@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-10-31",
+  "updated_on": "2026-11-18",
   "status": "discussion-draft",
   "scope": "One of three public family assignments per classified record, split by how much of the world code carries: WorldCoder-type (state and rules only), Code-as-World-type (whitebox/proxy world plus generative rendering), or VibeWorlding-type (full 3D world in code, static scenes included). Every other record carries an unassigned_group: \"gui\" (Other · GUI world models), \"benchmark\" (Other · Benchmarks, with benchmark_target naming what it evaluates), or \"survey\" (related surveys, shown at the top of the README).",
   "families": {
@@ -1989,6 +1989,163 @@
       "unassigned_group": "survey",
       "comparison": "It argues that video world models should recover the explicit state loop of game engines. Code-as-World methods keep that loop in executable code and use video models only to render it; this survey compares how much of the loop code owns.",
       "comparison_zh": "该综述主张视频世界模型应恢复游戏引擎中的显式状态循环。Code-as-World 方法把这一循环保留在可执行代码中，视频模型只负责渲染；本综述比较的是代码承担了这一循环的多少部分。"
+    },
+    {
+      "id": "2611.02807",
+      "coarse_family": "worldcoder",
+      "coarse_family_label": "WorldCoder-type · Programmatic Dynamics / World Program Induction",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.02807"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18"
+    },
+    {
+      "id": "2611.19247",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.19247"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18"
+    },
+    {
+      "id": "2611.15602",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.15602"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18"
+    },
+    {
+      "id": "2611.17821",
+      "coarse_family": "vibeworlding",
+      "coarse_family_label": "VibeWorlding-type · Agentic 3D World Construction",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.17821"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18"
+    },
+    {
+      "id": "2611.18078",
+      "coarse_family": "vibeworlding",
+      "coarse_family_label": "VibeWorlding-type · Agentic 3D World Construction",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.18078"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18"
+    },
+    {
+      "id": "2611.03634",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.03634"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "gui"
+    },
+    {
+      "id": "2611.14419",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.14419"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "worldcoder"
+    },
+    {
+      "id": "2611.16217",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.16217"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "code_as_world"
+    },
+    {
+      "id": "2611.09017",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.09017"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2611.15789",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.15789"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2611.17681",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.17681"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2611.19822",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-18",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.19822"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-18",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "video_wm"
     }
   ]
 }

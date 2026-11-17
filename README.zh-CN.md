@@ -80,6 +80,7 @@
 <a id="news"></a>
 ## 更新
 
+- **2026-11-18** — 新增 12 条文献：三条主线共 5 篇，评测 6 篇，GUI 环境资源 1 篇。[论文与归类说明](docs/updates/2026-11-18.md)。
 - **2026-10-31（补充检索）** — 针对 2026 年文献补充 30 条记录，只保留建模可交互世界的工作：WorldCoder-type 9 条、VibeWorlding-type 7 条、评测基准 3 条、GUI 世界模型 4 条、相关综述 7 篇。详见[更新说明](docs/updates/2026-10-31.md#coverage-pass)。
 - **2026-10-31（其他与相关综述）** — 删除 5 条对照/相邻记录（StatePlay、Simulate to Generalize、Software World Models、Agent-Editing World Model、AW-0）。三类之外的记录统一放在**其他**下（GUI 世界模型 · 按评测对象分组的评测基准，ExeWorldBench 和 BlenderWorld 也移入），并在开头新增[相关综述](#related-surveys)一节，说明本综述的不同之处。
 - **2026-10-31（重新分类）** — 三类改为按"代码承担了世界的多少部分"划分：WorldCoder-type（纯状态）、Code-as-World-type（白模 + 生成式渲染）、VibeWorlding-type（完整 3D，当前包含静态场景）。收紧 Code-as-World-type，将可仿真 3D 构建移入 VibeWorlding-type，GUI 世界模型集中为未收录的 GUI 分组。详见[更新说明](docs/updates/2026-10-31.md#reclassification)。
@@ -95,16 +96,16 @@
 
 [研究动机](#motivation) · [相关综述](#related-surveys) · [综述与资源](#survey--resources) · [核心视角](#at-a-glance) · [文献目录](#paper-collection) · [参与贡献](#contributing) · [致谢](#acknowledgements)
 
-**写作讨论：** [三类框架](docs/coarse-taxonomy.md) · [全量论文总表](docs/paper-master-list.md) · [分类 JSON](data/classification.json) · [本轮更新](docs/updates/2026-10-31.md)
+**写作讨论：** [三类框架](docs/coarse-taxonomy.md) · [全量论文总表](docs/paper-master-list.md) · [分类 JSON](data/classification.json) · [本轮更新](docs/updates/2026-11-18.md)
 
 <!-- NAVIGATION:BEGIN -->
 
 | 三类主线 |
 |---|
-| [01 · WorldCoder-type · 程序化动力学](#papers-worldcoder) <sub>(47)</sub> |
-| [02 · Code-as-World-type · 白模世界 + 生成式渲染](#papers-code_as_world) <sub>(22)</sub> |
-| [03 · VibeWorlding-type · agentic 3D 世界构建](#papers-vibeworlding) <sub>(40)</sub> |
-| [其他](#papers-other): [GUI 世界模型](#papers-other-gui) <sub>(20)</sub> · [评测基准](#papers-other-benchmark) <sub>(20)</sub> |
+| [01 · WorldCoder-type · 程序化动力学](#papers-worldcoder) <sub>(48)</sub> |
+| [02 · Code-as-World-type · 白模世界 + 生成式渲染](#papers-code_as_world) <sub>(24)</sub> |
+| [03 · VibeWorlding-type · agentic 3D 世界构建](#papers-vibeworlding) <sub>(42)</sub> |
+| [其他](#papers-other): [GUI 世界模型](#papers-other-gui) <sub>(21)</sub> · [评测基准](#papers-other-benchmark) <sub>(26)</sub> |
 | [全量论文总表](docs/paper-master-list.md)（含未归类来源） |
 
 <!-- NAVIGATION:END -->
@@ -148,7 +149,7 @@
 
 <!-- CATALOG:BEGIN -->
 
-**157 条文献来源** · 文献截止日期：**2026-10-29**。
+**169 条文献来源** · 文献截止日期：**2026-11-18**。
 
 README 只按三类主线浏览；未归类的小型、评测与相邻来源保留在[全量论文总表](docs/paper-master-list.md)。
 
@@ -158,6 +159,9 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 ### 01 · WorldCoder-type · 程序化动力学
 
 *纯状态层面的可执行动力学：转移机制、世界程序归纳、规划与模型修复，不生成外观。*
+
+- **Creating Hybrid Interactive Narrative Systems with LLM: From Formal Description to Evaluation** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.02807-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.02807)
+  <br><sub>叙事事件写成带前置条件与效果的操作。三种叙事管理器在同一组事实和目标上行动，生成的故事轨迹可以按规划序列比较。</sub>
 
 - **Algebraic World Model: From Exploration to Proofs** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40503-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40503)
   <br><sub>通过可执行 Python 假设、类型化规则和 Lean 证明探索未知游戏中的可达性与不可达性。</sub>
@@ -307,6 +311,12 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 
 *代码维护白模/proxy 世界的持久状态与规则，由生成式渲染器补全外观。*
 
+- **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19247-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19247)
+  <br><sub>游戏引擎决定事件何时发生、结果如何以及相机状态，视频模型绘制交互细节。同一套游戏机制可以呈现出多种视觉效果。</sub>
+
+- **CoCode-World: Shared 3D Proxy Representation for Multi-Player World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.15602-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.15602)
+  <br><sub>从共享的可编程 3D 代理和 RGB 参考图联合渲染双人视角，以同步的 GTA V 观测检验同一角色跨视角的外观一致性。</sub>
+
 - **Fight World Model: Customizable Combat through Visual Interaction Proxies** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40607-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40607)
   <br><sub>将可执行的战斗状态和规则解析与视频渲染分开，用绑定身份和时间的交互代理保持攻击、受击与生命状态一致。</sub>
 
@@ -379,6 +389,12 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 ### 03 · VibeWorlding-type · agentic 3D 世界构建
 
 *代码写出完整 3D 世界（几何、材质、布局，可含物理），由常规渲染器或仿真器执行；包含静态场景。*
+
+- **TelePhysica: Agentic Reconstruction of Physically Interactive Scenes** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.18078-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.18078)
+  <br><sub>从单张照片重建可视网格与可执行物理模型，检验重力平衡后可反转外力并重新仿真。仿真轨迹还可用于引导视频生成。</sub>
+
+- **SceneAgent: A Multi-Agent Framework for Portable Game Scene Generation (SceneAgent (portable game scenes))** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.17821-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.17821)
+  <br><sub>用持久化的 SceneContext 保存构建中的游戏场景。构建 agent 可跨引擎复用布局技能，由适配器转换坐标、绑定资产并导出场景。</sub>
 
 - **Gym-Anything for Robotics: Scaling physical simulations with digital agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40565-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40565)
   <br><sub>把仿真创建视为编码智能体任务，构建并审计 RoboWorld 物理仿真环境；作为 3D/模拟器构建支撑工作收录。</sub>
@@ -508,12 +524,15 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 *不属于三类主线的记录，分为 GUI 世界模型与评测基准两组。*
 
 <a id="papers-other-gui"></a>
-#### GUI 世界模型 (20)
+#### GUI 世界模型 (21)
 
 *GUI、网页与 computer-use 世界模型，包括以可渲染代码预测下一屏的工作；不纳入三类主线。*
 
 <details>
-<summary>20 条记录</summary>
+<summary>21 条记录</summary>
+
+- **WebHarbor: Docking Real Websites for Evolving GUI Agent Environments** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.03634-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.03634)
+  <br><sub>编码 agent 根据新任务扩展容器化的网站副本，由人工核对界面与业务流程。共提供 153 个可执行网站环境。</sub>
 
 - **Agent World Model in the Wild: Computer-Use Agent Environment Synthesis (WildAWM)** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.26828-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.26828)
   <br><sub>合成贯通 GUI、MCP 和 CLI 的可执行计算机环境，以可重放状态构建程序和基于执行的任务、验证器质量门控支持智能体训练。</sub>
@@ -578,14 +597,17 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 </details>
 
 <a id="papers-other-benchmark"></a>
-#### 评测基准 (20)
+#### 评测基准 (26)
 
 *评测基准与诊断研究，按评测对象分组。*
 
 <details>
-<summary>20 条记录</summary>
+<summary>26 条记录</summary>
 
 **评测 纯状态动力学（WorldCoder-type）**
+
+- **Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.14419-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.14419)
+  <br><sub>在 44 个情境中评估生成的部分可观测随机博弈模型，分别检验模型能否合法执行、结构与参考模型是否吻合，以及语义是否忠实。</sub>
 
 - **GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.22708-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.22708)
   <br><sub>以实际执行得到的结果为参照，结合确定性检查与语义评判，测试文本模型对动作后环境响应的预测。</sub>
@@ -604,6 +626,9 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 
 **评测 程序到视频的渲染（Code-as-World-type）**
 
+- **WorldDraft: If Code Builds the World, Can Video Models Just Render It?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.16217-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.16217)
+  <br><sub>由 48 组可执行 4D 世界构造 432 个配对案例。固定动力学，改变代理精细度与外观提示，分别测运动和相机轨迹的保持程度、目标外观的实现程度。</sub>
+
 - **Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.28416-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.28416)
   <br><sub>以文本、图像和视频为输入，评估可执行程序生成完整视频的能力，并测量执行、质量、指令对齐与参考保真。</sub>
 
@@ -611,6 +636,15 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
   <br><sub>PROWBench 将渲染视频中的事件与可执行程序规格及事件日志进行对齐比较。</sub>
 
 **评测 3D 世界构建（VibeWorlding-type）**
+
+- **OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.17681-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.17681)
+  <br><sub>针对 180 个 HTML5 游戏任务设置 1,800 条要求，通过静态源代码评判显式功能以及游戏系统间的深层关联。</sub>
+
+- **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.15789-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.15789)
+  <br><sub>用 242 个任务评估可执行 Blender 场景。Scene Check 重跑代码核对隐藏的 4D 场景事实，Screen Check 再检查这些事实能否在预览视频中看出来。</sub>
+
+- **Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.09017-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.09017)
+  <br><sub>用 145 个任务评估编码 agent 构建物体、场景和交互世界的能力。开放世界任务区分局部机关是否可用，以及依赖通行空间和持久状态的完整活动能否完成。</sub>
 
 - **3DCodeEdit: Benchmarking Instruction-Guided 3D Program Editing** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.38231-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.38231)
   <br><sub>评测对 Blender 程序的指令驱动编辑，用渲染检查暴露“代码可运行但几何结果错误”的问题。</sub>
@@ -637,6 +671,9 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
   <br><sub>WorldCoder-Bench 通过隐藏的运行时行为合同，评价具有物理依据的三维世界构建。</sub>
 
 **评测 非代码的视频与学习型世界模型**
+
+- **The Flip Test: Video World Models Fail to Learn the World State (FlipTest)** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19822-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19822)
+  <br><sub>用近乎相同的初始帧、配对对照及密集参数扫描，测试视频预测能否在物理结果刚好翻转的边界上随之改变。</sub>
 
 - **WorldProbe: When Video World Models Fall Apart under Long-Horizon Spatial Exploration** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.39721-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.39721)
   <br><sub>用目标条件多模态 agent 在线调整相机动作，探测视频世界模型的长时空间一致性。</sub>

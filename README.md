@@ -79,6 +79,7 @@ Related surveys centre on video models or world models in general. This survey t
 
 ## News
 
+- **2026-11-18** — Added 12 sources: five across the three families, six benchmarks and one GUI environment suite. [Papers and placement notes](docs/updates/2026-11-18.md).
 - **2026-10-31 (coverage pass)** — Added 30 records from a 2026 search pass, keeping only work that models an interactive world: 9 WorldCoder-type, 7 VibeWorlding-type, 3 benchmarks, 4 GUI world models and 7 related surveys. See the [update notes](docs/updates/2026-10-31.md#coverage-pass).
 - **2026-10-31 (Other & related surveys)** — Removed five comparator/adjacent records (StatePlay, Simulate to Generalize, Software World Models, Agent-Editing World Model, AW-0). Grouped everything outside the three families under **Other** (GUI world models · benchmarks by evaluation target, now including ExeWorldBench and BlenderWorld) and added a [related-surveys](#related-surveys) section that states how this survey differs.
 - **2026-10-31 (reclassification)** — Split the three families by how much of the world code carries: WorldCoder-type (state only), Code-as-World-type (whitebox world + generative rendering), VibeWorlding-type (full 3D, static scenes included). Tightened Code-as-World-type, moved simulation-ready 3D construction to VibeWorlding-type, and grouped GUI world models as an unassigned GUI section. See the [update notes](docs/updates/2026-10-31.md#reclassification).
@@ -92,16 +93,16 @@ Related surveys centre on video models or world models in general. This survey t
 
 [Motivation](#motivation) · [Related surveys](#related-surveys) · [Survey & resources](#survey--resources) · [At a glance](#at-a-glance) · [Paper collection](#paper-collection) · [Contributing](#contributing) · [Acknowledgements](#acknowledgements)
 
-**Writing discussion:** [Three-family map](docs/coarse-taxonomy.md) · [Paper master list](docs/paper-master-list.md) · [Classification JSON](data/classification.json) · [Update notes](docs/updates/2026-10-31.md)
+**Writing discussion:** [Three-family map](docs/coarse-taxonomy.md) · [Paper master list](docs/paper-master-list.md) · [Classification JSON](data/classification.json) · [Update notes](docs/updates/2026-11-18.md)
 
 <!-- NAVIGATION:BEGIN -->
 
 | Three primary families |
 |---|
-| [01 · WorldCoder-type · Programmatic Dynamics](#papers-worldcoder) <sub>(47)</sub> |
-| [02 · Code-as-World-type · Whitebox Worlds + Generative Rendering](#papers-code_as_world) <sub>(22)</sub> |
-| [03 · VibeWorlding-type · Agentic 3D World Construction](#papers-vibeworlding) <sub>(40)</sub> |
-| [Other](#papers-other): [GUI World Models](#papers-other-gui) <sub>(20)</sub> · [Benchmarks](#papers-other-benchmark) <sub>(20)</sub> |
+| [01 · WorldCoder-type · Programmatic Dynamics](#papers-worldcoder) <sub>(48)</sub> |
+| [02 · Code-as-World-type · Whitebox Worlds + Generative Rendering](#papers-code_as_world) <sub>(24)</sub> |
+| [03 · VibeWorlding-type · Agentic 3D World Construction](#papers-vibeworlding) <sub>(42)</sub> |
+| [Other](#papers-other): [GUI World Models](#papers-other-gui) <sub>(21)</sub> · [Benchmarks](#papers-other-benchmark) <sub>(26)</sub> |
 | [Paper master list](docs/paper-master-list.md) (including unassigned sources) |
 
 <!-- NAVIGATION:END -->
@@ -141,7 +142,7 @@ The families are split by how much of the world code carries: state only, a whit
 
 <!-- CATALOG:BEGIN -->
 
-**157 sources** · literature through **2026-10-29**.
+**169 sources** · literature through **2026-11-18**.
 
 The README groups papers by the three primary families; smaller, benchmark, and adjacent sources remain in the [paper master list](docs/paper-master-list.md).
 
@@ -151,6 +152,9 @@ Each primary family is ordered by recorded publication date; the annotated catal
 ### 01 · WorldCoder-type · Programmatic Dynamics
 
 *State-level executable dynamics: transition mechanisms, world-program induction, planning, and model repair, without generated appearance.*
+
+- **Creating Hybrid Interactive Narrative Systems with LLM: From Formal Description to Evaluation** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.02807-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.02807)
+  <br><sub>Encodes narrative events as operations with explicit preconditions and effects. Three experience managers act on the same facts and goals, making their story trajectories comparable as plans.</sub>
 
 - **Algebraic World Model: From Exploration to Proofs** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40503-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40503)
   <br><sub>Explores unknown games with executable Python hypotheses, typed rules, and Lean formalization for reachability and impossibility proofs.</sub>
@@ -300,6 +304,12 @@ Each primary family is ordered by recorded publication date; the annotated catal
 
 *Code keeps persistent state and rules over a whitebox/proxy world; a generative renderer supplies appearance.*
 
+- **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19247-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19247)
+  <br><sub>A game engine computes event timing, outcomes and camera state. A video model renders the interaction, allowing the same mechanic to take different visual forms.</sub>
+
+- **CoCode-World: Shared 3D Proxy Representation for Multi-Player World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.15602-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.15602)
+  <br><sub>Renders two players’ views jointly from a shared programmable 3D proxy and RGB references. Synchronized GTA V observations test whether characters retain their appearance across viewpoints.</sub>
+
 - **Fight World Model: Customizable Combat through Visual Interaction Proxies** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40607-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40607)
   <br><sub>Separates executable combat state and rule resolution from video rendering with identity- and timing-aligned interaction proxies; tests rule changes and customization.</sub>
 
@@ -372,6 +382,12 @@ Each primary family is ordered by recorded publication date; the annotated catal
 ### 03 · VibeWorlding-type · Agentic 3D World Construction
 
 *Code specifies the full 3D world (geometry, materials, layout, and optionally physics) for conventional rendering or simulation; static scenes included.*
+
+- **TelePhysica: Agentic Reconstruction of Physically Interactive Scenes** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.18078-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.18078)
+  <br><sub>Reconstructs visual meshes and executable physical models from a photograph, checks equilibrium, then simulates interventions such as reversing an applied force. Simulated trajectories can also guide video synthesis.</sub>
+
+- **SceneAgent: A Multi-Agent Framework for Portable Game Scene Generation (SceneAgent (portable game scenes))** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.17821-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.17821)
+  <br><sub>Stores the evolving game scene in a persistent SceneContext. Builder agents reuse layout skills across engines while adapters translate coordinates, bind assets and export scenes.</sub>
 
 - **Gym-Anything for Robotics: Scaling physical simulations with digital agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40565-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40565)
   <br><sub>Treats simulation creation as a coding-agent task and releases RoboWorld environments plus an adversarial creation-audit loop for physical simulation construction.</sub>
@@ -501,12 +517,15 @@ Each primary family is ordered by recorded publication date; the annotated catal
 *Records outside the three families, in two groups: GUI world models and benchmarks.*
 
 <a id="papers-other-gui"></a>
-#### GUI World Models (20)
+#### GUI World Models (21)
 
 *GUI, web, and computer-use world models, including renderable-code screen predictors. Kept outside the three families.*
 
 <details>
-<summary>20 records</summary>
+<summary>21 records</summary>
+
+- **WebHarbor: Docking Real Websites for Evolving GUI Agent Environments** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.03634-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.03634)
+  <br><sub>Coding agents extend Dockerized replicas of real websites as new tasks arrive. Human contributors check visual fidelity and workflow behavior across 153 environments.</sub>
 
 - **Agent World Model in the Wild: Computer-Use Agent Environment Synthesis (WildAWM)** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.26828-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.26828)
   <br><sub>Synthesizes executable computer-use worlds spanning GUI, MCP and CLI interfaces, with replayable state-building programs and execution-based task/verifier quality gates for agent training.</sub>
@@ -571,14 +590,17 @@ Each primary family is ordered by recorded publication date; the annotated catal
 </details>
 
 <a id="papers-other-benchmark"></a>
-#### Benchmarks (20)
+#### Benchmarks (26)
 
 *Benchmarks and diagnostic studies, grouped by what they evaluate.*
 
 <details>
-<summary>20 records</summary>
+<summary>26 records</summary>
 
 **Evaluating state-level dynamics (WorldCoder-type)**
+
+- **Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.14419-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.14419)
+  <br><sub>Evaluates formal models generated as partially observable stochastic games on 44 scenarios. Mechanical checks, structural agreement and semantic judgments test different aspects of fidelity.</sub>
 
 - **GlobeBench: Evaluating Text-Based World Model Capabilities for Scalable Environment Simulations** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.22708-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.22708)
   <br><sub>Tests textual action-conditioned successor predictions against execution-derived references, combining deterministic checks with semantic judging.</sub>
@@ -597,6 +619,9 @@ Each primary family is ordered by recorded publication date; the annotated catal
 
 **Evaluating program-to-video rendering (Code-as-World-type)**
 
+- **WorldDraft: If Code Builds the World, Can Video Models Just Render It?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.16217-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.16217)
+  <br><sub>Across 432 paired cases from 48 executable 4D world families, varies proxy detail and appearance cues while holding dynamics fixed. Scores motion and camera preservation separately from target appearance.</sub>
+
 - **Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.28416-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.28416)
   <br><sub>Benchmarks executable-program video creation from text, images and videos with objective and model-judged measures of execution, quality and alignment.</sub>
 
@@ -604,6 +629,15 @@ Each primary family is ordered by recorded publication date; the annotated catal
   <br><sub>PROWBench compares rendered video events with executable program specifications and event logs.</sub>
 
 **Evaluating 3D world construction (VibeWorlding-type)**
+
+- **OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.17681-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.17681)
+  <br><sub>Evaluates generated HTML5 games against 1,800 requirements across 180 tasks. Static source inspection scores specified features and deeper relationships among game systems.</sub>
+
+- **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.15789-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.15789)
+  <br><sub>Tests executable Blender scenes on 242 briefs. Scene Check reruns code against hidden 4D facts, and Screen Check judges whether the verified facts are visible in the rendered preview.</sub>
+
+- **Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.09017-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.09017)
+  <br><sub>Evaluates coding agents on 145 object, scene and interactive-world tasks. Open-world tests distinguish working local mechanisms from activities requiring clearance and persistent state.</sub>
 
 - **3DCodeEdit: Benchmarking Instruction-Guided 3D Program Editing** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.38231-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.38231)
   <br><sub>Benchmarks instruction-guided edits to Blender programs and uses render-based checklists to expose geometric-foresight failures.</sub>
@@ -630,6 +664,9 @@ Each primary family is ordered by recorded publication date; the annotated catal
   <br><sub>WorldCoder-Bench tests physically grounded 3D world synthesis using hidden runtime behavior contracts.</sub>
 
 **Evaluating non-code video and learned world models**
+
+- **The Flip Test: Video World Models Fail to Learn the World State (FlipTest)** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19822-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19822)
+  <br><sub>Uses near-identical initial frames, matched controls and dense parameter sweeps to test whether video predictions change at the physical boundary where an outcome flips.</sub>
 
 - **WorldProbe: When Video World Models Fall Apart under Long-Horizon Spatial Exploration** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.39721-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.39721)
   <br><sub>Uses a goal-conditioned agent to adapt camera actions online and probe long-horizon spatial consistency in video world models.</sub>
