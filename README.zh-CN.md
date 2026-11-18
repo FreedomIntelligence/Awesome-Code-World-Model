@@ -80,7 +80,7 @@
 <a id="news"></a>
 ## 更新
 
-- **2026-11-18** — 新增 12 条文献：三条主线共 5 篇，评测 6 篇，GUI 环境资源 1 篇。[论文与归类说明](docs/updates/2026-11-18.md)。
+- **2026-11-18** — 新增 12 条文献：三条主线共 5 篇，评测 6 篇，GUI 环境资源 1 篇。[论文与归类说明](docs/updates/2026-11-18.md)。 另收录 [Invoker-Render 项目发布](https://github.com/inclusionAI/CodeWorldModel)。
 - **2026-10-31（补充检索）** — 针对 2026 年文献补充 30 条记录，只保留建模可交互世界的工作：WorldCoder-type 9 条、VibeWorlding-type 7 条、评测基准 3 条、GUI 世界模型 4 条、相关综述 7 篇。详见[更新说明](docs/updates/2026-10-31.md#coverage-pass)。
 - **2026-10-31（其他与相关综述）** — 删除 5 条对照/相邻记录（StatePlay、Simulate to Generalize、Software World Models、Agent-Editing World Model、AW-0）。三类之外的记录统一放在**其他**下（GUI 世界模型 · 按评测对象分组的评测基准，ExeWorldBench 和 BlenderWorld 也移入），并在开头新增[相关综述](#related-surveys)一节，说明本综述的不同之处。
 - **2026-10-31（重新分类）** — 三类改为按"代码承担了世界的多少部分"划分：WorldCoder-type（纯状态）、Code-as-World-type（白模 + 生成式渲染）、VibeWorlding-type（完整 3D，当前包含静态场景）。收紧 Code-as-World-type，将可仿真 3D 构建移入 VibeWorlding-type，GUI 世界模型集中为未收录的 GUI 分组。详见[更新说明](docs/updates/2026-10-31.md#reclassification)。
@@ -103,7 +103,7 @@
 | 三类主线 |
 |---|
 | [01 · WorldCoder-type · 程序化动力学](#papers-worldcoder) <sub>(48)</sub> |
-| [02 · Code-as-World-type · 白模世界 + 生成式渲染](#papers-code_as_world) <sub>(24)</sub> |
+| [02 · Code-as-World-type · 白模世界 + 生成式渲染](#papers-code_as_world) <sub>(25)</sub> |
 | [03 · VibeWorlding-type · agentic 3D 世界构建](#papers-vibeworlding) <sub>(42)</sub> |
 | [其他](#papers-other): [GUI 世界模型](#papers-other-gui) <sub>(21)</sub> · [评测基准](#papers-other-benchmark) <sub>(26)</sub> |
 | [全量论文总表](docs/paper-master-list.md)（含未归类来源） |
@@ -149,7 +149,7 @@
 
 <!-- CATALOG:BEGIN -->
 
-**169 条文献来源** · 文献截止日期：**2026-11-18**。
+**170 条文献来源** · 文献截止日期：**2026-11-18**。
 
 README 只按三类主线浏览；未归类的小型、评测与相邻来源保留在[全量论文总表](docs/paper-master-list.md)。
 
@@ -310,6 +310,9 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 ### 02 · Code-as-World-type · 白模世界 + 生成式渲染
 
 *代码维护白模/proxy 世界的持久状态与规则，由生成式渲染器补全外观。*
+
+- **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** `2026` [![Project](assets/badges/project.svg)](https://github.com/inclusionAI/CodeWorldModel)
+  <br><sub>上游引擎用结构化代理指定相机轨迹和实体运动，Invoker-Render 结合外观参考图和文本，逐段生成对应的世界画面。</sub>
 
 - **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19247-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19247)
   <br><sub>游戏引擎决定事件何时发生、结果如何以及相机状态，视频模型绘制交互细节。同一套游戏机制可以呈现出多种视觉效果。</sub>

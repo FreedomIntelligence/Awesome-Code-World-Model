@@ -79,7 +79,7 @@ Related surveys centre on video models or world models in general. This survey t
 
 ## News
 
-- **2026-11-18** — Added 12 sources: five across the three families, six benchmarks and one GUI environment suite. [Papers and placement notes](docs/updates/2026-11-18.md).
+- **2026-11-18** — Added 12 sources: five across the three families, six benchmarks and one GUI environment suite. [Papers and placement notes](docs/updates/2026-11-18.md). Also added the [Invoker-Render project release](https://github.com/inclusionAI/CodeWorldModel).
 - **2026-10-31 (coverage pass)** — Added 30 records from a 2026 search pass, keeping only work that models an interactive world: 9 WorldCoder-type, 7 VibeWorlding-type, 3 benchmarks, 4 GUI world models and 7 related surveys. See the [update notes](docs/updates/2026-10-31.md#coverage-pass).
 - **2026-10-31 (Other & related surveys)** — Removed five comparator/adjacent records (StatePlay, Simulate to Generalize, Software World Models, Agent-Editing World Model, AW-0). Grouped everything outside the three families under **Other** (GUI world models · benchmarks by evaluation target, now including ExeWorldBench and BlenderWorld) and added a [related-surveys](#related-surveys) section that states how this survey differs.
 - **2026-10-31 (reclassification)** — Split the three families by how much of the world code carries: WorldCoder-type (state only), Code-as-World-type (whitebox world + generative rendering), VibeWorlding-type (full 3D, static scenes included). Tightened Code-as-World-type, moved simulation-ready 3D construction to VibeWorlding-type, and grouped GUI world models as an unassigned GUI section. See the [update notes](docs/updates/2026-10-31.md#reclassification).
@@ -100,7 +100,7 @@ Related surveys centre on video models or world models in general. This survey t
 | Three primary families |
 |---|
 | [01 · WorldCoder-type · Programmatic Dynamics](#papers-worldcoder) <sub>(48)</sub> |
-| [02 · Code-as-World-type · Whitebox Worlds + Generative Rendering](#papers-code_as_world) <sub>(24)</sub> |
+| [02 · Code-as-World-type · Whitebox Worlds + Generative Rendering](#papers-code_as_world) <sub>(25)</sub> |
 | [03 · VibeWorlding-type · Agentic 3D World Construction](#papers-vibeworlding) <sub>(42)</sub> |
 | [Other](#papers-other): [GUI World Models](#papers-other-gui) <sub>(21)</sub> · [Benchmarks](#papers-other-benchmark) <sub>(26)</sub> |
 | [Paper master list](docs/paper-master-list.md) (including unassigned sources) |
@@ -142,7 +142,7 @@ The families are split by how much of the world code carries: state only, a whit
 
 <!-- CATALOG:BEGIN -->
 
-**169 sources** · literature through **2026-11-18**.
+**170 sources** · literature through **2026-11-18**.
 
 The README groups papers by the three primary families; smaller, benchmark, and adjacent sources remain in the [paper master list](docs/paper-master-list.md).
 
@@ -303,6 +303,9 @@ Each primary family is ordered by recorded publication date; the annotated catal
 ### 02 · Code-as-World-type · Whitebox Worlds + Generative Rendering
 
 *Code keeps persistent state and rules over a whitebox/proxy world; a generative renderer supplies appearance.*
+
+- **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** `2026` [![Project](assets/badges/project.svg)](https://github.com/inclusionAI/CodeWorldModel)
+  <br><sub>The upstream engine fixes camera and entity motion in a structural proxy. Invoker-Render combines the proxy with an appearance reference and text to stream the rendered scene.</sub>
 
 - **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2611.19247-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.19247)
   <br><sub>A game engine computes event timing, outcomes and camera state. A video model renders the interaction, allowing the same mechanic to take different visual forms.</sub>

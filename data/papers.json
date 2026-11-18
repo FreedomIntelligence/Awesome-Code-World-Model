@@ -5899,6 +5899,46 @@
       "evidence_notes": "Tests video world models on simulated and real tasks. A coding agent supplies a comparison on the boundary-recovery task.",
       "arxiv_id": "2611.19822",
       "alias": "FlipTest"
+    },
+    {
+      "id": "invoker-render",
+      "citation_key": "wang2026cwm2",
+      "title": "Code World Model 2.0: Towards Infinite Controllable Video Generation",
+      "authors": [
+        "Ruoyu Wang",
+        "Hao Zhong",
+        "Yanming Yang",
+        "Jiahao Tian",
+        "Lin Liu",
+        "Biao Gong",
+        "Guoshan Lu",
+        "Yiding Tian",
+        "Chunhua Shen",
+        "Zhenzhong Lan",
+        "Chi Zhang"
+      ],
+      "alias": "Invoker-Render",
+      "year": 2026,
+      "first_public_date": null,
+      "available_by": "2026-11-18",
+      "date_basis": "verified_available_by",
+      "source_type": "project",
+      "source_url": "https://github.com/inclusionAI/CodeWorldModel",
+      "evidence_urls": [
+        "https://github.com/inclusionAI/CodeWorldModel",
+        "https://www.inclusion-ai.org/CodeWorldModel/"
+      ],
+      "review_depth": "targeted_fulltext",
+      "reviewed_on": "2026-11-18",
+      "section": "code_as_world",
+      "scope": "enabling",
+      "code_roles": [],
+      "tags": [
+        "proxy-rendering",
+        "streaming-video"
+      ],
+      "summary": "The upstream engine fixes camera and entity motion in a structural proxy. Invoker-Render combines the proxy with an appearance reference and text to stream the rendered scene.",
+      "evidence_notes": "Reviewed the official project documentation. The repository releases the causal streaming renderer. The engine supplies state and rules. The authors list the arXiv technical report as forthcoming."
     }
   ]
 }

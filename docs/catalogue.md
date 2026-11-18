@@ -4,7 +4,7 @@
 
 [← Browse the paper collection](../README.md#paper-collection) · [Structured data](../data/papers.json) · [BibTeX](../papers.bib)
 
-**169 source records** · literature cutoff **2026-11-18** · metadata snapshot **2026-11-18**.
+**170 source records** · literature cutoff **2026-11-18** · metadata snapshot **2026-11-18**.
 
 Review: **FT** = targeted full-text sections · **A** = metadata and abstract · **M** = bibliographic metadata.
 
@@ -100,10 +100,11 @@ Review depth describes citation and mechanism checking. Dates prefixed **by** ar
 
 </details>
 
-## Code-as-World-type · Whitebox Worlds + Generative Rendering (24)
+## Code-as-World-type · Whitebox Worlds + Generative Rendering (25)
 
 | Date | Paper | Mechanism / relevance | Scope | Review |
 |---|---|---|---|---|
+| by 2026-11-18 | [Code World Model 2.0: Towards Infinite Controllable Video Generation **(Invoker-Render)**](https://github.com/inclusionAI/CodeWorldModel) | The upstream engine fixes camera and entity motion in a structural proxy. Invoker-Render combines the proxy with an appearance reference and text to stream the rendered scene. | enabling | FT |
 | 2026-11-14 | [GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models](https://arxiv.org/abs/2611.19247) | A game engine computes event timing, outcomes and camera state. A video model renders the interaction, allowing the same mechanic to take different visual forms. | core | A |
 | 2026-11-11 | [CoCode-World: Shared 3D Proxy Representation for Multi-Player World Models](https://arxiv.org/abs/2611.15602) | Renders two players’ views jointly from a shared programmable 3D proxy and RGB references. Synchronized GTA V observations test whether characters retain their appearance across viewpoints. | enabling | A |
 | 2026-10-29 | [Fight World Model: Customizable Combat through Visual Interaction Proxies](https://arxiv.org/abs/2610.40607) | Separates executable combat state and rule resolution from video rendering with identity- and timing-aligned interaction proxies; tests rule changes and customization. | core | A |
@@ -130,8 +131,9 @@ Review depth describes citation and mechanism checking. Dates prefixed **by** ar
 | 2025-12-29 | [Web World Models](https://arxiv.org/abs/2512.23676) | Web World Models uses typed web state and code-defined rules as the substrate for persistent, generative worlds. | core | FT |
 
 <details>
-<summary>Evidence notes (21)</summary>
+<summary>Evidence notes (22)</summary>
 
+- **Invoker-Render:** Reviewed the official project documentation. The repository releases the causal streaming renderer. The engine supplies state and rules. The authors list the arXiv technical report as forthcoming.
 - **GameWM:** The engine retains authority over event outcomes.
 - **CoCode-World:** The paired proxies derive from map geometry and recorded engine state. The evaluated capability is cross-view rendering.
 - **Fight World Model:** The abstract describes an executable engine as the source of combat state and a deterministic proxy compiler for the renderer. This is a code-as-world design, not evidence that the combat rules were induced from unknown observations. Date follows arXiv v1 metadata; no venue assignment is inferred.

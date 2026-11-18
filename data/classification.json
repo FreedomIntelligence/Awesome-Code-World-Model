@@ -2146,6 +2146,18 @@
       "annotated_on": "2026-11-18",
       "unassigned_group": "benchmark",
       "benchmark_target": "video_wm"
+    },
+    {
+      "id": "invoker-render",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "official_project",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://github.com/inclusionAI/CodeWorldModel"
+      ],
+      "evidence_depth": "targeted_fulltext",
+      "annotated_on": "2026-11-18"
     }
   ]
 }
