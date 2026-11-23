@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated_on": "2026-11-18",
   "literature_cutoff": "2026-11-18",
-  "description": "Curated source records for a code-centric world-model survey. Source counts are bibliographic records, not unique-method counts. Review depth refers to citation and mechanism checking, not experiment reproduction.",
+  "description": "Curated source records for a code world model survey. Source counts are bibliographic records, not unique-method counts. Review depth refers to citation and mechanism checking, not experiment reproduction.",
   "sections": [
     {
       "id": "worldcoder",
@@ -4332,7 +4332,7 @@
         "verification"
       ],
       "summary": "A self-improving research-agent system builds and verifies a faithful Hearthstone Battlegrounds simulator, then trains agents against calibrated opponents.",
-      "evidence_notes": "Relevant because agents build an executable game environment, but the main contribution is the research-agent loop rather than a code-centric world-model method. Date follows arXiv v1 metadata; no venue assignment is inferred.",
+      "evidence_notes": "Relevant because agents build an executable game environment, but the main contribution is the research-agent loop rather than a code world model method. Date follows arXiv v1 metadata; no venue assignment is inferred.",
       "arxiv_id": "2610.33845",
       "alias": "AutoTavern"
     },

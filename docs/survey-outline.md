@@ -1,6 +1,6 @@
 # Survey 写作安排与三类主线
 
-**讨论稿 · 2026-10-29。** 当前工作标题为 *Programmatic World Models: A Survey*；首页使用文献库名称 *Code-Centric World Models*。README 首页直接采用三类主线，论文总表提供逐条记录和来源信息。
+**讨论稿 · 2026-10-29。** 当前工作标题为 *Programmatic World Models: A Survey*；首页使用文献库名称 *Code World Models*。README 首页直接采用三类主线，论文总表提供逐条记录和来源信息。
 
 [三类主线说明](coarse-taxonomy.md) · [全量论文总表](paper-master-list.md) · [分类 JSON](../data/classification.json) · [可复制 CSV](../data/classification.csv)
 

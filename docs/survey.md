@@ -1,4 +1,4 @@
-# Code-Centric World Models
+# Code World Models
 
 **Executable Dynamics, Persistent Worlds, and Renderable Observations**
 

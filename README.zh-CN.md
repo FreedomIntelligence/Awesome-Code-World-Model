@@ -1,26 +1,31 @@
 <div align="center">
 
-# Code-Centric World Models
+# Code World Models
 
-**可执行动力学 · 持久世界 · 可渲染观测**
+<h4>可执行动力学 · 持久世界 · 可渲染观测</h4>
 
-持续维护的文献集合，以及正在撰写的综述的配套主页。
-
-[English](README.md) | **简体中文**
+<p>
+  持续维护的代码世界模型文献集合与综述配套主页。<br>
+  <a href="README.md">English</a> · <strong>简体中文</strong>
+</p>
 
 <!-- BADGES:BEGIN -->
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome) [![GitHub stars](https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=social)](https://github.com/MichaelCao0/Awesome-Code-World-Model/stargazers) [![GitHub forks](https://img.shields.io/github/forks/MichaelCao0/Awesome-Code-World-Model?style=social)](https://github.com/MichaelCao0/Awesome-Code-World-Model/network/members) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome) [![GitHub stars](https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=flat&logo=github&color=181717)](https://github.com/MichaelCao0/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-2ea44f?style=flat)](CONTRIBUTING.md)
 
 [![Source records](assets/badges/sources.svg)](#paper-collection) [![Reading sections](assets/badges/topics.svg)](#contents) [![Literature cutoff](assets/badges/cutoff.svg)](docs/review-protocol.md)
 
-![Survey arXiv](https://img.shields.io/badge/arXiv-survey%20pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white) ![Survey Semantic Scholar citations](https://img.shields.io/badge/Semantic%20Scholar-citations%20pending-1857b6?style=flat-square&logo=semanticscholar&logoColor=white)
-
 <!-- BADGES:END -->
 
-[📝 综述入口](docs/survey.md) · [📚 文献目录](#paper-collection) · [🧭 分类框架](docs/taxonomy.md) · [📖 BibTeX](papers.bib) · [🤝 参与贡献](CONTRIBUTING.md)
+<p>
+  <a href="#paper-collection"><strong>📚 文献目录</strong></a> ·
+  <a href="#taxonomy"><strong>🧭 三类框架</strong></a> ·
+  <a href="docs/survey.md"><strong>📝 综述入口</strong></a> ·
+  <a href="papers.bib"><strong>📖 BibTeX</strong></a> ·
+  <a href="CONTRIBUTING.md"><strong>🤝 参与贡献</strong></a>
+</p>
 
-<p><img src="./assets/banner.png" alt="以程序构建可执行世界：代码、持久状态与渲染观测" width="1280"></p>
+<p><img src="./assets/banner.png" alt="以程序构建可执行世界：代码、持久状态与渲染观测" width="960"></p>
 
 </div>
 
@@ -29,74 +34,34 @@
 
 随着编码智能体在**生成、执行和迭代改进复杂程序**方面的能力不断增强，代码正成为世界建模的一种有前景的表示方式。
 
-除了预测像素，以代码为核心的世界模型还支持**显式动力学、持久状态与可编程交互**，为构建更**可控、可编辑、可验证的世界**提供了一条互补路径。
+除了预测像素，代码世界模型还支持**显式动力学、持久状态与可编程交互**，为构建更**可控、可编辑、可验证的世界**提供了一条互补路径。
 
 > [!NOTE]
-> **📝 我们正在撰写以代码为核心的世界模型综述。** 当前大纲、概念框架与文献资料见[综述入口](docs/survey.md)。
+> **📝 我们正在撰写代码世界模型综述。** 当前大纲、概念框架与文献资料见[综述入口](docs/survey.md)。
 >
 > **🤝 欢迎提交 PR！** 无论是补充遗漏论文、修正文献信息、完善分类框架，还是改进综述讨论，都欢迎参与。请先阅读[贡献指南](CONTRIBUTING.md)。
-
-<a id="related-surveys"></a>
-## 相关综述：我们的不同之处
-
-<!-- RELATED:BEGIN -->
-
-相关综述以视频模型或通用世界模型为中心；本综述以**可执行代码作为世界的载体**为纳入标准，按代码承担了世界的多少部分（纯状态 / 白模 + 生成式渲染 / 完整 3D）组织文献，视频模型只作为可选的渲染器出现。
-
-- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40191)
-  <br><sub>围绕视频生成模型的 agent harness 综述视频生产、交互式世界建模和递归自我改进；作为相关综述保留。</sub>
-  <br>**与本综述的区别：** 该综述以视频生成模型为中心，梳理围绕它构建的 agent harness（视频制作、交互式世界建模、递归自我改进），代码只是 harness 的组件之一。本综述以代码为世界的载体：代码承担状态与规则、白模世界或完整 3D 世界，视频模型只是可选的渲染器之一。
-
-- **AI for Games in the Foundation Model Era** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2609.16679-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.16679)
-  <br><sub>按六种角色综述游戏全生命周期中的 AI：从玩游戏、建模游戏到构建、运行时适配与测试。</sub>
-  <br>**与本综述的区别：** 该综述覆盖游戏领域的方方面面，包括学习型游戏世界模型与 AI 辅助开发。本综述中游戏只是若干领域之一，重点是以可执行代码写成的游戏规则与世界。
-
-- **From Generation to Simulation: How Far Are World Models from Being True Simulators?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2608.23070-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.23070)
-  <br><sub>以传统模拟器的八项能力为标尺评估 200 项生成式世界模型工作，发现结构化状态反馈最受忽视。</sub>
-  <br>**与本综述的区别：** 该综述考察潜变量、视频和联合嵌入世界模型距离模拟器还有多远。代码世界模型走的是相反路线：从带显式状态的可执行基底出发；本综述研究这一基底如何被归纳、构建和渲染。
-
-- **From Pixels to States: Rethinking Interactive World Models as Game Engines** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2607.14076-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.14076)
-  <br><sub>以游戏引擎的&quot;动作—状态—观测&quot;循环为视角综述交互式游戏世界模型，并发布带状态标注的《黑神话：悟空》数据引擎。</sub>
-  <br>**与本综述的区别：** 该综述主张视频世界模型应恢复游戏引擎中的显式状态循环。Code-as-World 方法把这一循环保留在可执行代码中，视频模型只负责渲染；本综述比较的是代码承担了这一循环的多少部分。
-
-- **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.12191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.12191)
-  <br><sub>综述 LLM agent 环境的建模、符号与神经合成、评测以及 agent 与环境的协同演化。</sub>
-  <br>**与本综述的区别：** 该综述把环境视为 agent 的训练基础设施。本综述只关注其代码充当世界模型、预测或模拟世界演化的情形，基准和合成任务环境居于次要位置。
-
-- **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.09032-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09032)
-  <br><sub>综述面向 LLM agent 的文本世界模型（预测下一个网页、终端输出或 API 响应），涵盖 LLM 作为世界模型与代码作为世界模型的构建、应用与评测。</sub>
-  <br>**与本综述的区别：** 该综述聚焦文本环境，把"代码作为世界模型"视为一种构建范式。本综述以代码世界本身为主题，并从文本与符号状态扩展到白模加生成式渲染以及完整 3D 世界。
-
-- **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.22748)
-  <br><sub>以&quot;层级 × 规律&quot;分类综述面向 agent 的世界模型：预测器、模拟器、演化器三个层级，横跨物理、数字、社会与科学四类规律。</sub>
-  <br>**与本综述的区别：** 该综述按能力层级与规律类型梳理 400 余项工作，代码化模型只是众多实现方式之一。本综述的组织问题是代码在世界中承担什么，只收录以代码为世界载体的方法。
-
-- **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** `2025` [![arXiv](https://img.shields.io/badge/arXiv-2503.18971-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.18971)
-  <br><sub>综述用 LLM 将规划问题形式化（如 PDDL）并修正规格、交由现成自动规划器求解的研究。</sub>
-  <br>**与本综述的区别：** 该综述覆盖 WorldCoder-type 的一个分支：由语言写出的符号规划模型。本综述将其与 Python 转移程序、物理残差、生成式渲染的代码世界和 3D 世界程序放在同一框架下。
-
-<!-- RELATED:END -->
 
 <a id="news"></a>
 ## 更新
 
-- **2026-11-18** — 新增 12 条文献：三条主线共 5 篇，评测 6 篇，GUI 环境资源 1 篇。[论文与归类说明](docs/updates/2026-11-18.md)。 另收录 [Invoker-Render 项目发布](https://github.com/inclusionAI/CodeWorldModel)。
-- **2026-10-31（补充检索）** — 针对 2026 年文献补充 30 条记录，只保留建模可交互世界的工作：WorldCoder-type 9 条、VibeWorlding-type 7 条、评测基准 3 条、GUI 世界模型 4 条、相关综述 7 篇。详见[更新说明](docs/updates/2026-10-31.md#coverage-pass)。
-- **2026-10-31（其他与相关综述）** — 删除 5 条对照/相邻记录（StatePlay、Simulate to Generalize、Software World Models、Agent-Editing World Model、AW-0）。三类之外的记录统一放在**其他**下（GUI 世界模型 · 按评测对象分组的评测基准，ExeWorldBench 和 BlenderWorld 也移入），并在开头新增[相关综述](#related-surveys)一节，说明本综述的不同之处。
-- **2026-10-31（重新分类）** — 三类改为按"代码承担了世界的多少部分"划分：WorldCoder-type（纯状态）、Code-as-World-type（白模 + 生成式渲染）、VibeWorlding-type（完整 3D，当前包含静态场景）。收紧 Code-as-World-type，将可仿真 3D 构建移入 VibeWorlding-type，GUI 世界模型集中为未收录的 GUI 分组。详见[更新说明](docs/updates/2026-10-31.md#reclassification)。
-- **2026-10-31** — 根据 10 月 13–29 日检索新增 21 条记录，补充可执行动力学、持久世界引擎、可编辑 3D 构建与运行时评测。严格范围仍由三类主线定义，支撑来源保留在未归类总表中。
-- **2026-10-30** — 继续补充三类主线归类；评测、综述和明显相邻来源保留在总表但不强行归类。仓库目录现在只有三个 section。
-- **2026-10-29** — 加入 VibeWorlding，整理覆盖 124 条记录的全量论文总表，并将 README 主分类收敛为 WorldCoder-type、Code-as-World-type、VibeWorlding-type 三类。封面改为代码—状态—数字世界主题的栅格图。
+- **2026-11-18** — 新增 12 篇文献（三条主线 5 篇、评测 6 篇、GUI 环境资源 1 篇）及 [Invoker-Render 项目发布](https://github.com/inclusionAI/CodeWorldModel)。[详情](docs/updates/2026-11-18.md)
+- **2026-10-31** — 按"代码承担世界的多少部分"重构三类主线（纯状态 / 白模 + 生成式渲染 / 完整 3D），补充 2026 年检索新增 51 条记录，并整理 GUI 世界模型、评测基准与相关综述。[详情](docs/updates/2026-10-31.md)
+
+<details>
+<summary>更早更新（2026-10）</summary>
+
+- **2026-10-30** — 补充三类主线归类，目录收敛为三个主分区。
+- **2026-10-29** — 加入 VibeWorlding、124 条记录的[全量论文总表](docs/paper-master-list.md)与初版三类主线框架。
 - **2026-10-26** — 补入 31 条核实来源，形成当前文献目录基础。
-- **2026-10-19** — 加入中英双语 README、PNG 封面、综述标签占位与分类导航。
+- **2026-10-19** — 加入中英双语 README、封面与分类导航。
 - **2026-10-14** — 初始版本收录 92 条文献记录，提供结构化元数据、BibTeX、分类框架与评测框架。
+
+</details>
 
 <a id="contents"></a>
 ## 导航
 
-[研究动机](#motivation) · [相关综述](#related-surveys) · [综述与资源](#survey--resources) · [核心视角](#at-a-glance) · [文献目录](#paper-collection) · [参与贡献](#contributing) · [致谢](#acknowledgements)
-
-**写作讨论：** [三类框架](docs/coarse-taxonomy.md) · [全量论文总表](docs/paper-master-list.md) · [分类 JSON](data/classification.json) · [本轮更新](docs/updates/2026-11-18.md)
+[研究动机](#motivation) · [更新](#news) · [三类框架](#taxonomy) · [文献目录](#paper-collection) · [相关综述](#related-surveys) · [参与贡献](#contributing) · [致谢](#acknowledgements)
 
 <!-- NAVIGATION:BEGIN -->
 
@@ -110,39 +75,18 @@
 
 <!-- NAVIGATION:END -->
 
-<a id="survey--resources"></a>
-## 综述与资源
+**更多资源：** [综述入口](docs/survey.md) · [分类与范围](docs/taxonomy.md) · [评测框架](docs/evaluation.md) · [详细核查表](docs/catalogue.md) · [中文综述大纲](docs/survey-outline.md) · [BibTeX](papers.bib) · [结构化数据](data/papers.json)
 
-综述**正在撰写**。[综述入口](docs/survey.md) 集中提供当前大纲、概念框架与文献资料；正式发布后，论文与配套材料也将在这里更新。顶部的 arXiv 与 Semantic Scholar Citations 标签目前预留为空。
+<a id="taxonomy"></a>
+## 三类主线框架
 
-| 研究与浏览 | 写作与贡献 |
-|---|---|
-| [**分类与范围**](docs/taxonomy.md) — 代码的语义职责 | [**中文综述大纲**](docs/survey-outline.md) — 研究问题与章节组织 |
-| [**评测框架**](docs/evaluation.md) — 从运行正确性到 agent 使用价值 | [**BibTeX 文献库**](papers.bib) — 稳定的引用键 |
-| [**详细核查表**](docs/catalogue.md) — 日期、定位、核查深度与证据说明 | [**结构化数据**](data/papers.json) — 原始来源与机制标签 |
-
-论文标题和方法名保留原文，本页提供中文机制摘要。README 首页只采用三类主线；评测框架及详细核查文档以英文为主。
-
-<a id="at-a-glance"></a>
-## 核心视角
-
-| 代码承载的语义 | 支持的能力 | 代表工作 |
-|---|---|---|
-| **转移与机制** | 执行规则、预测后果与规划 | [WorldCoder](https://arxiv.org/abs/2402.12275)、[OneLife](https://arxiv.org/abs/2510.12088)、[General Game Playing](https://arxiv.org/abs/2510.04542) |
-| **观测与外观** | 以可渲染代码预测界面或场景 | [gWorld](https://arxiv.org/abs/2602.01576)、[Code2World](https://arxiv.org/abs/2602.09856)、[AppDeltaWorld](https://arxiv.org/abs/2608.05891) |
-| **执行与观测的耦合** | 维护世界状态，并连接到视觉输出 | [Web World Models](https://arxiv.org/abs/2512.23676)、[Programmable World Model](https://arxiv.org/abs/2609.10540)、[Magpie](https://arxiv.org/abs/2608.27168) |
-
-程序来源、验证过程与下游用途构成另一组属性。[分类框架](docs/taxonomy.md) 解释这些属性如何贯通不同研究路线。
-
-### 三类写作主线（初版）
-
-| 初版主类 | 核心问题 | 代表工作 |
+| 主类（代码承担……） | 核心问题 | 代表工作 |
 |---|---|---|
 | **WorldCoder-type** · 程序化动力学（纯状态） | 代码能否预测动作后果并支持规划？ | [WorldCoder](https://arxiv.org/abs/2402.12275)、[TheoryCoder](https://arxiv.org/abs/2503.20124)、[OneLife](https://arxiv.org/abs/2510.12088)、[Code World Models for General Game Playing](https://arxiv.org/abs/2510.04542) |
 | **Code-as-World-type** · 白模世界 + 生成式渲染 | 代码维护的白模/proxy 世界状态与规则，能否驱动生成式渲染的世界？ | [Code World Model](https://arxiv.org/abs/2608.25927)、[Programmable World Model](https://arxiv.org/abs/2609.10540)、[AgentGarten](https://arxiv.org/abs/2610.12374)、[Oneira](https://arxiv.org/abs/2610.01614) |
 | **VibeWorlding-type** · agentic 3D 世界构建 | agent 能否用代码写出并编辑完整 3D 世界（含静态与可仿真场景）？ | [VibeWorlding](https://arxiv.org/abs/2608.15265)、[WorldClaw](https://arxiv.org/abs/2608.05248)、[USDCraft](https://arxiv.org/abs/2610.11322)、[SceneRig](https://arxiv.org/abs/2610.28585) |
 
-三类按"代码承担了世界的多少部分"划分：只有状态、白模世界加生成式渲染、完整 3D 世界。[三类框架说明](docs/coarse-taxonomy.md) 给出具体判据。其余记录统一放在[其他](#papers-other)下，分为 [GUI 世界模型](#papers-other-gui)和按评测对象分组的[评测基准](#papers-other-benchmark)。
+三类按"代码承担了世界的多少部分"划分，具体判据见[三类框架说明](docs/coarse-taxonomy.md)。其余记录统一放在[其他](#papers-other)下（[GUI 世界模型](#papers-other-gui)与[评测基准](#papers-other-benchmark)）。
 
 <a id="paper-collection"></a>
 ## 文献目录
@@ -699,10 +643,56 @@ README 只按三类主线浏览；未归类的小型、评测与相邻来源保�
 
 <!-- CATALOG:END -->
 
+<a id="related-surveys"></a>
+## 相关综述：我们的不同之处
+
+<!-- RELATED:BEGIN -->
+
+相关综述以视频模型或通用世界模型为中心；本综述以**可执行代码作为世界的载体**为纳入标准，按代码承担了世界的多少部分（纯状态 / 白模 + 生成式渲染 / 完整 3D）组织文献，视频模型只作为可选的渲染器出现。
+
+<details>
+<summary><strong>展开查看与 8 篇相关综述的逐条对比</strong></summary>
+
+- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40191)
+  <br><sub>围绕视频生成模型的 agent harness 综述视频生产、交互式世界建模和递归自我改进；作为相关综述保留。</sub>
+  <br>**与本综述的区别：** 该综述以视频生成模型为中心，梳理围绕它构建的 agent harness（视频制作、交互式世界建模、递归自我改进），代码只是 harness 的组件之一。本综述以代码为世界的载体：代码承担状态与规则、白模世界或完整 3D 世界，视频模型只是可选的渲染器之一。
+
+- **AI for Games in the Foundation Model Era** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2609.16679-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.16679)
+  <br><sub>按六种角色综述游戏全生命周期中的 AI：从玩游戏、建模游戏到构建、运行时适配与测试。</sub>
+  <br>**与本综述的区别：** 该综述覆盖游戏领域的方方面面，包括学习型游戏世界模型与 AI 辅助开发。本综述中游戏只是若干领域之一，重点是以可执行代码写成的游戏规则与世界。
+
+- **From Generation to Simulation: How Far Are World Models from Being True Simulators?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2608.23070-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.23070)
+  <br><sub>以传统模拟器的八项能力为标尺评估 200 项生成式世界模型工作，发现结构化状态反馈最受忽视。</sub>
+  <br>**与本综述的区别：** 该综述考察潜变量、视频和联合嵌入世界模型距离模拟器还有多远。代码世界模型走的是相反路线：从带显式状态的可执行基底出发；本综述研究这一基底如何被归纳、构建和渲染。
+
+- **From Pixels to States: Rethinking Interactive World Models as Game Engines** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2607.14076-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.14076)
+  <br><sub>以游戏引擎的&quot;动作—状态—观测&quot;循环为视角综述交互式游戏世界模型，并发布带状态标注的《黑神话：悟空》数据引擎。</sub>
+  <br>**与本综述的区别：** 该综述主张视频世界模型应恢复游戏引擎中的显式状态循环。Code-as-World 方法把这一循环保留在可执行代码中，视频模型只负责渲染；本综述比较的是代码承担了这一循环的多少部分。
+
+- **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.12191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.12191)
+  <br><sub>综述 LLM agent 环境的建模、符号与神经合成、评测以及 agent 与环境的协同演化。</sub>
+  <br>**与本综述的区别：** 该综述把环境视为 agent 的训练基础设施。本综述只关注其代码充当世界模型、预测或模拟世界演化的情形，基准和合成任务环境居于次要位置。
+
+- **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.09032-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09032)
+  <br><sub>综述面向 LLM agent 的文本世界模型（预测下一个网页、终端输出或 API 响应），涵盖 LLM 作为世界模型与代码作为世界模型的构建、应用与评测。</sub>
+  <br>**与本综述的区别：** 该综述聚焦文本环境，把"代码作为世界模型"视为一种构建范式。本综述以代码世界本身为主题，并从文本与符号状态扩展到白模加生成式渲染以及完整 3D 世界。
+
+- **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.22748)
+  <br><sub>以&quot;层级 × 规律&quot;分类综述面向 agent 的世界模型：预测器、模拟器、演化器三个层级，横跨物理、数字、社会与科学四类规律。</sub>
+  <br>**与本综述的区别：** 该综述按能力层级与规律类型梳理 400 余项工作，代码化模型只是众多实现方式之一。本综述的组织问题是代码在世界中承担什么，只收录以代码为世界载体的方法。
+
+- **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** `2025` [![arXiv](https://img.shields.io/badge/arXiv-2503.18971-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.18971)
+  <br><sub>综述用 LLM 将规划问题形式化（如 PDDL）并修正规格、交由现成自动规划器求解的研究。</sub>
+  <br>**与本综述的区别：** 该综述覆盖 WorldCoder-type 的一个分支：由语言写出的符号规划模型。本综述将其与 Python 转移程序、物理残差、生成式渲染的代码世界和 3D 世界程序放在同一框架下。
+
+</details>
+
+<!-- RELATED:END -->
+
 <a id="contributing"></a>
 ## 参与贡献
 
-欢迎补充论文、修正信息和提出有价值的比较。来源核查与分类约定见[贡献指南](CONTRIBUTING.md)，也可以[提交 issue](https://github.com/MichaelCao0/Code-world-survey/issues/new)。
+欢迎补充论文、修正信息和提出有价值的比较。来源核查与分类约定见[贡献指南](CONTRIBUTING.md)，也可以[提交 issue](https://github.com/MichaelCao0/Awesome-Code-World-Model/issues/new)。
 
 两份 README 共享 [data/papers.json](data/papers.json) 中的论文数据，中文摘要保存在 [data/readme.zh-CN.json](data/readme.zh-CN.json)。更新后运行：
 
@@ -734,4 +724,4 @@ python3 scripts/build_catalog.py --check
 
 首页组织参考了 [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)。封面为本仓库原创。感谢相关论文作者开放研究成果与资源。
 
-<p align="center"><a href="#code-centric-world-models">返回顶部 ↑</a></p>
+<p align="center"><a href="#code-world-models">返回顶部 ↑</a></p>

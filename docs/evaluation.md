@@ -1,6 +1,6 @@
 # Evaluation and evidence
 
-A code-centric world model has several interfaces that can be evaluated independently: the program, its transitions, its state, its rendered observations, and the agent that uses them. A useful evaluation reports which interface is tested and what reference establishes correctness.
+A code world model has several interfaces that can be evaluated independently: the program, its transitions, its state, its rendered observations, and the agent that uses them. A useful evaluation reports which interface is tested and what reference establishes correctness.
 
 ## Evidence layers
 

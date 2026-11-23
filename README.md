@@ -1,26 +1,31 @@
 <div align="center">
 
-# Code-Centric World Models
+# Code World Models
 
-**Executable Dynamics · Persistent Worlds · Renderable Observations**
+<h4>Executable Dynamics · Persistent Worlds · Renderable Observations</h4>
 
-A living literature collection and home for our forthcoming survey.
-
-**English** | [简体中文](README.zh-CN.md)
+<p>
+  A curated literature collection and companion hub for our forthcoming survey.<br>
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a>
+</p>
 
 <!-- BADGES:BEGIN -->
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome) [![GitHub stars](https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=social)](https://github.com/MichaelCao0/Awesome-Code-World-Model/stargazers) [![GitHub forks](https://img.shields.io/github/forks/MichaelCao0/Awesome-Code-World-Model?style=social)](https://github.com/MichaelCao0/Awesome-Code-World-Model/network/members) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome) [![GitHub stars](https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=flat&logo=github&color=181717)](https://github.com/MichaelCao0/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-2ea44f?style=flat)](CONTRIBUTING.md)
 
 [![Source records](assets/badges/sources.svg)](#paper-collection) [![Reading sections](assets/badges/topics.svg)](#contents) [![Literature cutoff](assets/badges/cutoff.svg)](docs/review-protocol.md)
 
-![Survey arXiv](https://img.shields.io/badge/arXiv-survey%20pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white) ![Survey Semantic Scholar citations](https://img.shields.io/badge/Semantic%20Scholar-citations%20pending-1857b6?style=flat-square&logo=semanticscholar&logoColor=white)
-
 <!-- BADGES:END -->
 
-[📝 Survey Hub](docs/survey.md) · [📚 Paper Collection](#paper-collection) · [🧭 Taxonomy](docs/taxonomy.md) · [📖 BibTeX](papers.bib) · [🤝 Contributing](CONTRIBUTING.md)
+<p>
+  <a href="#paper-collection"><strong>📚 Paper Collection</strong></a> ·
+  <a href="#taxonomy"><strong>🧭 Taxonomy</strong></a> ·
+  <a href="docs/survey.md"><strong>📝 Survey Hub</strong></a> ·
+  <a href="papers.bib"><strong>📖 BibTeX</strong></a> ·
+  <a href="CONTRIBUTING.md"><strong>🤝 Contributing</strong></a>
+</p>
 
-<p><img src="./assets/banner.png" alt="Worlds, made executable: code, persistent state, and rendered observations" width="1280"></p>
+<p><img src="./assets/banner.png" alt="Worlds, made executable: code, persistent state, and rendered observations" width="960"></p>
 
 </div>
 
@@ -29,71 +34,33 @@ A living literature collection and home for our forthcoming survey.
 
 As coding agents become increasingly capable of **generating, executing, and refining complex programs**, code is emerging as a promising representation for world modeling.
 
-Beyond predicting pixels, code-centric world models enable **explicit dynamics, persistent states, and programmable interactions**, offering a complementary path toward more **controllable, editable, and verifiable worlds**.
+Beyond predicting pixels, code world models enable **explicit dynamics, persistent states, and programmable interactions**, offering a complementary path toward more **controllable, editable, and verifiable worlds**.
 
 > [!NOTE]
-> **📝 We are writing a survey on code-centric world models.** Explore the [survey hub](docs/survey.md) for our outline, framework, and bibliography.
+> **📝 We are writing a survey on code world models.** Explore the [survey hub](docs/survey.md) for our outline, framework, and bibliography.
 >
 > **🤝 PRs are welcome!** Help us add missing papers, correct metadata, refine the taxonomy, or improve the survey discussion. See the [contribution guide](CONTRIBUTING.md) to get started.
 
-<a id="related-surveys"></a>
-## Related surveys & how we differ
-
-<!-- RELATED:BEGIN -->
-
-Related surveys centre on video models or world models in general. This survey takes **executable code as the substrate of the world** as its inclusion criterion and organises the literature by how much of the world code carries (state only / whitebox + generative rendering / full 3D); video models appear only as optional renderers.
-
-- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40191)
-  <br><sub>Surveys agent harnesses for video production, interactive world modeling, and recursive self-improvement; it is a related survey rather than a core code-world method.</sub>
-  <br>**How we differ:** It surveys agent harnesses built around video generation models, covering video production, interactive world modeling and recursive self-improvement, so the video model is the centre and code is one harness component. Here code is the world substrate: it carries state and rules, a whitebox world, or the full 3D world, and a video model is only one possible renderer.
-
-- **AI for Games in the Foundation Model Era** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2609.16679-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.16679)
-  <br><sub>Surveys AI across the game lifecycle in six roles, from playing and modeling games to building, adapting at runtime and testing them.</sub>
-  <br>**How we differ:** It covers games broadly, including learned game-world models and AI-assisted development. Here games are one domain among several, and the focus is on game rules and worlds written as executable code.
-
-- **From Generation to Simulation: How Far Are World Models from Being True Simulators?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2608.23070-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.23070)
-  <br><sub>Measures generative world models against eight capabilities of traditional simulators across 200 works, finding structured state feedback the most neglected.</sub>
-  <br>**How we differ:** It asks how far latent, video and joint-embedding world models are from simulators. Code world models take the opposite route: they start from an executable simulator-like substrate with explicit state, and this survey studies how that substrate is induced, built and rendered.
-
-- **From Pixels to States: Rethinking Interactive World Models as Game Engines** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2607.14076-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.14076)
-  <br><sub>Reviews interactive game world models through the game-engine loop of action, state and observation, and releases a state-annotated Black Myth: Wukong gameplay data engine.</sub>
-  <br>**How we differ:** It argues that video world models should recover the explicit state loop of game engines. Code-as-World methods keep that loop in executable code and use video models only to render it; this survey compares how much of the loop code owns.
-
-- **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.12191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.12191)
-  <br><sub>Surveys environments for LLM agents across modeling, symbolic and neural synthesis, evaluation, and agent-environment co-evolution.</sub>
-  <br>**How we differ:** It treats environments as training infrastructure for agents. Here an environment matters only when its code acts as a world model, predicting or simulating how the world evolves; benchmarks and synthetic task environments are secondary.
-
-- **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.09032-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09032)
-  <br><sub>Surveys text world models for LLM agents, which predict the next webpage, terminal output or API response, covering LLM-as-WM and code-as-WM construction, applications and evaluation.</sub>
-  <br>**How we differ:** It covers textual environments and treats code-as-world-model as one construction paradigm. Here code-as-world is the subject itself, extended from text and symbolic states to whitebox worlds with generative rendering and full 3D worlds.
-
-- **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.22748)
-  <br><sub>Surveys world models for agents with a levels-by-laws taxonomy: predictor, simulator and evolver levels across physical, digital, social and scientific regimes.</sub>
-  <br>**How we differ:** It organizes world models by capability level and law regime across 400+ works, with code-based models as one implementation among many. Here the organizing question is what executable code carries in the world, and only methods where code is the world substrate are included.
-
-- **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** `2025` [![arXiv](https://img.shields.io/badge/arXiv-2503.18971-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.18971)
-  <br><sub>Surveys LLMs that formalize and refine planning specifications such as PDDL for off-the-shelf automated planners.</sub>
-  <br>**How we differ:** It covers one corner of the WorldCoder-type line: symbolic planning models written from language. Here such models sit alongside Python transition programs, physical residuals, generatively rendered code worlds and 3D world programs.
-
-<!-- RELATED:END -->
-
+<a id="news"></a>
 ## News
 
-- **2026-11-18** — Added 12 sources: five across the three families, six benchmarks and one GUI environment suite. [Papers and placement notes](docs/updates/2026-11-18.md). Also added the [Invoker-Render project release](https://github.com/inclusionAI/CodeWorldModel).
-- **2026-10-31 (coverage pass)** — Added 30 records from a 2026 search pass, keeping only work that models an interactive world: 9 WorldCoder-type, 7 VibeWorlding-type, 3 benchmarks, 4 GUI world models and 7 related surveys. See the [update notes](docs/updates/2026-10-31.md#coverage-pass).
-- **2026-10-31 (Other & related surveys)** — Removed five comparator/adjacent records (StatePlay, Simulate to Generalize, Software World Models, Agent-Editing World Model, AW-0). Grouped everything outside the three families under **Other** (GUI world models · benchmarks by evaluation target, now including ExeWorldBench and BlenderWorld) and added a [related-surveys](#related-surveys) section that states how this survey differs.
-- **2026-10-31 (reclassification)** — Split the three families by how much of the world code carries: WorldCoder-type (state only), Code-as-World-type (whitebox world + generative rendering), VibeWorlding-type (full 3D, static scenes included). Tightened Code-as-World-type, moved simulation-ready 3D construction to VibeWorlding-type, and grouped GUI world models as an unassigned GUI section. See the [update notes](docs/updates/2026-10-31.md#reclassification).
-- **2026-10-31** — Added 21 records from the 2026-10-13–29 search pass, including executable dynamics, persistent world engines, editable 3D construction, and execution-grounded benchmarks. The strict catalogue boundary remains the three-family map; supporting sources stay unassigned.
-- **2026-10-30** — Expanded the three-family assignments while leaving benchmarks and adjacent sources unassigned in the master list. The repository now has exactly three catalogue sections.
-- **2026-10-29** — Added VibeWorlding, a 124-record [paper master list](docs/paper-master-list.md), and the initial three-family map: WorldCoder-type, Code-as-World-type, and VibeWorlding-type. Replaced the cover with a generated raster image.
-- **2026-10-19** — Bilingual READMEs, a PNG cover, reserved survey links, and visual navigation.
-- **2026-10-14** — Initial release: 92 source records, structured metadata, BibTeX, and a shared taxonomy and evaluation framework.
+- **2026-11-18** — Added 12 papers (5 across the three families, 6 benchmarks, 1 GUI suite) and the [Invoker-Render project](https://github.com/inclusionAI/CodeWorldModel). [Details](docs/updates/2026-11-18.md)
+- **2026-10-31** — Reorganized the catalogue around the three-family taxonomy (state only / whitebox + generative rendering / full 3D), added 51 records from our 2026 coverage pass, and grouped GUI world models, benchmarks, and related surveys. [Details](docs/updates/2026-10-31.md)
 
+<details>
+<summary>Earlier updates (2026-10)</summary>
+
+- **2026-10-30** — Expanded three-family assignments; repository converged to three primary catalogue sections.
+- **2026-10-29** — Added VibeWorlding, the 124-record [paper master list](docs/paper-master-list.md), and the initial three-family map.
+- **2026-10-19** — Added bilingual READMEs, cover illustration, and section navigation.
+- **2026-10-14** — Initial release with 92 source records, structured metadata, BibTeX, taxonomy, and evaluation framework.
+
+</details>
+
+<a id="contents"></a>
 ## Contents
 
-[Motivation](#motivation) · [Related surveys](#related-surveys) · [Survey & resources](#survey--resources) · [At a glance](#at-a-glance) · [Paper collection](#paper-collection) · [Contributing](#contributing) · [Acknowledgements](#acknowledgements)
-
-**Writing discussion:** [Three-family map](docs/coarse-taxonomy.md) · [Paper master list](docs/paper-master-list.md) · [Classification JSON](data/classification.json) · [Update notes](docs/updates/2026-11-18.md)
+[Motivation](#motivation) · [News](#news) · [Taxonomy](#taxonomy) · [Paper collection](#paper-collection) · [Related surveys](#related-surveys) · [Contributing](#contributing) · [Acknowledgements](#acknowledgements)
 
 <!-- NAVIGATION:BEGIN -->
 
@@ -107,27 +74,10 @@ Related surveys centre on video models or world models in general. This survey t
 
 <!-- NAVIGATION:END -->
 
-## Survey & resources
+**More resources:** [Survey Hub](docs/survey.md) · [Taxonomy & Scope](docs/taxonomy.md) · [Evaluation](docs/evaluation.md) · [Annotated Catalogue](docs/catalogue.md) · [BibTeX](papers.bib) · [Structured Data](data/papers.json)
 
-Our survey is **in preparation**. The [survey hub](docs/survey.md) brings together the current outline, conceptual framework, and bibliography, and will host the manuscript and accompanying materials when released.
-
-| Read & explore | Write & contribute |
-|---|---|
-| [**Taxonomy & scope**](docs/taxonomy.md) — the semantic roles of code | [**Survey outline / 中文大纲**](docs/survey-outline.md) — research questions and chapters |
-| [**Evaluation framework**](docs/evaluation.md) — from runtime correctness to agent utility | [**BibTeX bibliography**](papers.bib) — stable citation keys |
-| [**Annotated catalogue**](docs/catalogue.md) — dates, scope, review depth, and evidence notes | [**Structured data**](data/papers.json) — source metadata and mechanism tags |
-
-## At a glance
-
-| Code carries… | What it enables | Start with |
-|---|---|---|
-| **Transitions & mechanisms** | Execute rules, predict consequences, and plan | [WorldCoder](https://arxiv.org/abs/2402.12275), [OneLife](https://arxiv.org/abs/2510.12088), [General Game Playing](https://arxiv.org/abs/2510.04542) |
-| **Observations & appearance** | Predict a screen or scene as renderable code | [gWorld](https://arxiv.org/abs/2602.01576), [Code2World](https://arxiv.org/abs/2602.09856), [AppDeltaWorld](https://arxiv.org/abs/2608.05891) |
-| **Execution + observation** | Maintain world state and connect it to visual output | [Web World Models](https://arxiv.org/abs/2512.23676), [Programmable World Model](https://arxiv.org/abs/2609.10540), [Magpie](https://arxiv.org/abs/2608.27168) |
-
-Program origin, verification, and downstream use form a second set of attributes. The [taxonomy](docs/taxonomy.md) explains how they connect across branches.
-
-### Three-family writing map
+<a id="taxonomy"></a>
+## Three-Family Taxonomy
 
 | Family (code carries…) | Core question | Representative anchors |
 |---|---|---|
@@ -135,7 +85,7 @@ Program origin, verification, and downstream use form a second set of attributes
 | **Code-as-World-type** · Whitebox Worlds + Generative Rendering | Can executable state and rules over a whitebox/proxy world drive a generatively rendered world? | [Code World Model](https://arxiv.org/abs/2608.25927), [Programmable World Model](https://arxiv.org/abs/2609.10540), [AgentGarten](https://arxiv.org/abs/2610.12374), [Oneira](https://arxiv.org/abs/2610.01614) |
 | **VibeWorlding-type** · Agentic 3D World Construction | Can an agent write and edit a full 3D world in code, static or simulation-ready? | [VibeWorlding](https://arxiv.org/abs/2608.15265), [WorldClaw](https://arxiv.org/abs/2608.05248), [USDCraft](https://arxiv.org/abs/2610.11322), [SceneRig](https://arxiv.org/abs/2610.28585) |
 
-The families are split by how much of the world code carries: state only, a whitebox world rendered generatively, or the full 3D world. The [three-family guide](docs/coarse-taxonomy.md) gives the placement rules. Everything else sits under [Other](#papers-other): [GUI world models](#papers-other-gui) and [benchmarks](#papers-other-benchmark), the latter grouped by what they evaluate.
+The three families are split by how much of the world code carries; see the [three-family guide](docs/coarse-taxonomy.md) for placement rules. Everything else sits under [Other](#papers-other) ([GUI world models](#papers-other-gui) and [benchmarks](#papers-other-benchmark)).
 
 <a id="paper-collection"></a>
 ## Paper collection
@@ -692,9 +642,55 @@ Each primary family is ordered by recorded publication date; the annotated catal
 
 <!-- CATALOG:END -->
 
+<a id="related-surveys"></a>
+## Related surveys & how we differ
+
+<!-- RELATED:BEGIN -->
+
+Related surveys centre on video models or world models in general. This survey takes **executable code as the substrate of the world** as its inclusion criterion and organises the literature by how much of the world code carries (state only / whitebox + generative rendering / full 3D); video models appear only as optional renderers.
+
+<details>
+<summary><strong>Compare with 8 related surveys</strong></summary>
+
+- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.40191)
+  <br><sub>Surveys agent harnesses for video production, interactive world modeling, and recursive self-improvement; it is a related survey rather than a core code-world method.</sub>
+  <br>**How we differ:** It surveys agent harnesses built around video generation models, covering video production, interactive world modeling and recursive self-improvement, so the video model is the centre and code is one harness component. Here code is the world substrate: it carries state and rules, a whitebox world, or the full 3D world, and a video model is only one possible renderer.
+
+- **AI for Games in the Foundation Model Era** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2609.16679-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.16679)
+  <br><sub>Surveys AI across the game lifecycle in six roles, from playing and modeling games to building, adapting at runtime and testing them.</sub>
+  <br>**How we differ:** It covers games broadly, including learned game-world models and AI-assisted development. Here games are one domain among several, and the focus is on game rules and worlds written as executable code.
+
+- **From Generation to Simulation: How Far Are World Models from Being True Simulators?** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2608.23070-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.23070)
+  <br><sub>Measures generative world models against eight capabilities of traditional simulators across 200 works, finding structured state feedback the most neglected.</sub>
+  <br>**How we differ:** It asks how far latent, video and joint-embedding world models are from simulators. Code world models take the opposite route: they start from an executable simulator-like substrate with explicit state, and this survey studies how that substrate is induced, built and rendered.
+
+- **From Pixels to States: Rethinking Interactive World Models as Game Engines** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2607.14076-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.14076)
+  <br><sub>Reviews interactive game world models through the game-engine loop of action, state and observation, and releases a state-annotated Black Myth: Wukong gameplay data engine.</sub>
+  <br>**How we differ:** It argues that video world models should recover the explicit state loop of game engines. Code-as-World methods keep that loop in executable code and use video models only to render it; this survey compares how much of the loop code owns.
+
+- **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.12191-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.12191)
+  <br><sub>Surveys environments for LLM agents across modeling, symbolic and neural synthesis, evaluation, and agent-environment co-evolution.</sub>
+  <br>**How we differ:** It treats environments as training infrastructure for agents. Here an environment matters only when its code acts as a world model, predicting or simulating how the world evolves; benchmarks and synthetic task environments are secondary.
+
+- **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2606.09032-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09032)
+  <br><sub>Surveys text world models for LLM agents, which predict the next webpage, terminal output or API response, covering LLM-as-WM and code-as-WM construction, applications and evaluation.</sub>
+  <br>**How we differ:** It covers textual environments and treats code-as-world-model as one construction paradigm. Here code-as-world is the subject itself, extended from text and symbolic states to whitebox worlds with generative rendering and full 3D worlds.
+
+- **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** `2026` [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.22748)
+  <br><sub>Surveys world models for agents with a levels-by-laws taxonomy: predictor, simulator and evolver levels across physical, digital, social and scientific regimes.</sub>
+  <br>**How we differ:** It organizes world models by capability level and law regime across 400+ works, with code-based models as one implementation among many. Here the organizing question is what executable code carries in the world, and only methods where code is the world substrate are included.
+
+- **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** `2025` [![arXiv](https://img.shields.io/badge/arXiv-2503.18971-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.18971)
+  <br><sub>Surveys LLMs that formalize and refine planning specifications such as PDDL for off-the-shelf automated planners.</sub>
+  <br>**How we differ:** It covers one corner of the WorldCoder-type line: symbolic planning models written from language. Here such models sit alongside Python transition programs, physical residuals, generatively rendered code worlds and 3D world programs.
+
+</details>
+
+<!-- RELATED:END -->
+
 ## Contributing
 
-Papers, corrections, and useful comparisons are welcome. See the [contribution guide](CONTRIBUTING.md) for source verification and classification conventions, or [open an issue](https://github.com/MichaelCao0/Code-world-survey/issues/new).
+Papers, corrections, and useful comparisons are welcome. See the [contribution guide](CONTRIBUTING.md) for source verification and classification conventions, or [open an issue](https://github.com/MichaelCao0/Awesome-Code-World-Model/issues/new).
 
 The collection is generated from [data/papers.json](data/papers.json). To update it locally:
 
@@ -725,4 +721,4 @@ Related preprints are linked in the structured data. Counts describe bibliograph
 
 The presentation takes inspiration from [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models). The cover illustration is original to this repository. We thank the authors whose papers and public resources make this collection possible.
 
-<p align="center"><a href="#code-centric-world-models">Back to top ↑</a></p>
+<p align="center"><a href="#code-world-models">Back to top ↑</a></p>

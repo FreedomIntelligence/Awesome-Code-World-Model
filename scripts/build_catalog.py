@@ -223,13 +223,26 @@ def catalogue(data, localized=None):
 def related_surveys(data, localized=None):
     surveys = group_papers(data, 'survey')
     if localized:
-        lines = ['相关综述以视频模型或通用世界模型为中心；本综述以**可执行代码作为世界的载体**为纳入标准，按代码承担了世界的多少部分（纯状态 / 白模 + 生成式渲染 / 完整 3D）组织文献，视频模型只作为可选的渲染器出现。', '']
+        lines = [
+            '相关综述以视频模型或通用世界模型为中心；本综述以**可执行代码作为世界的载体**为纳入标准，按代码承担了世界的多少部分（纯状态 / 白模 + 生成式渲染 / 完整 3D）组织文献，视频模型只作为可选的渲染器出现。',
+            '',
+            '<details>',
+            f'<summary><strong>展开查看与 {len(surveys)} 篇相关综述的逐条对比</strong></summary>',
+            '',
+        ]
     else:
-        lines = ['Related surveys centre on video models or world models in general. This survey takes **executable code as the substrate of the world** as its inclusion criterion and organises the literature by how much of the world code carries (state only / whitebox + generative rendering / full 3D); video models appear only as optional renderers.', '']
+        lines = [
+            'Related surveys centre on video models or world models in general. This survey takes **executable code as the substrate of the world** as its inclusion criterion and organises the literature by how much of the world code carries (state only / whitebox + generative rendering / full 3D); video models appear only as optional renderers.',
+            '',
+            '<details>',
+            f'<summary><strong>Compare with {len(surveys)} related surveys</strong></summary>',
+            '',
+        ]
     for p in surveys:
         lines += paper_lines(p, localized)[:2]
         en, zh = data['comparisons'][p['id']]
         lines += [f"  <br>**{'与本综述的区别：' if localized else 'How we differ:'}** {zh if localized else en}", '']
+    lines.append('</details>')
     return '\n'.join(lines).rstrip()
 
 def navigation(data, localized=None):
@@ -297,13 +310,13 @@ def badge(label, value, color='#0f766e', left_color='#40564e'):
     left = max(42, len(label) * 7 + 16)
     right = max(36, len(value) * 7 + 16) if value else 0
     title = escape(f'{label}: {value}' if value else label)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{left + right}" height="22" role="img" aria-label="{title}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{left + right}" height="20" role="img" aria-label="{title}">
   <title>{title}</title>
-  <rect width="{left + right}" height="22" rx="3" fill="{color}"/>
-  <path d="M3 0h{left - 3}v22H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Z" fill="{left_color if value else color}"/>
+  <rect width="{left + right}" height="20" rx="3" fill="{color}"/>
+  <path d="M3 0h{left - 3}v20H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Z" fill="{left_color if value else color}"/>
   <g fill="#fff" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="11">
-    <text x="{left / 2:g}" y="15">{escape(label)}</text>
-    <text x="{left + right / 2:g}" y="15">{escape(value)}</text>
+    <text x="{left / 2:g}" y="14">{escape(label)}</text>
+    <text x="{left + right / 2:g}" y="14">{escape(value)}</text>
   </g>
 </svg>
 '''
@@ -322,9 +335,8 @@ def badge_row(survey_links):
     repo = 'https://github.com/MichaelCao0/Awesome-Code-World-Model'
     identity = [
         ('https://awesome.re/badge.svg', 'Awesome', 'https://github.com/sindresorhus/awesome'),
-        (f'https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=social', 'GitHub stars', f'{repo}/stargazers'),
-        (f'https://img.shields.io/github/forks/MichaelCao0/Awesome-Code-World-Model?style=social', 'GitHub forks', f'{repo}/network/members'),
-        ('https://img.shields.io/badge/PRs-welcome-brightgreen.svg', 'PRs welcome', 'CONTRIBUTING.md'),
+        ('https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=flat&logo=github&color=181717', 'GitHub stars', f'{repo}/stargazers'),
+        ('https://img.shields.io/badge/PRs-welcome-2ea44f?style=flat', 'PRs welcome', 'CONTRIBUTING.md'),
     ]
     metrics = [
         ('sources', 'Source records', '#paper-collection'),
@@ -332,17 +344,15 @@ def badge_row(survey_links):
         ('cutoff', 'Literature cutoff', 'docs/review-protocol.md'),
     ]
     identity_row = ' '.join(f'[![{alt}]({source})]({target})' for source, alt, target in identity)
-    metric_row = ' '.join(f'[![{alt}](assets/badges/{name}.svg)]({target})' for name, alt, target in metrics)
-    arxiv_badge = ('https://img.shields.io/badge/arXiv-survey%20pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white'
-                   if not survey_links['arxiv_url'] else
-                   'https://img.shields.io/badge/arXiv-paper-b31b1b?style=flat-square&logo=arxiv&logoColor=white')
-    scholar_badge = (survey_links['semantic_scholar_citations_badge_url'] or
-                     'https://img.shields.io/badge/Semantic%20Scholar-citations%20pending-1857b6?style=flat-square&logo=semanticscholar&logoColor=white')
-    publication = [
-        f"[![Survey arXiv]({arxiv_badge})]({survey_links['arxiv_url']})" if survey_links['arxiv_url'] else f'![Survey arXiv]({arxiv_badge})',
-        f"[![Survey Semantic Scholar citations]({scholar_badge})]({survey_links['semantic_scholar_url']})" if survey_links['semantic_scholar_url'] else f'![Survey Semantic Scholar citations]({scholar_badge})',
-    ]
-    return identity_row + '\n\n' + metric_row + '\n\n' + ' '.join(publication)
+    metric_badges = [f'[![{alt}](assets/badges/{name}.svg)]({target})' for name, alt, target in metrics]
+    if survey_links['arxiv_url']:
+        arxiv_badge = 'https://img.shields.io/badge/arXiv-survey-b31b1b?style=flat&logo=arxiv&logoColor=white'
+        metric_badges.append(f"[![Survey arXiv]({arxiv_badge})]({survey_links['arxiv_url']})")
+    if survey_links['semantic_scholar_url']:
+        scholar_badge = (survey_links['semantic_scholar_citations_badge_url'] or
+                         'https://img.shields.io/badge/Semantic%20Scholar-citations-1857b6?style=flat&logo=semanticscholar&logoColor=white')
+        metric_badges.append(f"[![Survey Semantic Scholar citations]({scholar_badge})]({survey_links['semantic_scholar_url']})")
+    return identity_row + '\n\n' + ' '.join(metric_badges)
 
 def bib_escape(value):
     replacements = {'\\': r'\textbackslash{}', '&': r'\&', '%': r'\%', '_': r'\_', '#': r'\#', '$': r'\$', '{': r'\{', '}': r'\}'}
