@@ -162,44 +162,38 @@ def section_papers(data, section_id):
 def group_papers(data, group):
     return [p for p in section_papers(data, None) if data['unassigned_groups'].get(p['id']) == group]
 
-def paper_lines(p, localized=None):
+def paper_row(p, localized=None):
     label = md(p['title'])
     if p.get('alias') and p['alias'].lower() not in p['title'].lower():
         label += f" ({md(p['alias'])})"
-    kind = 'arxiv' if p.get('arxiv_id') else 'paper'
-    badge_label = 'arXiv' if p.get('arxiv_id') else 'Project' if p.get('source_type') == 'project' else 'Paper'
-    if p.get('source_type') == 'project':
-        kind = 'project'
-    summary = localized['summaries'][p['id']] if localized else p['summary']
-    badge_source = (f"https://img.shields.io/badge/arXiv-{p['arxiv_id']}-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white"
-                    if p.get('arxiv_id') else f'assets/badges/{kind}.svg')
-    return [f"- **{label}** `{p['year']}` [![{badge_label}]({badge_source})]({p['source_url']})",
-            f"  <br><sub>{escape(summary)}</sub>", '']
+    link_label = 'Project' if p.get('source_type') == 'project' else 'PDF'
+    summary = md(localized['summaries'][p['id']] if localized else p['summary'])
+    return f"| `{p['year']}` | **{label}** | {summary} | [{link_label}]({p['source_url']}) |"
+
+def paper_table(papers, localized=None):
+    header = ('| 年份 | 论文 | 核心机制与简介 | 链接 |' if localized
+              else '| Year | Paper | Summary | Link |')
+    lines = [header, '|---|---|---|:-:|']
+    lines.extend(paper_row(p, localized) for p in papers)
+    return lines
 
 def catalogue(data, localized=None):
-    unassigned = [p for p in data['papers'] if p['section'] is None]
     if localized:
-        lines = [f"**{len(data['papers'])} 条文献来源** · 文献截止日期：**{data['literature_cutoff']}**。", '',
-                 'README 只按三类主线浏览；未归类的小型、评测与相邻来源保留在[全量论文总表](docs/paper-master-list.md)。', '',
-                 '各主类按记录日期倒序排列；完整核查、证据和未归类来源见注释表。']
+        lines = [f"**{len(data['papers'])} 条文献来源** · 截止 **{data['literature_cutoff']}** · 按发布日期倒序排列。完整信息见[详细核查表](docs/catalogue.md)与[全量论文总表](docs/paper-master-list.md)。"]
     else:
-        lines = [f"**{len(data['papers'])} sources** · literature through **{data['literature_cutoff']}**.", '',
-                 'The README groups papers by the three primary families; smaller, benchmark, and adjacent sources remain in the [paper master list](docs/paper-master-list.md).', '',
-                 'Each primary family is ordered by recorded publication date; the annotated catalogue and master list retain the complete corpus.']
+        lines = [f"**{len(data['papers'])} sources** · updated through **{data['literature_cutoff']}** · ordered by date (newest first). Full metadata in the [annotated catalogue](docs/catalogue.md) and [master list](docs/paper-master-list.md)."]
     for index, section in enumerate(data['sections'], 1):
         title, description, folded = PRESENTATION[section['id']]
         if localized:
             title = localized['sections'][section['id']]['title']
             description = localized['sections'][section['id']]['description']
         subset = section_papers(data, section['id'])
-        lines += ['', f'<a id="papers-{section["id"]}"></a>', f'### {index:02d} · {title}', '',
-                  f'*{description}*', '']
-        for p in subset:
-            lines += paper_lines(p, localized)
-        lines += ['[↑ 返回导航](#contents)' if localized else '[↑ Contents](#contents)']
+        lines += ['', f'<a id="papers-{section["id"]}"></a>', f'### {index:02d} · {title} ({len(subset)})', '',
+                  f'*{description}*', '', *paper_table(subset, localized), '',
+                  '[↑ 返回总览](#contents)' if localized else '[↑ Back to overview](#contents)']
     lines += ['', '<a id="papers-other"></a>', '### 其他' if localized else '### Other', '',
               '*不属于三类主线的记录，分为 GUI 世界模型与评测基准两组。*' if localized else
-              '*Records outside the three families, in two groups: GUI world models and benchmarks.*']
+              '*Records outside the three primary families: GUI world models and benchmarks.*']
     for gid, spec in OTHER_GROUPS.items():
         subset = group_papers(data, gid)
         title = spec['title_zh'] if localized else spec['title']
@@ -210,14 +204,11 @@ def catalogue(data, localized=None):
             for tid, (en, zh) in BENCHMARK_TARGETS.items():
                 part = [p for p in subset if data['benchmark_targets'][p['id']] == tid]
                 if part:
-                    lines += [f"**{'评测' if localized else 'Evaluating'} {zh if localized else en}**", '']
-                    for p in part:
-                        lines += paper_lines(p, localized)
+                    lines += [f"**{'评测' if localized else 'Evaluating'} {zh if localized else en}**", '', *paper_table(part, localized), '']
         else:
-            for p in subset:
-                lines += paper_lines(p, localized)
+            lines += [*paper_table(subset, localized), '']
         lines += ['</details>']
-    lines += ['', '[↑ 返回导航](#contents)' if localized else '[↑ Contents](#contents)']
+    lines += ['', '[↑ 返回总览](#contents)' if localized else '[↑ Back to overview](#contents)']
     return '\n'.join(lines)
 
 def related_surveys(data, localized=None):
@@ -229,6 +220,8 @@ def related_surveys(data, localized=None):
             '<details>',
             f'<summary><strong>展开查看与 {len(surveys)} 篇相关综述的逐条对比</strong></summary>',
             '',
+            '| 年份 | 相关综述 | 与本综述的区别 | 链接 |',
+            '|---|---|---|:-:|',
         ]
     else:
         lines = [
@@ -237,33 +230,64 @@ def related_surveys(data, localized=None):
             '<details>',
             f'<summary><strong>Compare with {len(surveys)} related surveys</strong></summary>',
             '',
+            '| Year | Survey | How We Differ | Link |',
+            '|---|---|---|:-:|',
         ]
     for p in surveys:
-        lines += paper_lines(p, localized)[:2]
+        label = md(p['title'])
         en, zh = data['comparisons'][p['id']]
-        lines += [f"  <br>**{'与本综述的区别：' if localized else 'How we differ:'}** {zh if localized else en}", '']
-    lines.append('</details>')
+        diff = md(zh if localized else en)
+        lines.append(f"| `{p['year']}` | **{label}** | {diff} | [PDF]({p['source_url']}) |")
+    lines += ['', '</details>']
     return '\n'.join(lines).rstrip()
 
 def navigation(data, localized=None):
-    entries = []
+    taxonomy_meta = {
+        'worldcoder': (
+            'State & dynamics only',
+            'Does code predict action consequences and support planning?',
+            '纯状态与动力学',
+            '代码能否预测动作后果并支持规划？',
+        ),
+        'code_as_world': (
+            'Whitebox world + generative rendering',
+            'Can executable state & rules drive a generatively rendered world?',
+            '白模世界 + 生成式渲染',
+            '代码维护的白模状态与规则能否驱动生成式渲染？',
+        ),
+        'vibeworlding': (
+            'Full 3D world',
+            'Can an agent write and edit a full 3D world in code?',
+            '完整 3D 世界',
+            'agent 能否用代码构建并编辑完整 3D 世界？',
+        ),
+    }
+    if localized:
+        lines = ['| 分类主线 | 代码承担内容 | 核心问题 | 文献数 |', '|---|---|---|---:|']
+    else:
+        lines = ['| Family | Code Carries | Core Question | Papers |', '|---|---|---|---:|']
     for index, section in enumerate(data['sections'], 1):
         sid = section['id']
         count = len(section_papers(data, sid))
         title = localized['sections'][sid]['title'] if localized else PRESENTATION[sid][0]
-        entries.append(f"[{index:02d} · {title}](#papers-{sid}) <sub>({count})</sub>")
+        short_title = title.split(' · ')[0]
+        carries_en, q_en, carries_zh, q_zh = taxonomy_meta[sid]
+        carries, question = (carries_zh, q_zh) if localized else (carries_en, q_en)
+        lines.append(f"| **[{index:02d} · {short_title}](#papers-{sid})** | {carries} | {question} | **{count}** |")
+    gui_n = len(group_papers(data, 'gui'))
+    bench_n = len(group_papers(data, 'benchmark'))
+    survey_n = len(group_papers(data, 'survey'))
+    other_total = gui_n + bench_n + survey_n
     if localized:
-        lines = ['| 三类主线 |', '|---|']
+        lines.append(
+            f"| **[其他](#papers-other)** | GUI 世界、评测与综述 | "
+            f"[GUI 世界模型](#papers-other-gui) ({gui_n}) · [评测基准](#papers-other-benchmark) ({bench_n}) · [相关综述](#related-surveys) ({survey_n}) | **{other_total}** |"
+        )
     else:
-        lines = ['| Three primary families |', '|---|']
-    lines.extend(f'| {entry} |' for entry in entries)
-    other = ' · '.join(f"[{spec['title_zh'] if localized else spec['title']}](#papers-other-{gid}) <sub>({len(group_papers(data, gid))})</sub>"
-                       for gid, spec in OTHER_GROUPS.items())
-    lines.append(f"| [{'其他' if localized else 'Other'}](#papers-other): {other} |")
-    if localized:
-        lines.append('| [全量论文总表](docs/paper-master-list.md)（含未归类来源） |')
-    else:
-        lines.append('| [Paper master list](docs/paper-master-list.md) (including unassigned sources) |')
+        lines.append(
+            f"| **[Other](#papers-other)** | GUI worlds, benchmarks & surveys | "
+            f"[GUI World Models](#papers-other-gui) ({gui_n}) · [Benchmarks](#papers-other-benchmark) ({bench_n}) · [Related Surveys](#related-surveys) ({survey_n}) | **{other_total}** |"
+        )
     return '\n'.join(lines)
 
 def annotated_catalogue(data):
@@ -306,14 +330,14 @@ def annotated_catalogue(data):
             lines.append(f"| {display_date(p)} | [{label}]({p['source_url']}) | {md(p['summary'])} | {p['scope']} | {DEPTHS[p['review_depth']]} |")
     return '\n'.join(lines) + '\n'
 
-def badge(label, value, color='#0f766e', left_color='#40564e'):
+def badge(label, value, color='#6c8ba8', left_color='#4a5568'):
     left = max(42, len(label) * 7 + 16)
     right = max(36, len(value) * 7 + 16) if value else 0
     title = escape(f'{label}: {value}' if value else label)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{left + right}" height="20" role="img" aria-label="{title}">
   <title>{title}</title>
-  <rect width="{left + right}" height="20" rx="3" fill="{color}"/>
-  <path d="M3 0h{left - 3}v20H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Z" fill="{left_color if value else color}"/>
+  <rect width="{left + right}" height="20" fill="{color}"/>
+  <rect width="{left}" height="20" fill="{left_color if value else color}"/>
   <g fill="#fff" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="11">
     <text x="{left / 2:g}" y="14">{escape(label)}</text>
     <text x="{left + right / 2:g}" y="14">{escape(value)}</text>
@@ -325,34 +349,33 @@ def badges(data, survey_links):
     specs = {'sources': ('Sources', str(len(data['papers']))), 'topics': ('Topics', str(len(data['sections']))),
              'cutoff': ('Literature', data['literature_cutoff']), 'contributions': ('Contributions', 'welcome'),
              'arxiv': ('arXiv', ''), 'paper': ('Paper', ''), 'project': ('Project', '')}
-    output = {ROOT / f'assets/badges/{name}.svg': badge(label, value, '#a33d47' if name == 'arxiv' else '#0f766e')
+    colors = {'arxiv': '#b47b7b', 'paper': '#7b8a97', 'project': '#7b9a8d'}
+    output = {ROOT / f'assets/badges/{name}.svg': badge(label, value, colors.get(name, '#6c8ba8'))
               for name, (label, value) in specs.items()}
-    output[ROOT / 'assets/badges/survey-arxiv.svg'] = badge('arXiv', 'Paper' if survey_links['arxiv_url'] else '—', '#8c959f', '#57606a')
-    output[ROOT / 'assets/badges/survey-citations.svg'] = badge('Semantic Scholar Citations', '—', '#8c959f', '#57606a')
+    output[ROOT / 'assets/badges/survey-arxiv.svg'] = badge('arXiv', 'Paper' if survey_links['arxiv_url'] else '—', '#8c96a0', '#4a5568')
+    output[ROOT / 'assets/badges/survey-citations.svg'] = badge('Semantic Scholar Citations', '—', '#8c96a0', '#4a5568')
     return output
 
-def badge_row(survey_links):
-    repo = 'https://github.com/MichaelCao0/Awesome-Code-World-Model'
-    identity = [
-        ('https://awesome.re/badge.svg', 'Awesome', 'https://github.com/sindresorhus/awesome'),
-        ('https://img.shields.io/github/stars/MichaelCao0/Awesome-Code-World-Model?style=flat&logo=github&color=181717', 'GitHub stars', f'{repo}/stargazers'),
-        ('https://img.shields.io/badge/PRs-welcome-2ea44f?style=flat', 'PRs welcome', 'CONTRIBUTING.md'),
+def badge_row(data, survey_links):
+    repo = 'https://github.com/FreedomIntelligence/Awesome-Code-World-Model'
+    survey_badge = (
+        ('https://img.shields.io/badge/Survey-PDF-b47b7b?style=flat-square&labelColor=4a5568',
+         'Survey PDF', survey_links['arxiv_url'])
+        if survey_links['arxiv_url'] else
+        ('https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568',
+         'Survey PDF coming soon', '#motivation')
+    )
+    items = [
+        (f"https://img.shields.io/badge/Papers-{len(data['papers'])}-6c8ba8?style=flat-square&labelColor=4a5568", 'Papers', '#paper-collection'),
+        survey_badge,
+        ('https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d', 'GitHub stars', f'{repo}/stargazers'),
+        ('https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568', 'PRs welcome', 'CONTRIBUTING.md'),
     ]
-    metrics = [
-        ('sources', 'Source records', '#paper-collection'),
-        ('topics', 'Reading sections', '#contents'),
-        ('cutoff', 'Literature cutoff', 'docs/review-protocol.md'),
-    ]
-    identity_row = ' '.join(f'[![{alt}]({source})]({target})' for source, alt, target in identity)
-    metric_badges = [f'[![{alt}](assets/badges/{name}.svg)]({target})' for name, alt, target in metrics]
-    if survey_links['arxiv_url']:
-        arxiv_badge = 'https://img.shields.io/badge/arXiv-survey-b31b1b?style=flat&logo=arxiv&logoColor=white'
-        metric_badges.append(f"[![Survey arXiv]({arxiv_badge})]({survey_links['arxiv_url']})")
     if survey_links['semantic_scholar_url']:
         scholar_badge = (survey_links['semantic_scholar_citations_badge_url'] or
-                         'https://img.shields.io/badge/Semantic%20Scholar-citations-1857b6?style=flat&logo=semanticscholar&logoColor=white')
-        metric_badges.append(f"[![Survey Semantic Scholar citations]({scholar_badge})]({survey_links['semantic_scholar_url']})")
-    return identity_row + '\n\n' + ' '.join(metric_badges)
+                         'https://img.shields.io/badge/Semantic%20Scholar-citations-6c8ba8?style=flat-square&logo=semanticscholar&logoColor=white&labelColor=4a5568')
+        items.append((scholar_badge, 'Survey Semantic Scholar citations', survey_links['semantic_scholar_url']))
+    return ' '.join(f'[![{alt}]({source})]({target})' for source, alt, target in items)
 
 def bib_escape(value):
     replacements = {'\\': r'\textbackslash{}', '&': r'\&', '%': r'\%', '_': r'\_', '#': r'\#', '$': r'\$', '{': r'\{', '}': r'\}'}
@@ -451,7 +474,7 @@ def main():
     for filename, language in [('README.md', None), ('README.zh-CN.md', localized)]:
         readme_path = ROOT / filename
         readme = readme_path.read_text(encoding='utf-8')
-        for name, content in [('BADGES', badge_row(survey_links)), ('NAVIGATION', navigation(data, language)),
+        for name, content in [('BADGES', badge_row(data, survey_links)), ('NAVIGATION', navigation(data, language)),
                               ('CATALOG', catalogue(data, language)), ('RELATED', related_surveys(data, language))]:
             readme = replace_region(readme, name, content)
         expected[readme_path] = readme
