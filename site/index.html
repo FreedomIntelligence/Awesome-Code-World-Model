@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-style="clean">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code World Models — Interactive Survey &amp; Literature Hub</title>
+  <meta name="description" content="Executable Dynamics, Persistent Worlds, and Renderable Observations: L0–L4 Transition Paradigms, 3 Code-Substrate Families, and 170 Curated Sources.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Survey Promo Bar (Linked with PWM 3-Work Portal) -->
+  <div class="promo-bar" id="promoBar">
+    <div style="display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <a data-pwm-link="https://michaelcao0.github.io/program-world-models.github.io/#work" href="https://michaelcao0.github.io/program-world-models.github.io/#work" class="badge mono" style="height:20px;background:var(--aui-surface);">
+        <span data-i18n="pwm_portal_pill">← PWM 3-Work Portal ↗</span>
+      </a>
+      <a href="#paradigms">
+        <span id="promoLead">Work 01 · Code World Models: From Executable Programs to Interactive World Simulation</span>
+        <span class="promo-muted" id="promoCta">Explore L0–L4 Spectrum →</span>
+      </a>
+    </div>
+    <button class="promo-close" id="promoClose" aria-label="Dismiss announcement">✕</button>
+  </div>
+
+  <!-- Sticky Precision Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#" class="brand">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>Code World Models</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="#paradigms" data-i18n="nav_paradigms">L0–L4 Spectrum</a>
+          <a class="nav-link" href="#compare" data-i18n="nav_compare">State vs. Pixels</a>
+          <a class="nav-link" href="#families" data-i18n="nav_families">3 Families</a>
+          <a class="nav-link" href="#contracts" data-i18n="nav_contracts">Observation &amp; Eval</a>
+          <a class="nav-link" href="#library" data-i18n="nav_library">Library</a>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button class="pill-btn nav-cmd-btn" id="openCmdBtn" title="Quick search (⌘K)">
+          <span class="cmd-label" style="color:var(--aui-muted)" data-i18n="search_short">Search...</span>
+          <span class="kbd">⌘K</span>
+        </button>
+
+        <button class="pill-btn nav-style-btn" id="styleToggleBtn" title="Switch Clean / Classic UI geometry">
+          <span style="color:var(--aui-muted)" data-i18n="style_prefix">Style:</span>
+          <strong id="styleLabel">Clean</strong>
+        </button>
+
+        <div class="segmented" role="group" aria-label="Language">
+          <button type="button" id="langEnBtn" class="active">EN</button>
+          <button type="button" id="langZhBtn">中文</button>
+        </div>
+
+        <div class="segmented" role="group" aria-label="Theme">
+          <button type="button" id="themeLightBtn" class="active" aria-label="Light theme">☀</button>
+          <button type="button" id="themeDarkBtn" aria-label="Dark theme">☾</button>
+        </div>
+
+        <a class="pill-btn tabular nav-gh-btn" href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model" target="_blank" rel="noopener">
+          <span class="gh-label">GitHub</span>
+          <span class="badge mono" id="navTotalBadge">170</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Split Editorial Copy + SurveyAtlas Interactive Dot Field -->
+  <section class="hero" id="top">
+    <canvas id="atlasField" aria-label="Every paper in Code World Models, placed by publication date and research swimlane"></canvas>
+
+    <div class="hero-atlas-hud">
+      <div class="segmented atlas-mode-seg" role="group" aria-label="Dot swimlane grouping">
+        <button type="button" id="atlasModeFamily" class="active" data-i18n="atlas_by_family">By Family</button>
+        <button type="button" id="atlasModeParadigm" data-i18n="atlas_by_paradigm">By L0–L4</button>
+      </div>
+      <button type="button" class="pill-btn atlas-replay-btn" id="atlasReplayBtn" title="Replay chronological sweep">
+        <span>↻</span>
+        <span data-i18n="atlas_replay">Replay</span>
+      </button>
+      <div class="atlas-year-watermark tabular" id="atlasYearWatermark" aria-hidden="true">2026</div>
+    </div>
+
+    <div class="container hero-split-wrap">
+      <div class="hero-copy">
+        <a href="#paradigms" class="hero-pill">
+          <span class="hero-pill-tag">L0–L4 SURVEY</span>
+          <span id="heroPillText">Executable Dynamics · Persistent Worlds · Renderable Observations →</span>
+        </a>
+
+        <h1 class="hero-h1" id="heroTitle">Worlds written as executable code.</h1>
+        <p class="hero-sub" id="heroSub">
+          Uniting model-based agents that induce programs for planning with generative visual worlds driven by authoritative code state—organized across a 5-layer transition spectrum and 170 verified sources.
+        </p>
+
+        <div class="cli-box">
+          <span class="prompt">$</span>
+          <code id="cloneCmd">git clone https://github.com/FreedomIntelligence/Awesome-Code-World-Model.git</code>
+          <button class="icon-btn" id="copyCloneBtn" title="Copy git clone command" aria-label="Copy clone command">⧉</button>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#library" class="pill-btn primary lg" id="heroPrimaryCta">Browse 170 papers</a>
+          <a href="#paradigms" class="pill-btn lg" id="heroSecondaryCta">Inspect L0–L4 spectrum</a>
+          <button type="button" class="pill-btn lg" id="downloadAllBibBtn" data-i18n="download_bib">Download BibTeX</button>
+        </div>
+
+        <div class="hero-metrics tabular">
+          <div class="metric-item">
+            <div class="metric-val" id="statTotal">170</div>
+            <div class="metric-lbl" data-i18n="stat_sources">Curated sources</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">L0–L4</div>
+            <div class="metric-lbl" data-i18n="stat_paradigms">Transition paradigms</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">3 + 2</div>
+            <div class="metric-lbl" data-i18n="stat_families">Core families + suites</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val mono" id="statCutoff">2026-11-18</div>
+            <div class="metric-lbl" data-i18n="stat_cutoff">Literature cutoff</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating SurveyAtlas-style Paper Dot Tooltip -->
+  <div class="atlas-ftip" id="atlasTip" role="tooltip" aria-hidden="true"></div>
+
+  <!-- Section 1: 5-Layer Transition Paradigms (L0-L4 from Overleaf Survey §3) -->
+  <section class="section" id="paradigms">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow pink" id="pEyebrow">Survey Section 3 · Five Transition Paradigms</div>
+        <h2 class="section-title" id="pTitle">One question sorts every simulator</h2>
+        <p class="section-desc" id="pDesc">
+          When an agent acts, which component computes the next state <code class="mono">s_{t+1}</code>, and where do its rules come from? From hand-authored engines (L0) to fully learned dynamics (L4), each paradigm trades off verifiability, authoring cost, and open-world coverage.
+        </p>
+      </div>
+
+      <div class="spectrum-meta-bar mono">
+        <span id="axisLeft">← Hand-authored rules · Exact verification</span>
+        <span id="axisRight">Learned dynamics · Open visual coverage →</span>
+      </div>
+
+      <div class="spectrum-rail" id="spectrumRail" role="tablist" aria-label="L0 to L4 Transition Paradigms"></div>
+
+      <div class="inspector-stage" id="inspectorStage" role="tabpanel"></div>
+
+      <!-- 3 Common Boundary Pitfalls (§3.2) -->
+      <div class="bento-3" id="pitfallsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Section 2: Interactive Draggable Split Comparison -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow" id="cEyebrow">Survey Section 2 · Running Diagnostic Cases</div>
+        <h2 class="section-title" id="cTitle">Same intervention, executable difference</h2>
+        <p class="section-desc" id="cDesc">
+          Drag the divider to compare pure pixel-space rollout (L4) against authoritative programmatic state + conditional rendering (L2/L3) across our survey’s diagnostic scenarios.
+        </p>
+      </div>
+
+      <div class="underline-tabs" id="caseTabs"></div>
+
+      <div class="compare-labels">
+        <span class="badge" id="cmpLeftBadge">L4 · Frame-Only Video Prediction</span>
+        <span style="font-size:12px;color:var(--aui-muted)" id="cmpHint">← Drag handle to compare →</span>
+        <span class="badge pink" id="cmpRightBadge">L2 / L3 · Code World Model</span>
+      </div>
+
+      <div class="browser-frame">
+        <div class="browser-chrome">
+          <div class="traffic-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url" id="cmpUrl">sim://interactive-rollout/case-a-wall-collision</div>
+          <span class="mono" style="font-size:11px;color:var(--aui-muted)">s_{t+1} ~ F(s_t, a_t)</span>
+        </div>
+
+        <div class="split-stage" id="splitStage" style="--split-pos: 48%;">
+          <div class="split-pane split-left" id="splitLeftContent"></div>
+          <div class="split-pane split-right" id="splitRightContent"></div>
+          <div class="split-handle"><div class="split-knob">↔</div></div>
+          <input type="range" min="8" max="92" value="48" class="split-range" id="splitSlider" aria-label="Comparison slider between pixel prediction and code world model">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: 3-Family Code-Substrate Catalogue Crosswalk -->
+  <section class="section" id="families">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow" id="fEyebrow">Catalogue Organization · Zooming into L2 &amp; L3</div>
+        <h2 class="section-title" id="fTitle">How much of the world code carries</h2>
+        <p class="section-desc" id="fDesc">
+          Within code-grounded world models, our 170-paper collection splits into three primary families along a single axis—from pure symbolic/state dynamics to whitebox-conditioned neural rendering to complete 3D worlds in code.
+        </p>
+      </div>
+
+      <div class="family-grid" id="familyGrid"></div>
+
+      <div class="bento-3" id="otherGroupsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Section 4: Observation Contracts, Evaluation Obligations & Survey Outline -->
+  <section class="section" id="contracts" style="border-bottom:none;">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow pink" id="oEyebrow">Survey Architecture · Sections 5, 7 &amp; Manuscript Map</div>
+        <h2 class="section-title" id="oTitle">Observation contracts &amp; evidence obligations</h2>
+        <p class="section-desc" id="oDesc">
+          Inspect how upstream state compiles into visual conditioning interfaces, what each benchmark obligation does (and does not) establish, and the 9-chapter survey blueprint.
+        </p>
+      </div>
+
+      <div class="underline-tabs" id="frameworkTabs"></div>
+      <div id="frameworkStage"></div>
+    </div>
+  </section>
+
+  <!-- Section 5: AffectUI Inset App Shell — 170-Paper Interactive Explorer -->
+  <section class="app-shell-section" id="library">
+    <div class="container">
+      <div style="margin-bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <div class="eyebrow" id="libEyebrow">Structured Literature Corpus</div>
+          <h2 class="section-title" style="font-size:28px;margin-bottom:4px;" id="libTitle">Explore all 170 verified sources</h2>
+          <p class="section-desc" style="font-size:13.5px;" id="libDesc">Filter by transition paradigm, code-substrate family, benchmark target, code role, and review depth.</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="pill-btn" id="resetFiltersTopBtn" data-i18n="reset_filters">Reset filters</button>
+          <button type="button" class="pill-btn primary" id="exportFilteredBibBtn" data-i18n="export_bibtex">Export filtered BibTeX</button>
+        </div>
+      </div>
+
+      <div class="app-shell">
+        <aside class="shell-sidebar" aria-label="Catalogue filters">
+          <div class="sidebar-search">
+            <span style="color:var(--aui-muted)">⌕</span>
+            <input type="search" id="searchInput" placeholder="Filter title, alias, author, tag...">
+          </div>
+
+          <div class="filter-group" id="sectionFilterGroup"></div>
+          <div class="filter-group" id="paradigmFilterGroup"></div>
+          <div class="filter-group" id="roleFilterGroup"></div>
+          <div class="filter-group" id="depthFilterGroup"></div>
+          <div class="filter-group" id="yearFilterGroup"></div>
+        </aside>
+
+        <main class="shell-main">
+          <div class="library-toolbar">
+            <div style="font-size:12.5px;color:var(--aui-secondary);" class="tabular" id="resultsCounter">Showing 170 of 170 sources</div>
+            <div class="toolbar-right">
+              <select class="aui-select" id="sortSelect" aria-label="Sort order">
+                <option value="newest" data-i18n="sort_newest">Newest first</option>
+                <option value="oldest" data-i18n="sort_oldest">Oldest first</option>
+                <option value="title" data-i18n="sort_title">Title A–Z</option>
+              </select>
+              <div class="segmented" role="group" aria-label="View mode">
+                <button type="button" id="viewCardsBtn" class="active" data-i18n="view_cards">Cards</button>
+                <button type="button" id="viewTableBtn" data-i18n="view_table">Table</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="papersContainer"></div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connected PWM 3-Work Ecosystem Dock + Minimalist Footer -->
+  <section class="section" style="padding:40px 0;background:var(--aui-surface);border-top:0.5px solid var(--aui-border);">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;">
+        <div>
+          <span class="badge pink mono" data-i18n="series_badge">PROGRAM WORLD MODEL · CONNECTED SERIES</span>
+          <h3 style="margin:6px 0 0;font-size:17px;font-weight:650;letter-spacing:-0.02em;" data-i18n="series_title">Part of our three-part open research program</h3>
+        </div>
+        <a class="pill-btn" data-pwm-link="https://michaelcao0.github.io/program-world-models.github.io/" href="https://michaelcao0.github.io/program-world-models.github.io/">
+          <span data-i18n="series_portal_cta">Open PWM Main Portal ↗</span>
+        </a>
+      </div>
+
+      <div class="bento-3">
+        <div class="bento-card" style="border:1px solid var(--aui-pink-border);background:var(--aui-pink-soft);">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span class="badge mono">01 · Survey &amp; Atlas</span>
+            <span class="badge pink" data-i18n="series_here">Current Site</span>
+          </div>
+          <h4 data-i18n="series_w1_t">The Survey &amp; 170-Paper Atlas</h4>
+          <p data-i18n="series_w1_d">L0–L4 transition authority framework, observation contracts, evaluation obligations, and living bibliography.</p>
+        </div>
+
+        <a class="bento-card" href="https://jz-jimmy.github.io/blog/pwm-arena/#minecraft" target="_blank" rel="noopener">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span class="badge mono">02 · Benchmark</span>
+            <span class="badge blue">PWM-Arena ↗</span>
+          </div>
+          <h4 data-i18n="series_w2_t">PWM-Arena Counterfactual Suite</h4>
+          <p data-i18n="series_w2_d">paired A/B runtime rule-editing scenarios decomposing Perception (P), Dynamics (D), and Rendering (R).</p>
+        </a>
+
+        <a class="bento-card" data-pwm-link="https://michaelcao0.github.io/program-world-models.github.io/#inspector" href="https://michaelcao0.github.io/program-world-models.github.io/#inspector">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span class="badge mono">03 · Agent Method</span>
+            <span class="badge" data-i18n="series_w3_tag">Interactive Demo ↗</span>
+          </div>
+          <h4 data-i18n="series_w3_t">Executable World Synthesis</h4>
+          <p data-i18n="series_w3_d">Code-agent loop for inducing runnable world programs, inspecting step traces, and verifying consequences.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimalist Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom:8px;">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span>Code World Models</span>
+          </div>
+          <p style="margin:0 0 12px;max-width:300px;line-height:1.55;" id="footerTagline">
+            Curated literature database and interactive companion for Code World Models: From Executable Programs to Interactive World Simulation.
+          </p>
+          <span class="mono" style="font-size:11px;">FreedomIntelligence · Program World Model</span>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="foot_series">PWM Research Series</h5>
+          <a data-pwm-link="https://michaelcao0.github.io/program-world-models.github.io/" href="https://michaelcao0.github.io/program-world-models.github.io/" data-i18n="foot_portal">PWM 3-Work Portal ↗</a>
+          <a href="#top" data-i18n="foot_w1">01 · Survey &amp; Atlas (Here)</a>
+          <a href="https://jz-jimmy.github.io/blog/pwm-arena/#minecraft" target="_blank" rel="noopener">02 · PWM-Arena ↗</a>
+          <a data-pwm-link="https://michaelcao0.github.io/program-world-models.github.io/#inspector" href="https://michaelcao0.github.io/program-world-models.github.io/#inspector" data-i18n="foot_w3">03 · World Inspector &amp; Method ↗</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="foot_repository">Repository</h5>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model" target="_blank" rel="noopener">GitHub Repository ↗</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/docs/survey.md" target="_blank" rel="noopener">Survey Hub</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/docs/catalogue.md" target="_blank" rel="noopener">Annotated Catalogue</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing Guide</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="foot_data">Structured Data</h5>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/data/papers.json" target="_blank" rel="noopener">data/papers.json</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/data/classification.json" target="_blank" rel="noopener">data/classification.json</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/blob/main/papers.bib" target="_blank" rel="noopener">papers.bib</a>
+          <a href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model/issues/new" target="_blank" rel="noopener">Submit a Paper / Issue ↗</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command K Search Dialog -->
+  <dialog class="aui-dialog" id="cmdDialog">
+    <div class="dialog-head">
+      <span style="color:var(--aui-muted)">⌕</span>
+      <input type="text" class="cmd-input" id="cmdInput" placeholder="Jump to L0–L4 paradigm, family, or search 170 papers...">
+      <button class="kbd" id="closeCmdBtn">ESC</button>
+    </div>
+    <div class="cmd-list" id="cmdResults"></div>
+  </dialog>
+
+  <!-- Paper Inspector Dialog -->
+  <dialog class="aui-dialog" id="paperDialog">
+    <div class="dialog-head">
+      <div style="font-weight:600;font-size:13px;" id="paperDialogHeader">Source Record</div>
+      <button class="icon-btn" id="closePaperBtn" aria-label="Close">✕</button>
+    </div>
+    <div class="dialog-body" id="paperDialogBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
