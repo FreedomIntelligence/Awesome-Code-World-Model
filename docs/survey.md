@@ -46,6 +46,6 @@ The BibTeX file cites the collected sources. A citation for the survey itself wi
 
 ## Follow the project
 
-Release news and collection updates appear on the [repository homepage](../README.md#news). Contributions and corrections follow the [contribution guide](../CONTRIBUTING.md).
+Release announcements and collection updates appear on the [repository homepage](../README.md). Contributions and corrections follow the [contribution guide](../CONTRIBUTING.md).
 
 [← Back to the collection](../README.md)
