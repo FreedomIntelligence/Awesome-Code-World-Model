@@ -38,7 +38,7 @@
       series_title: 'Part of our three-part open research program',
       series_portal_cta: 'Open PWM Main Portal ↗',
       series_here: 'Current Site',
-      series_w1_t: 'The Survey & 170-Paper Atlas',
+      series_w1_t: `The Survey & ${DATA.total_sources}-Paper Atlas`,
       series_w1_d: 'L0–L4 transition authority framework, observation contracts, evaluation obligations, and living bibliography.',
       series_w2_t: 'PWM-Arena Counterfactual Suite',
       series_w2_d: 'Paired A/B runtime rule-editing scenarios decomposing Perception (P), Dynamics (D), and Rendering (R).',
@@ -62,7 +62,7 @@
       atlas_replay: 'Replay',
       heroPillText: 'Executable Dynamics · Persistent Worlds · Renderable Observations →',
       heroTitle: 'Worlds written as executable code.',
-      heroSub: 'Uniting model-based agents that induce programs for planning with generative visual worlds driven by authoritative code state—organized across a 5-layer transition spectrum and 170 verified sources.',
+      heroSub: `Uniting model-based agents that induce programs for planning with generative visual worlds driven by authoritative code state—organized across a 5-layer transition spectrum and ${DATA.total_sources} verified sources.`,
       heroPrimaryCta: `Browse ${DATA.total_sources} papers`,
       heroSecondaryCta: 'Inspect L0–L4 spectrum',
       stat_sources: 'Curated sources',
@@ -82,7 +82,7 @@
       cmpRightBadge: 'L2 / L3 · Code World Model',
       fEyebrow: 'Catalogue Organization · Zooming into L2 & L3',
       fTitle: 'How much of the world code carries',
-      fDesc: 'Within code-grounded world models, our 170-paper collection splits into three primary families along a single axis—from pure state dynamics to whitebox-conditioned neural rendering to complete 3D worlds in code.',
+      fDesc: `Within code-grounded world models, our ${DATA.total_sources}-paper collection splits into three primary families along a single axis—from pure state dynamics to whitebox-conditioned neural rendering to complete 3D worlds in code.`,
       oEyebrow: 'Survey Architecture · Sections 5, 7 & Manuscript Map',
       oTitle: 'Observation contracts & evidence obligations',
       oDesc: 'Inspect how upstream state compiles into visual conditioning interfaces, what each benchmark obligation does (and does not) establish, and the 9-chapter survey blueprint.',
@@ -101,7 +101,7 @@
       foot_data: 'Structured Data',
       footerTagline: 'Curated literature database and interactive companion for Code World Models: From Executable Programs to Interactive World Simulation.',
       searchPlaceholder: 'Filter title, alias, author, tag...',
-      cmdPlaceholder: 'Jump to L0–L4 paradigm, family, or search 170 papers...',
+      cmdPlaceholder: `Jump to L0–L4 paradigm, family, or search ${DATA.total_sources} papers...`,
     },
     zh: {
       promoLead: '系列工作 01 · Code World Models: From Executable Programs to Interactive World Simulation',
@@ -111,7 +111,7 @@
       series_title: '同一开放研究计划的三项联动成果',
       series_portal_cta: '打开 PWM 研究计划总站 ↗',
       series_here: '当前站点',
-      series_w1_t: '领域综述与 170 篇交互图谱',
+      series_w1_t: `领域综述与 ${DATA.total_sources} 篇交互图谱`,
       series_w1_d: '围绕 L0–L4 状态决定权范式、观测条件契约与五项评测义务构建的动态文献中枢。',
       series_w2_t: 'PWM-Arena 反事实评测集',
       series_w2_d: '基于成对 A/B 运行时规则编辑场景，解耦检验感知接地（P）、动力学执行（D）与视觉渲染回读（R）。',
@@ -135,7 +135,7 @@
       atlas_replay: '重播',
       heroPillText: '可执行动力学 · 持久状态世界 · 可渲染视觉观测 →',
       heroTitle: '以可执行代码构建交互世界。',
-      heroSub: '汇合“面向规划的程序归纳智能体”与“由权威代码状态驱动的生成式视觉世界”两大脉络——围绕 L0–L4 五层状态转移范式与三类代码载体框架，系统梳理 170 篇核实文献。',
+      heroSub: `汇合“面向规划的程序归纳智能体”与“由权威代码状态驱动的生成式视觉世界”两大脉络——围绕 L0–L4 五层状态转移范式与三类代码载体框架，系统梳理 ${DATA.total_sources} 篇核实文献。`,
       heroPrimaryCta: `浏览 ${DATA.total_sources} 篇文献`,
       heroSecondaryCta: '探索 L0–L4 五层范式',
       stat_sources: '核实文献记录',
@@ -155,7 +155,7 @@
       cmpRightBadge: 'L2 / L3 · 代码世界模型',
       fEyebrow: '文献目录主轴 · 聚焦 L2 与 L3 内部结构',
       fTitle: '可执行代码承担了世界的多少部分',
-      fDesc: '在代码世界模型内部，170 篇文献沿单一主轴划分为三类主线：纯状态程序化动力学、白模/Proxy + 生成式渲染、以及完整 3D 世界代码构建。',
+      fDesc: `在代码世界模型内部，${DATA.total_sources} 篇文献沿单一主轴划分为三类主线：纯状态程序化动力学、白模/Proxy + 生成式渲染、以及完整 3D 世界代码构建。`,
       oEyebrow: '综述核心图表 · 第 5 章观测契约、第 7 章评测义务与章节蓝图',
       oTitle: '观测条件接口与评测证据链',
       oDesc: '对比上游状态如何编译为视觉渲染条件（表 1 三种反馈机制）、五项评测义务各自能证明与不能证明的边界（表 2），以及 9 章综述全文结构。',
@@ -174,7 +174,7 @@
       foot_data: '结构化数据',
       footerTagline: '《Code World Models: From Executable Programs to Interactive World Simulation》综述配套交互式主页与文献数据库。',
       searchPlaceholder: '搜索标题、方法别名、作者、标签...',
-      cmdPlaceholder: '跳转 L0–L4 范式、三类主线或检索 170 篇论文...',
+      cmdPlaceholder: `跳转 L0–L4 范式、三类主线或检索 ${DATA.total_sources} 篇论文...`,
     },
   };
 
@@ -295,7 +295,7 @@
       anchors: [
         { label: 'Oneira (Writeback)', id: '2610.01614' },
         { label: 'UniState', id: null },
-        { label: 'WorldRuler', id: null },
+        { label: 'WorldRuler', id: '2611.24869' },
         { label: 'GameWM (Candidate)', id: '2611.19247' },
       ],
     },
@@ -431,7 +431,7 @@
         { method: 'Programmable WM (PWM)', id: '2609.10540', upstream: 'Engine 3D OBBs', cond: 'Projected 3D maps', role: 'Motion completion', fb: 'Appearance memory' },
         { method: 'GameWM', id: '2611.19247', upstream: 'Game engine', cond: 'Depth / semantic proxy', role: 'Motion completion', fb: 'Visual history' },
         { method: 'BoxWorld', id: '2610.36371', upstream: 'Async. engine', cond: '2D boxes & status', role: 'State rendering', fb: 'Visual history' },
-        { method: 'CWM 2.0 (Invoker-Render)', id: 'inclusion_cwm2', upstream: 'Structured scene', cond: 'Multi-scale proxy', role: 'Motion completion', fb: 'Visual history' },
+        { method: 'CWM 2.0 (Invoker-Render)', id: '2611.22925', upstream: 'Structured scene', cond: 'Multi-scale proxy', role: 'Motion completion', fb: 'Visual history' },
         { method: 'AgentGarten', id: '2610.12374', upstream: 'Code worlds', cond: 'Depth / surface normals', role: 'State rendering (36.5 fps)', fb: 'Action-mediated' },
       ],
     },
@@ -450,7 +450,7 @@
         { method: 'CoDeR', id: '2609.26458', upstream: 'Three.js whitebox', cond: 'Whitebox & depth', role: 'Appearance painting', fb: 'Surface color memory' },
         { method: 'UniState', id: null, upstream: '3D latent memory', cond: '3D latents & edits', role: 'Motion & contact', fb: 'State writeback (L3)' },
         { method: 'Oneira', id: '2610.01614', upstream: 'Agent world table', cond: 'Box-edit proxy', role: 'Motion & new objects', fb: 'State writeback (L3)' },
-        { method: 'WorldRuler', id: null, upstream: '3D rule graph', cond: 'Geometry & masks', role: 'Local attribute control', fb: 'State writeback (L3)' },
+        { method: 'WorldRuler', id: '2611.24869', upstream: '3D rule graph', cond: 'Geometry & masks', role: 'Local attribute control', fb: 'State writeback (L3)' },
       ],
     },
   ];
@@ -1192,12 +1192,18 @@
 
     let benchSubHtml = '';
     if (STATE.sectionFilter === 'benchmark') {
+      const btCounts = {};
+      DATA.papers.forEach((p) => {
+        if (p.unassigned_group === 'benchmark' && p.benchmark_target) {
+          btCounts[p.benchmark_target] = (btCounts[p.benchmark_target] || 0) + 1;
+        }
+      });
       const subs = [
         ['all', zh ? '全部评测靶点' : 'All targets'],
-        ['worldcoder', '→ worldcoder (6)'],
-        ['code_as_world', '→ code_as_world (3)'],
-        ['vibeworlding', '→ vibeworlding (11)'],
-        ['video_wm', '→ video_wm / L4 (6)'],
+        ['worldcoder', `→ worldcoder (${btCounts.worldcoder || 0})`],
+        ['code_as_world', `→ code_as_world (${btCounts.code_as_world || 0})`],
+        ['vibeworlding', `→ vibeworlding (${btCounts.vibeworlding || 0})`],
+        ['video_wm', `→ video_wm / L4 (${btCounts.video_wm || 0})`],
       ];
       benchSubHtml = `<div style="padding-left:10px;display:flex;flex-direction:column;gap:2px;margin-top:2px;">` +
         subs.map(([val, lbl]) => `
@@ -1629,7 +1635,7 @@
     document.getElementById('downloadAllBibBtn').addEventListener('click', () => {
       const bib = DATA.papers.map((p) => p.bibtex).join('\n\n') + '\n';
       downloadTextFile('code-world-models.bib', bib);
-      showToast(STATE.lang === 'zh' ? '已下载全部 170 篇 BibTeX' : 'Downloaded full 170-paper BibTeX');
+      showToast(STATE.lang === 'zh' ? `已下载全部 ${DATA.total_sources} 篇 BibTeX` : `Downloaded full ${DATA.total_sources}-paper BibTeX`);
     });
 
     document.getElementById('exportFilteredBibBtn').addEventListener('click', () => {
@@ -1741,12 +1747,12 @@
     };
 
     const FAMILY_LANES = [
-      { key: 'worldcoder', en: '01 · WORLDCODER-TYPE', zh: '01 · 程序化动力学 (48)', filter: { sec: 'worldcoder' }, colorIdx: 0 },
-      { key: 'code_as_world', en: '02 · CODE-AS-WORLD-TYPE', zh: '02 · 白模 + 生成式渲染 (25)', filter: { sec: 'code_as_world' }, colorIdx: 1 },
-      { key: 'vibeworlding', en: '03 · VIBEWORLDING-TYPE', zh: '03 · 3D 世界构建 (42)', filter: { sec: 'vibeworlding' }, colorIdx: 2 },
-      { key: 'gui', en: 'OTHER · GUI WORLD MODELS', zh: '其他 · GUI 世界模型 (21)', filter: { sec: 'gui' }, colorIdx: 3 },
-      { key: 'benchmark', en: 'OTHER · BENCHMARKS (B1–B4)', zh: '其他 · 评测基准 B1–B4 (26)', filter: { sec: 'benchmark' }, colorIdx: 4 },
-      { key: 'survey', en: 'RELATED SURVEYS', zh: '相关综述对比 (8)', filter: { sec: 'survey' }, colorIdx: 5 },
+      { key: 'worldcoder', en: '01 · WORLDCODER-TYPE', zh: `01 · 程序化动力学 (${DATA.section_counts.worldcoder || 0})`, filter: { sec: 'worldcoder' }, colorIdx: 0 },
+      { key: 'code_as_world', en: '02 · CODE-AS-WORLD-TYPE', zh: `02 · 白模 + 生成式渲染 (${DATA.section_counts.code_as_world || 0})`, filter: { sec: 'code_as_world' }, colorIdx: 1 },
+      { key: 'vibeworlding', en: '03 · VIBEWORLDING-TYPE', zh: `03 · 3D 世界构建 (${DATA.section_counts.vibeworlding || 0})`, filter: { sec: 'vibeworlding' }, colorIdx: 2 },
+      { key: 'gui', en: 'OTHER · GUI WORLD MODELS', zh: `其他 · GUI 世界模型 (${DATA.group_counts.gui || 0})`, filter: { sec: 'gui' }, colorIdx: 3 },
+      { key: 'benchmark', en: 'OTHER · BENCHMARKS (B1–B4)', zh: `其他 · 评测基准 B1–B4 (${DATA.group_counts.benchmark || 0})`, filter: { sec: 'benchmark' }, colorIdx: 4 },
+      { key: 'survey', en: 'RELATED SURVEYS', zh: `相关综述对比 (${DATA.group_counts.survey || 0})`, filter: { sec: 'survey' }, colorIdx: 5 },
     ];
 
     const PARADIGM_LANES = [

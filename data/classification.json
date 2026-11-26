@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-11-18",
+  "updated_on": "2026-11-26",
   "status": "discussion-draft",
   "scope": "One of three public family assignments per classified record, split by how much of the world code carries: WorldCoder-type (state and rules only), Code-as-World-type (whitebox/proxy world plus generative rendering), or VibeWorlding-type (full 3D world in code, static scenes included). Every other record carries an unassigned_group: \"gui\" (Other · GUI world models), \"benchmark\" (Other · Benchmarks, with benchmark_target naming what it evaluates), or \"survey\" (related surveys, shown at the top of the README).",
   "families": {
@@ -2148,16 +2148,420 @@
       "benchmark_target": "video_wm"
     },
     {
-      "id": "invoker-render",
+      "id": "2611.22925",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.22925",
+        "https://github.com/inclusionAI/CodeWorldModel"
+      ],
+      "evidence_depth": "targeted_fulltext",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2606.00133",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2606.00133"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "survey",
+      "comparison": "It surveys broad learned world models along architecture, method family, reasoning strategy and domain. Our survey focuses specifically on world models where executable code carries world state, rules or 3D structure.",
+      "comparison_zh": "该综述按架构、方法族、推理策略与应用领域梳理广义学习型世界模型；本综述专门聚焦以可执行代码承载状态、规则或三维结构的世界模型。"
+    },
+    {
+      "id": "2606.01164",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2606.01164"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "survey",
+      "comparison": "It centers on action-conditioned video and 3D generative world models. Here executable code is the world substrate, and video generators appear as optional state-conditioned renderers.",
+      "comparison_zh": "该综述以动作条件视频与三维生成式世界模型为中心；本综述以可执行代码为世界基底，视频生成模型仅作为可选的条件渲染器出现。"
+    },
+    {
+      "id": "2609.29669",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2609.29669"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "survey",
+      "comparison": "It maps evaluation benchmarks for predictive embodied world models versus direct VLA policies. Here robotics is one validation domain, and the focus is on executable world programs, persistent state and counterfactual verifiability.",
+      "comparison_zh": "该综述聚焦具身预测世界模型与直接 VLA 策略的评测对比；本综述将机器人视为验证载体之一，重点考察可执行世界程序、持久状态与反事实可验证性。"
+    },
+    {
+      "id": "2609.35432",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2609.35432"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "survey",
+      "comparison": "It studies self-evolving physical coding agents that pair Code as Policy with Code as World for robotic execution. Our survey systematically develops Code as World itself across state induction, generative proxy rendering and 3D world construction.",
+      "comparison_zh": "该文从自进化具身编码智能体视角结合 Code as Policy 与 Code as World；本综述专门系统展开 Code as World 在状态动力学、代理生成渲染与三维世界构建上的完整谱系。"
+    },
+    {
+      "id": "2606.15654",
+      "coarse_family": "worldcoder",
+      "coarse_family_label": "WorldCoder-type · Programmatic Dynamics / World Program Induction",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2606.15654"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.32483",
+      "coarse_family": "worldcoder",
+      "coarse_family_label": "WorldCoder-type · Programmatic Dynamics / World Program Induction",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.32483"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.24869",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.24869"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.25838",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.25838"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2609.34221",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2609.34221"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2607.18703",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2607.18703"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.10768",
+      "coarse_family": "vibeworlding",
+      "coarse_family_label": "VibeWorlding-type · Agentic 3D World Construction",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.10768"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2608.17975",
+      "coarse_family": "vibeworlding",
+      "coarse_family_label": "VibeWorlding-type · Agentic 3D World Construction",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2608.17975"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2605.18451",
+      "coarse_family": "vibeworlding",
+      "coarse_family_label": "VibeWorlding-type · Agentic 3D World Construction",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2605.18451"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.32811",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.32811"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "gui"
+    },
+    {
+      "id": "2611.06544",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.06544"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "gui"
+    },
+    {
+      "id": "2610.14228",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2610.14228"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "gui"
+    },
+    {
+      "id": "2602.15384",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2602.15384"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "gui"
+    },
+    {
+      "id": "2611.30226",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.30226"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2611.24073",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.24073"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2609.36777",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2609.36777"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2604.02580",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2604.02580"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "vibeworlding"
+    },
+    {
+      "id": "2610.35864",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2610.35864"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "code_as_world"
+    },
+    {
+      "id": "2610.08684",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2610.08684"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "code_as_world"
+    },
+    {
+      "id": "2609.35023",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2609.35023"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "code_as_world"
+    },
+    {
+      "id": "2611.24408",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.24408"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "video_wm"
+    },
+    {
+      "id": "2610.23542",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2610.23542"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "video_wm"
+    },
+    {
+      "id": "2608.30692",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2608.30692"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "video_wm"
+    },
+    {
+      "id": "2606.20545",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2606.20545"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "benchmark",
+      "benchmark_target": "video_wm"
+    },
+    {
+      "id": "genrender",
+      "coarse_family": null,
+      "coarse_family_label": "Unassigned / 未归类",
+      "source_provenance": "official_project",
+      "assignment_status": "reviewed-proposal",
+      "evidence_urls": [
+        "https://genrender-hub.github.io/",
+        "https://github.com/GenRender-Hub/Awesome-Generative-Renderers"
+      ],
+      "evidence_depth": "targeted_fulltext",
+      "annotated_on": "2026-11-26",
+      "unassigned_group": "survey",
+      "comparison": "It centers on the video renderer along a T0–T3b conditioning specification ladder, where code engines are one upstream proxy source among traditional G-buffers and neural states. Our survey centers on executable code as the world substrate—spanning state-only dynamics (01), proxy+renderer worlds (02) and full 3D engine code (03)—and uses L0–L4 to separate upstream state ownership.",
+      "comparison_zh": "该综述以视频渲染器为中心，按上游规格阶梯（T0–T3b）组织条件视频生成，代码引擎只是其中一种上游代理源。本综述以可执行代码世界本身为中心，覆盖纯状态动力学（01）、白模加生成式渲染（02）与完整三维世界构建（03），并用 L0–L4 拆解上游状态决定权。"
+    },
+    {
+      "id": "streaming-cwm",
       "coarse_family": "code_as_world",
       "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
       "source_provenance": "official_project",
       "assignment_status": "provisional",
       "evidence_urls": [
-        "https://github.com/inclusionAI/CodeWorldModel"
+        "https://github.com/TingtingLiao/streaming-code-world-model",
+        "https://huggingface.co/Luffuly/streaming-code-world-model"
       ],
       "evidence_depth": "targeted_fulltext",
-      "annotated_on": "2026-11-18"
+      "annotated_on": "2026-11-26"
     }
   ]
 }

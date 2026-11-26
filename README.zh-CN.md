@@ -10,9 +10,11 @@
 
 <!-- BADGES:BEGIN -->
 
-[![Papers](https://img.shields.io/badge/Papers-170-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
+[![Papers](https://img.shields.io/badge/Papers-200-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
 
 <!-- BADGES:END -->
+
+<p><img src="./assets/banner.png" alt="以程序构建可执行世界：代码、持久状态与渲染观测" width="960"></p>
 
 </div>
 
@@ -34,10 +36,10 @@
 
 | 分类主线 | 代码承担内容 | 核心问题 | 文献数 |
 |---|---|---|---:|
-| **[01 · WorldCoder-type](#papers-worldcoder)** | 纯状态与动力学 | 代码能否预测动作后果并支持规划？ | **48** |
-| **[02 · Code-as-World-type](#papers-code_as_world)** | 白模世界 + 生成式渲染 | 代码维护的白模状态与规则能否驱动生成式渲染？ | **25** |
-| **[03 · VibeWorlding-type](#papers-vibeworlding)** | 完整 3D 世界 | agent 能否用代码构建并编辑完整 3D 世界？ | **42** |
-| **[其他](#papers-other)** | GUI 世界、评测与综述 | [GUI 世界模型](#papers-other-gui) (21) · [评测基准](#papers-other-benchmark) (26) · [相关综述](#related-surveys) (8) | **55** |
+| **[01 · WorldCoder-type](#papers-worldcoder)** | 纯状态与动力学 | 代码能否预测动作后果并支持规划？ | **50** |
+| **[02 · Code-as-World-type](#papers-code_as_world)** | 白模世界 + 生成式渲染 | 代码维护的白模状态与规则能否驱动生成式渲染？ | **30** |
+| **[03 · VibeWorlding-type](#papers-vibeworlding)** | 完整 3D 世界 | agent 能否用代码构建并编辑完整 3D 世界？ | **45** |
+| **[其他](#papers-other)** | GUI 世界、评测与综述 | [GUI 世界模型](#papers-other-gui) (25) · [评测基准](#papers-other-benchmark) (37) · [相关综述](#related-surveys) (13) | **75** |
 
 <!-- NAVIGATION:END -->
 
@@ -46,15 +48,16 @@
 
 <!-- CATALOG:BEGIN -->
 
-**170 条文献来源** · 截止 **2026-11-18** · 按发布日期倒序排列。完整信息见[详细核查表](docs/catalogue.md)与[全量论文总表](docs/paper-master-list.md)。
+**200 条文献来源** · 截止 **2026-11-26** · 按发布日期倒序排列。完整信息见[详细核查表](docs/catalogue.md)与[全量论文总表](docs/paper-master-list.md)。
 
 <a id="papers-worldcoder"></a>
-### 01 · WorldCoder-type · 程序化动力学 (48)
+### 01 · WorldCoder-type · 程序化动力学 (50)
 
 *纯状态层面的可执行动力学：转移机制、世界程序归纳、规划与模型修复，不生成外观。*
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
+| `2026` | **CodeWAM: A Code World Action Model for End-to-End Autonomous Driving** | CodeWAM 用可执行代码推演候选规划下的自车运动状态，并与学习式视觉场景模型联合评估端到端驾驶未来后果。 | [PDF](https://arxiv.org/abs/2611.32483) |
 | `2026` | **Creating Hybrid Interactive Narrative Systems with LLM: From Formal Description to Evaluation** | 叙事事件写成带前置条件与效果的操作。三种叙事管理器在同一组事实和目标上行动，生成的故事轨迹可以按规划序列比较。 | [PDF](https://arxiv.org/abs/2611.02807) |
 | `2026` | **Algebraic World Model: From Exploration to Proofs** | 通过可执行 Python 假设、类型化规则和 Lean 证明探索未知游戏中的可达性与不可达性。 | [PDF](https://arxiv.org/abs/2610.40503) |
 | `2026` | **PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds** | 由 VLM 提出可执行物理世界，确定性物理引擎验证反事实分支并生成可验证的训练任务。 | [PDF](https://arxiv.org/abs/2610.34921) |
@@ -80,6 +83,7 @@
 | `2026` | **World-Time Compute with Verified Code World Models** | World-Time Compute 利用经验证的符号代码世界，生成具有精确标签的训练轨迹。 | [PDF](https://arxiv.org/abs/2609.09163) |
 | `2026` | **OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3** | OPINE-World 通过错误优先探索，联合修订符号本体、转移假设与目标。 | [PDF](https://arxiv.org/abs/2607.01531) |
 | `2026` | **Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games** | Mind-Studio 为部分可观测游戏构建可执行模型，并评价同状态起点的多步前瞻保真度。 | [PDF](https://arxiv.org/abs/2606.16070) |
+| `2026` | **PO-PDDL: Learning Symbolic POMDPs from Visual Demonstrations for Robot Planning Under Uncertainty** | PO-PDDL 从机器人演示视频中重建潜在符号状态轨迹，学习随机转移与观测规则以支持不确定性下的信念空间规划。 | [PDF](https://arxiv.org/abs/2606.15654) |
 | `2026` | **PatchWorld: Gradient-Free Optimization of Executable World Models for Agent Environments** | PatchWorld 通过反例引导的补丁优化可执行信念状态模型，并用于动作前瞻。 | [PDF](https://arxiv.org/abs/2605.30880) |
 | `2026` | **Distilling Game Code World Model Generation into Lightweight Large Language Models (GameCWM distillation)** | 通过后训练，将前沿 LLM 生成游戏代码世界模型（规则、合法动作、转移、观测与奖励）的能力蒸馏到小模型中。 | [PDF](https://arxiv.org/abs/2605.24375) |
 | `2026` | **Baba in Wonderland: Online Self-Supervised Dynamics Discovery for Executable World Models (Alice / Baba in Wonderland)** | Alice 在词汇先验错配下学习可执行动力学，以旧行为保持冲突指导假设修订与探索。 | [PDF](https://arxiv.org/abs/2605.16725) |
@@ -107,14 +111,17 @@
 [↑ 返回总览](#contents)
 
 <a id="papers-code_as_world"></a>
-### 02 · Code-as-World-type · 白模世界 + 生成式渲染 (25)
+### 02 · Code-as-World-type · 白模世界 + 生成式渲染 (30)
 
 *代码维护白模/proxy 世界的持久状态与规则，由生成式渲染器补全外观。*
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
-| `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | 上游引擎用结构化代理指定相机轨迹和实体运动，Invoker-Render 结合外观参考图和文本，逐段生成对应的世界画面。 | [Project](https://github.com/inclusionAI/CodeWorldModel) |
+| `2026` | **ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds** | ContextRenderer 面向游戏引擎多样化动态代理提出动态上下文学习与循环历史压缩，在长程交互中保持条件跟随与视觉连续性。 | [PDF](https://arxiv.org/abs/2611.25838) |
+| `2026` | **WorldRuler: Interactive World Modeling under Configurable Rules** | WorldRuler 用可执行三维规则图组织用户自定义规则、依赖与跨存取档物体状态，并与视频生成及感知反馈构成闭环。 | [PDF](https://arxiv.org/abs/2611.24869) |
+| `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | Invoker-Render（Code World Model 2.0）通过 ProForcing 在多粒度结构代理、外观参考与文本条件下统一双向创作与四步因果流式渲染，由上游引擎锁定状态与运动。 | [PDF](https://arxiv.org/abs/2611.22925) |
 | `2026` | **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** | 游戏引擎决定事件何时发生、结果如何以及相机状态，视频模型绘制交互细节。同一套游戏机制可以呈现出多种视觉效果。 | [PDF](https://arxiv.org/abs/2611.19247) |
+| `2026` | **Streaming Code World Model (Streaming CWM)** | 在 Code World Model 与 CARLA 导出的深度和语义代理上实现四步因果分块流式视频渲染。 | [Project](https://github.com/TingtingLiao/streaming-code-world-model) |
 | `2026` | **CoCode-World: Shared 3D Proxy Representation for Multi-Player World Models** | 从共享的可编程 3D 代理和 RGB 参考图联合渲染双人视角，以同步的 GTA V 观测检验同一角色跨视角的外观一致性。 | [PDF](https://arxiv.org/abs/2611.15602) |
 | `2026` | **Fight World Model: Customizable Combat through Visual Interaction Proxies** | 将可执行的战斗状态和规则解析与视频渲染分开，用绑定身份和时间的交互代理保持攻击、受击与生命状态一致。 | [PDF](https://arxiv.org/abs/2610.40607) |
 | `2026` | **Wizard: Manipulate Any World in Real Time via Agentic Control** | 用骨架和几何代理结合显式游戏状态，支持实时、可泛化的视频世界控制；摘要未证明代码是世界表示。 | [PDF](https://arxiv.org/abs/2610.40339) |
@@ -132,17 +139,19 @@
 | `2026` | **StreamRender-H3: Interactive Coding Worlds with Real-time Streaming Diffusion Render** | three.js 游戏引擎维护地图、规则和状态，并根据玩家输入推进；语义帧连接引擎和流式 MiniMax-H3 渲染器，构成执行式模拟与生成外观分离的系统。 | [Project](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/) |
 | `2026` | **AgentGarten: Code Worlds for Evolving Agents** | AgentGarten 将程序定义的仿真后端连接到共享实时渲染器，并复用 agent 的文字技能手册。 | [PDF](https://arxiv.org/abs/2610.12374) |
 | `2026` | **Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models** | 编码智能体与轻量引擎维护可扩展世界状态表，生成粗粒度视觉条件，并纳入新出现的对象以支持持续交互。 | [PDF](https://arxiv.org/abs/2610.01614) |
+| `2026` | **WorldWeave: Growing Persistent Geometric Worlds for Video Generation** | WorldWeave 通过智能体引导的场景组织与确定性几何编译维护可扩展持久三维结构，并以只读深度查询驱动跨重访一致的视频生成。 | [PDF](https://arxiv.org/abs/2609.34221) |
 | `2026` | **Code Plans, Diffusion Renders: Open-Ended Generative World Modeling (CoDeR)** | CoDeR 协调可执行白盒世界的构建与生成式 Artist，创建开放式视觉世界。 | [PDF](https://arxiv.org/abs/2609.26458) |
 | `2026` | **GameDirector: Decoupling Gameplay Logic from Rendering for Player-Configurable Game World Models** | GameDirector 利用视觉情境估计和显式玩法规则，控制游戏视频生成。 | [PDF](https://arxiv.org/abs/2609.25652) |
 | `2026` | **Programmable World Model** | Programmable World Model 将包含非视觉事实的持久引擎状态，编译为视频生成控制信号。 | [PDF](https://arxiv.org/abs/2609.10540) |
 | `2026` | **Magpie: Real-Time World Renderer for Interactive Games** | Magpie 将持久的游戏引擎状态与规则，连接到由白盒观测驱动的交互式神经渲染器。 | [PDF](https://arxiv.org/abs/2608.27168) |
 | `2026` | **Code World Model: Coding Agent as World Brain** | Code World Model 通过可执行代理表示，连接编码世界大脑与视觉世界引擎。 | [PDF](https://arxiv.org/abs/2608.25927) |
+| `2026` | **Generative World Renderer at the Speed of Play (AlayaRenderer-Flash)** | AlayaRenderer-Flash 将接收物理引擎结构化状态与 G-buffer 的生成式世界渲染器蒸馏为逾 30 FPS 的少步因果流式模型，支持实时可玩交互。 | [PDF](https://arxiv.org/abs/2607.18703) |
 | `2025` | **Web World Models** | Web World Models 以类型化 Web 状态和代码定义的规则，支撑持久的生成式世界。 | [PDF](https://arxiv.org/abs/2512.23676) |
 
 [↑ 返回总览](#contents)
 
 <a id="papers-vibeworlding"></a>
-### 03 · VibeWorlding-type · agentic 3D 世界构建 (42)
+### 03 · VibeWorlding-type · agentic 3D 世界构建 (45)
 
 *代码写出完整 3D 世界（几何、材质、布局，可含物理），由常规渲染器或仿真器执行；包含静态场景。*
 
@@ -150,6 +159,7 @@
 |---|---|---|:-:|
 | `2026` | **TelePhysica: Agentic Reconstruction of Physically Interactive Scenes** | 从单张照片重建可视网格与可执行物理模型，检验重力平衡后可反转外力并重新仿真。仿真轨迹还可用于引导视频生成。 | [PDF](https://arxiv.org/abs/2611.18078) |
 | `2026` | **SceneAgent: A Multi-Agent Framework for Portable Game Scene Generation (SceneAgent (portable game scenes))** | 用持久化的 SceneContext 保存构建中的游戏场景。构建 agent 可跨引擎复用布局技能，由适配器转换坐标、绑定资产并导出场景。 | [PDF](https://arxiv.org/abs/2611.17821) |
+| `2026` | **BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs** | BlenderFORGE 基于隔离的确定性 Blender 沙箱导出结构化状态并计算多轮强化学习奖励，训练开源多模态模型编写 bpy 代码精确编辑三维场景。 | [PDF](https://arxiv.org/abs/2611.10768) |
 | `2026` | **Gym-Anything for Robotics: Scaling physical simulations with digital agents** | 把仿真创建视为编码智能体任务，构建并审计 RoboWorld 物理仿真环境；作为 3D/模拟器构建支撑工作收录。 | [PDF](https://arxiv.org/abs/2610.40565) |
 | `2026` | **Cinematize from Unreal: Agentic Choreography for Controllable World Simulation (CineU)** | 把 Unreal 工程作为可检查的持久世界，利用智能体生成代码执行并验证操作，通过几何约束、时间线和局部修复完成世界编排。 | [PDF](https://arxiv.org/abs/2610.38468) |
 | `2026` | **Learning to Code the World: Harness Evolution for Compositional 3D Reconstruction (SceneEvolve)** | 用可执行代码表示组合式 3D 场景，并在固定模型和执行后端的条件下演化重建 harness。 | [PDF](https://arxiv.org/abs/2610.37046) |
@@ -170,10 +180,12 @@
 | `2026` | **LEGO-Anything: Coding Agents for 3D Scene Reconstruction** | LEGO-Anything 将三维场景重建为可执行程序，并分别评价产物有效性、几何和外观。 | [PDF](https://arxiv.org/abs/2609.36380) |
 | `2026` | **Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs** | Recursive Code World Models 通过递归程序、全局—局部修订和共享参考视图重建复杂场景。 | [PDF](https://arxiv.org/abs/2609.11499) |
 | `2026` | **FuncRoom-Agent: Sequential Feed-Forward 3D Functional Indoor Scene Generation** | FuncRoom-Agent 通过递归 DSL、顺序专家模型和执行依据的过程奖励，生成功能性室内场景。 | [PDF](https://arxiv.org/abs/2608.29519) |
+| `2026` | **aDSL: Agentic 3D Creation via Joint Agent-Program Design** | aDSL 协同设计关系型三维领域特定语言与规划—执行—审阅多智能体闭环，利用执行反馈修复几何与空间约束违规。 | [PDF](https://arxiv.org/abs/2608.17975) |
 | `2026` | **VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?** | VibeWorlding 研究多模态 coding agent 如何在 Blender 沙盒中通过资产检索、程序化编辑、渲染反馈与物理可行性检查端到端构建和修改开放式 3D 世界。它的核心任务是世界构建与编辑，不应直接计作时间动力学发现。 | [PDF](https://arxiv.org/abs/2608.15265) |
 | `2026` | **WorldClaw: Agentic 3D Open-World Generation at Scale** | WorldClaw 通过区域规划、地形生成和渲染反馈，构建大规模可编辑三维场景。 | [PDF](https://arxiv.org/abs/2608.05248) |
 | `2026` | **SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation** | 由规划、编码、审查多智能体编写 Blender 程序，生成含流体、粒子、刚体和关节机构的动态 4D 场景，并依据渲染视频检查运动。 | [PDF](https://arxiv.org/abs/2607.01766) |
 | `2026` | **SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects** | SceneCode 构建可编辑的室内世界程序，包含关节物体、仿真导出与持久场景组织。 | [PDF](https://arxiv.org/abs/2605.19587) |
+| `2026` | **Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis** | Code-as-Room 解析俯视房间图像并通过带跨阶段记忆的结构化执行框架多阶段合成三维室内几何、材质与光照 Blender 代码。 | [PDF](https://arxiv.org/abs/2605.18451) |
 | `2026` | **SR-Platform: An Agentic Pipeline for Natural Language-Driven Robot Simulation Environment Synthesis** | 经场景规划、CadQuery 资产合成、受约束布局和 MJCF 组装，将自然语言描述转为可执行的 MuJoCo 环境。 | [PDF](https://arxiv.org/abs/2605.14700) |
 | `2026` | **ChronoAgentic: A Code-based Multi-Agent World Simulator for Physically Grounded Simulation Construction** | ChronoAgentic 结合规划、编码、视觉审阅与轨迹检查，构建 PyChrono 仿真程序。 | [PDF](https://arxiv.org/abs/2605.14398) |
 | `2026` | **SimWorld Studio: Automatic Environment Generation with Evolving Coding Agent for Embodied Agent Learning** | 自我演化的 coding agent 编写并运行 Unreal Engine 代码，根据语言或图像指令构建带可验证任务的物理具身环境。 | [PDF](https://arxiv.org/abs/2605.09423) |
@@ -199,18 +211,21 @@
 *不属于三类主线的记录，分为 GUI 世界模型与评测基准两组。*
 
 <a id="papers-other-gui"></a>
-#### GUI 世界模型 (21)
+#### GUI 世界模型 (25)
 
 *GUI、网页与 computer-use 世界模型，包括以可渲染代码预测下一屏的工作；不纳入三类主线。*
 
 <details>
-<summary>21 条记录</summary>
+<summary>25 条记录</summary>
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
+| `2026` | **Interactive Neural Computers** | 将桌面环境建模为带惊奇门控槽位记忆与残差潜渲染的端到端交互式世界模型，从键鼠动作预测下一屏并保持屏外文件内容。 | [PDF](https://arxiv.org/abs/2611.32811) |
+| `2026` | **MKD2World: A Typed Spatial MarkDown World Model For Web Agents** | MKD2World 将桌面网页序列化为编码元素类型、坐标框与控件状态的 Typed Spatial Markdown，用于动作条件下一状态预测以辅助网页智能体决策。 | [PDF](https://arxiv.org/abs/2611.06544) |
 | `2026` | **WebHarbor: Docking Real Websites for Evolving GUI Agent Environments** | 编码 agent 根据新任务扩展容器化的网站副本，由人工核对界面与业务流程。共提供 153 个可执行网站环境。 | [PDF](https://arxiv.org/abs/2611.03634) |
 | `2026` | **Agent World Model in the Wild: Computer-Use Agent Environment Synthesis (WildAWM)** | 合成贯通 GUI、MCP 和 CLI 的可执行计算机环境，以可重放状态构建程序和基于执行的任务、验证器质量门控支持智能体训练。 | [PDF](https://arxiv.org/abs/2610.26828) |
 | `2026` | **Beyond Next-Screen Prediction: The Decision Value of GUI World Models** | 控制预测呈现方式和监督条件，对比 GUI 前瞻预测与直接动作排序器，检验预测画面对决策的增量价值。 | [PDF](https://arxiv.org/abs/2610.24372) |
+| `2026` | **Latent World Action Model for GUI Agents** | 将 GUI 世界模型的预测目标从全屏像素重建转向动作感知对比学习的潜空间转移预测，并与动作选择头共享多模态表征。 | [PDF](https://arxiv.org/abs/2610.14228) |
 | `2026` | **Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents** | 研究以 GUI 世界模型验证状态转移，并区分界面相似度与转移正确性。 | [PDF](https://arxiv.org/abs/2610.11942) |
 | `2026` | **AutoGUIWorld: Image Generators as Visual World Models for GUI Agent** | AutoGUIWorld 通过规划视觉后果并迭代编辑截图，合成 GUI 交互轨迹。 | [PDF](https://arxiv.org/abs/2610.01215) |
 | `2026` | **The GUI Is Not the State: Diagnosing State Aliasing in GUI World Models (StateAliasBench)** | StateAliasBench 配对可见 GUI 条件相同、未来却不同的案例，诊断隐藏转移状态。 | [PDF](https://arxiv.org/abs/2609.32679) |
@@ -221,6 +236,7 @@
 | `2026` | **OpenComputer: Verifiable Software Worlds for Computer-Use Agents** | OpenComputer 提供真实软件环境、结构化状态验证与可审计的任务奖励。 | [PDF](https://arxiv.org/abs/2605.19769) |
 | `2026` | **How Mobile World Model Guides GUI Agents?** | 比较文本、图像和可渲染代码表示，分析重建、在线使用及 agent 消费预测的不同方式。 | [PDF](https://arxiv.org/abs/2605.10347) |
 | `2026` | **Computer-Using World Model** | Computer-Using World Model 先预测文本变化，再生成桌面软件交互后的截图。 | [PDF](https://arxiv.org/abs/2602.17365) |
+| `2026` | **World-Model-Augmented Web Agents with Action Correction (WAC)** | WAC 让网页智能体在执行前调用状态转移世界模型模拟动作后果，并由裁判模型审查风险以触发动作纠偏。 | [PDF](https://arxiv.org/abs/2602.15384) |
 | `2026` | **WebWorld: A Large-Scale World Model for Web Agent Training** | WebWorld 学习大规模网页仿真器，用于 agent 训练。 | [PDF](https://arxiv.org/abs/2602.14721) |
 | `2026` | **Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning** | 合成约 1000 个由代码驱动、数据库支撑的工具环境用于 agent 强化学习，其状态转移比 LLM 模拟的环境更一致。 | [PDF](https://arxiv.org/abs/2602.10090) |
 | `2026` | **Code2World: A GUI World Model via Renderable Code Generation** | Code2World 结合 AndroidCode、视觉修订与渲染感知学习，生成下一屏 GUI 代码。 | [PDF](https://arxiv.org/abs/2602.09856) |
@@ -233,12 +249,12 @@
 </details>
 
 <a id="papers-other-benchmark"></a>
-#### 评测基准 (26)
+#### 评测基准 (37)
 
 *评测基准与诊断研究，按评测对象分组。*
 
 <details>
-<summary>26 条记录</summary>
+<summary>37 条记录</summary>
 
 **评测 纯状态动力学（WorldCoder-type）**
 
@@ -256,13 +272,18 @@
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
 | `2026` | **WorldDraft: If Code Builds the World, Can Video Models Just Render It?** | 由 48 组可执行 4D 世界构造 432 个配对案例。固定动力学，改变代理精细度与外观提示，分别测运动和相机轨迹的保持程度、目标外观的实现程度。 | [PDF](https://arxiv.org/abs/2611.16217) |
+| `2026` | **VibeVideoBench: Evaluating Multimodal Agents on Code-Driven Video Generation** | VibeVideoBench 在无生成视频模型的沙箱中评测多模态智能体纯靠编写代码渲染音视频的 239 个任务，结合程序规格检查与细粒度准则打分。 | [PDF](https://arxiv.org/abs/2610.35864) |
 | `2026` | **Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V** | 以文本、图像和视频为输入，评估可执行程序生成完整视频的能力，并测量执行、质量、指令对齐与参考保真。 | [PDF](https://arxiv.org/abs/2610.28416) |
+| `2026` | **RenderBench: Benchmarking Render-to-Real Video Transfer with Reconstructed Digital Twins** | RenderBench 将可编辑三维数字孪生与代理渲染同真实目标视频配对，按物体、可见性、关节与运动定位代理到真实视频迁移的失真。 | [PDF](https://arxiv.org/abs/2610.08684) |
 | `2026` | **PROWBench: Do Video Models Render What the Program Specifies?** | PROWBench 将渲染视频中的事件与可执行程序规格及事件日志进行对齐比较。 | [PDF](https://arxiv.org/abs/2610.02205) |
+| `2026` | **Proxy2World: Learning to Generate Worlds From Lightweight Proxies without Seeing Them** | Proxy2World 通过跨模态流匹配从带位姿 RGBD 视频学习轻量代理条件生成，并提出 ProxyBench 评测不同场景与运动下的结构遵循度。 | [PDF](https://arxiv.org/abs/2609.35023) |
 
 **评测 3D 世界构建（VibeWorlding-type）**
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
+| `2026` | **VeriWorld: A Verifiable Visual SWE-Bench for Spatial Reasoning in 3D Environments** | VeriWorld 在具备可执行动作与确定性验证器的交互式三维环境中对比视觉、结构化与联合输入，揭示感知到结构的推理鸿沟与协议敏感性。 | [PDF](https://arxiv.org/abs/2611.30226) |
+| `2026` | **3D GameDev Arena: Benchmarking Coding Agents That Plan, Build, and Playtest extreme Long-Horizon Browser Games** | 3D GameDev Arena 包含 14 类共 108 个超长程从零构建三维网页游戏任务，联合代码功能验收、智能体试玩与人类盲测偏好评估编码智能体。 | [PDF](https://arxiv.org/abs/2611.24073) |
 | `2026` | **OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation** | 针对 180 个 HTML5 游戏任务设置 1,800 条要求，通过静态源代码评判显式功能以及游戏系统间的深层关联。 | [PDF](https://arxiv.org/abs/2611.17681) |
 | `2026` | **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender** | 用 242 个任务评估可执行 Blender 场景。Scene Check 重跑代码核对隐藏的 4D 场景事实，Screen Check 再检查这些事实能否在预览视频中看出来。 | [PDF](https://arxiv.org/abs/2611.15789) |
 | `2026` | **Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds** | 用 145 个任务评估编码 agent 构建物体、场景和交互世界的能力。开放世界任务区分局部机关是否可用，以及依赖通行空间和持久状态的完整活动能否完成。 | [PDF](https://arxiv.org/abs/2611.09017) |
@@ -273,17 +294,23 @@
 | `2026` | **WorldBench: Evaluating LLMs on Three.js Voxel World Generation** | 评测 LLM 编写的 Three.js 体素世界；评判器既探索运行中的世界、又阅读代码，只有两者一致时才计为证据。 | [PDF](https://arxiv.org/abs/2610.10622) |
 | `2026` | **Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos** | Video2World 从几何、动力学和功能三个方面，评价具身视频到交互世界的重建。 | [PDF](https://arxiv.org/abs/2610.04432) |
 | `2026` | **Spec2Game: Can LLMs Generate Complete Playable Games from Detailed Specifications?** | 评测根据详细游戏规格（含受控规则变体）生成完整 Pygame 项目的能力，区分可执行性与规则是否被忠实实现。 | [PDF](https://arxiv.org/abs/2610.04253) |
+| `2026` | **Code4Scene: Benchmarking Coding Agents for Constructing and Editing 3D Scenes** | Code4Scene 基于 170 个 Unreal Engine 任务直接检查引擎原生场景的任务完成度、物理合法性与非编辑区保持度，评测三维构建与精确编辑。 | [PDF](https://arxiv.org/abs/2609.36777) |
 | `2026` | **WorldCoder-Bench: Benchmarking Physically Grounded 3D World Synthesis** | WorldCoder-Bench 通过隐藏的运行时行为合同，评价具有物理依据的三维世界构建。 | [PDF](https://arxiv.org/abs/2606.01869) |
+| `2026` | **VoxelCodeBench: Benchmarking 3D World Modeling Through Code Generation** | VoxelCodeBench 在 Unreal Engine 中执行体素世界生成代码，从符号理解、几何构建与多物体组合评测超越语法可执行性的三维空间正确性。 | [PDF](https://arxiv.org/abs/2604.02580) |
 
 **评测 非代码的视频与学习型世界模型**
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
+| `2026` | **StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model** | StrideWorld 以运动前固定的真实初始几何和单步动作步幅为参照，揭示交互视频世界模型在相机漫游与组合路径下的场景形变与失速。 | [PDF](https://arxiv.org/abs/2611.24408) |
 | `2026` | **The Flip Test: Video World Models Fail to Learn the World State (FlipTest)** | 用近乎相同的初始帧、配对对照及密集参数扫描，测试视频预测能否在物理结果刚好翻转的边界上随之改变。 | [PDF](https://arxiv.org/abs/2611.19822) |
 | `2026` | **WorldProbe: When Video World Models Fall Apart under Long-Horizon Spatial Exploration** | 用目标条件多模态 agent 在线调整相机动作，探测视频世界模型的长时空间一致性。 | [PDF](https://arxiv.org/abs/2610.39721) |
 | `2026` | **WMEval: Evaluating Interactive World Models Grounded on Physical Simulations** | 以 Unity 物理仿真为真值，对交互式世界模型进行感知、状态和物理因果层面的对齐评测。 | [PDF](https://arxiv.org/abs/2610.33894) |
 | `2026` | **Events, Not Pixels: Where World Models Get the Return Wrong** | 在匹配预算下用真实转移替换部分想象转移诊断回报误差；对所测模型，奖励或终止事件比视觉误差大的帧更影响回报。 | [PDF](https://arxiv.org/abs/2610.29435) |
+| `2026` | **Execution Before Memory: Diagnosing Memory Failures in Video World Models** | 提出 MIST 评测将“指令要求的隐藏状态改变是否实际发生”与“后续帧是否记住该结果”解耦，指出视频世界模型的许多记忆失败实为执行缺失。 | [PDF](https://arxiv.org/abs/2610.23542) |
 | `2026` | **WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions** | 以配对真实执行评估动作条件机器人世界模型，覆盖状态正确性、交互空间对齐、局部交互保真及多视角动作一致性。 | [PDF](https://arxiv.org/abs/2610.18826) |
+| `2026` | **Can Video World Models Track Unobserved World States? (Visual Shell Game)** | 通过动作条件“三杯猜球”视频测试与置换群状态追踪分析，检验视频世界模型能否在长交换序列与视野外演化中维护可修订的隐藏世界状态。 | [PDF](https://arxiv.org/abs/2608.30692) |
+| `2026` | **Current World Models Lack a Persistent State Core (WRBench)** | WRBench 将移开镜头作为可观测性干预，在 23 个模型的 9,600 段视频上检验视野外物理事件是否随时间持续演化而非停滞在离开瞬间。 | [PDF](https://arxiv.org/abs/2606.20545) |
 | `2025` | **WorldModelBench: Judging Video Generation Models As World Models** | WorldModelBench 从指令遵从、物理合理性和人类偏好评价视频世界模型。 | [PDF](https://arxiv.org/abs/2502.20694) |
 
 </details>
@@ -300,16 +327,21 @@
 相关综述以视频模型或通用世界模型为中心；本综述以**可执行代码作为世界的载体**为纳入标准，按代码承担了世界的多少部分（纯状态 / 白模 + 生成式渲染 / 完整 3D）组织文献，视频模型只作为可选的渲染器出现。
 
 <details>
-<summary><strong>展开查看与 8 篇相关综述的逐条对比</strong></summary>
+<summary><strong>展开查看与 13 篇相关综述的逐条对比</strong></summary>
 
 | 年份 | 相关综述 | 与本综述的区别 | 链接 |
 |---|---|---|:-:|
+| `2026` | **Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond** | 该综述以视频渲染器为中心，按上游规格阶梯（T0–T3b）组织条件视频生成，代码引擎只是其中一种上游代理源。本综述以可执行代码世界本身为中心，覆盖纯状态动力学（01）、白模加生成式渲染（02）与完整三维世界构建（03），并用 L0–L4 拆解上游状态决定权。 | [Project](https://genrender-hub.github.io/) |
 | `2026` | **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** | 该综述以视频生成模型为中心，梳理围绕它构建的 agent harness（视频制作、交互式世界建模、递归自我改进），代码只是 harness 的组件之一。本综述以代码为世界的载体：代码承担状态与规则、白模世界或完整 3D 世界，视频模型只是可选的渲染器之一。 | [PDF](https://arxiv.org/abs/2610.40191) |
+| `2026` | **Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence** | 该文从自进化具身编码智能体视角结合 Code as Policy 与 Code as World；本综述专门系统展开 Code as World 在状态动力学、代理生成渲染与三维世界构建上的完整谱系。 | [PDF](https://arxiv.org/abs/2609.35432) |
 | `2026` | **AI for Games in the Foundation Model Era** | 该综述覆盖游戏领域的方方面面，包括学习型游戏世界模型与 AI 辅助开发。本综述中游戏只是若干领域之一，重点是以可执行代码写成的游戏规则与世界。 | [PDF](https://arxiv.org/abs/2609.16679) |
+| `2026` | **Do World Models Make Better Robots? A Survey of Evaluation Benchmarks for Predictive Embodied Intelligence** | 该综述聚焦具身预测世界模型与直接 VLA 策略的评测对比；本综述将机器人视为验证载体之一，重点考察可执行世界程序、持久状态与反事实可验证性。 | [PDF](https://arxiv.org/abs/2609.29669) |
 | `2026` | **From Generation to Simulation: How Far Are World Models from Being True Simulators?** | 该综述考察潜变量、视频和联合嵌入世界模型距离模拟器还有多远。代码世界模型走的是相反路线：从带显式状态的可执行基底出发；本综述研究这一基底如何被归纳、构建和渲染。 | [PDF](https://arxiv.org/abs/2608.23070) |
 | `2026` | **From Pixels to States: Rethinking Interactive World Models as Game Engines** | 该综述主张视频世界模型应恢复游戏引擎中的显式状态循环。Code-as-World 方法把这一循环保留在可执行代码中，视频模型只负责渲染；本综述比较的是代码承担了这一循环的多少部分。 | [PDF](https://arxiv.org/abs/2607.14076) |
 | `2026` | **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** | 该综述把环境视为 agent 的训练基础设施。本综述只关注其代码充当世界模型、预测或模拟世界演化的情形，基准和合成任务环境居于次要位置。 | [PDF](https://arxiv.org/abs/2606.12191) |
 | `2026` | **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** | 该综述聚焦文本环境，把"代码作为世界模型"视为一种构建范式。本综述以代码世界本身为主题，并从文本与符号状态扩展到白模加生成式渲染以及完整 3D 世界。 | [PDF](https://arxiv.org/abs/2606.09032) |
+| `2026` | **Towards Interactive Video World Modeling: Frontiers, Challenges, Benchmarks, and Future Trends** | 该综述以动作条件视频与三维生成式世界模型为中心；本综述以可执行代码为世界基底，视频生成模型仅作为可选的条件渲染器出现。 | [PDF](https://arxiv.org/abs/2606.01164) |
+| `2026` | **World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications** | 该综述按架构、方法族、推理策略与应用领域梳理广义学习型世界模型；本综述专门聚焦以可执行代码承载状态、规则或三维结构的世界模型。 | [PDF](https://arxiv.org/abs/2606.00133) |
 | `2026` | **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** | 该综述按能力层级与规律类型梳理 400 余项工作，代码化模型只是众多实现方式之一。本综述的组织问题是代码在世界中承担什么，只收录以代码为世界载体的方法。 | [PDF](https://arxiv.org/abs/2604.22748) |
 | `2025` | **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** | 该综述覆盖 WorldCoder-type 的一个分支：由语言写出的符号规划模型。本综述将其与 Python 转移程序、物理残差、生成式渲染的代码世界和 3D 世界程序放在同一框架下。 | [PDF](https://arxiv.org/abs/2503.18971) |
 

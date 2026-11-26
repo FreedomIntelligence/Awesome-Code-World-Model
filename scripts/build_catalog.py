@@ -238,7 +238,8 @@ def related_surveys(data, localized=None):
         label = md(p['title'])
         en, zh = data['comparisons'][p['id']]
         diff = md(zh if localized else en)
-        lines.append(f"| `{p['year']}` | **{label}** | {diff} | [PDF]({p['source_url']}) |")
+        link_label = 'Project' if p.get('source_type') == 'project' else 'PDF'
+        lines.append(f"| `{p['year']}` | **{label}** | {diff} | [{link_label}]({p['source_url']}) |")
     lines += ['', '</details>']
     return '\n'.join(lines).rstrip()
 

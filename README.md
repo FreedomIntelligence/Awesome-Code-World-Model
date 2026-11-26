@@ -10,9 +10,11 @@
 
 <!-- BADGES:BEGIN -->
 
-[![Papers](https://img.shields.io/badge/Papers-170-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
+[![Papers](https://img.shields.io/badge/Papers-200-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
 
 <!-- BADGES:END -->
+
+<p><img src="./assets/banner.png" alt="Worlds, made executable: code, persistent state, and rendered observations" width="960"></p>
 
 </div>
 
@@ -34,10 +36,10 @@ As part of our ongoing research effort, we plan to release a series of open reso
 
 | Family | Code Carries | Core Question | Papers |
 |---|---|---|---:|
-| **[01 · WorldCoder-type](#papers-worldcoder)** | State & dynamics only | Does code predict action consequences and support planning? | **48** |
-| **[02 · Code-as-World-type](#papers-code_as_world)** | Whitebox world + generative rendering | Can executable state & rules drive a generatively rendered world? | **25** |
-| **[03 · VibeWorlding-type](#papers-vibeworlding)** | Full 3D world | Can an agent write and edit a full 3D world in code? | **42** |
-| **[Other](#papers-other)** | GUI worlds, benchmarks & surveys | [GUI World Models](#papers-other-gui) (21) · [Benchmarks](#papers-other-benchmark) (26) · [Related Surveys](#related-surveys) (8) | **55** |
+| **[01 · WorldCoder-type](#papers-worldcoder)** | State & dynamics only | Does code predict action consequences and support planning? | **50** |
+| **[02 · Code-as-World-type](#papers-code_as_world)** | Whitebox world + generative rendering | Can executable state & rules drive a generatively rendered world? | **30** |
+| **[03 · VibeWorlding-type](#papers-vibeworlding)** | Full 3D world | Can an agent write and edit a full 3D world in code? | **45** |
+| **[Other](#papers-other)** | GUI worlds, benchmarks & surveys | [GUI World Models](#papers-other-gui) (25) · [Benchmarks](#papers-other-benchmark) (37) · [Related Surveys](#related-surveys) (13) | **75** |
 
 <!-- NAVIGATION:END -->
 
@@ -46,15 +48,16 @@ As part of our ongoing research effort, we plan to release a series of open reso
 
 <!-- CATALOG:BEGIN -->
 
-**170 sources** · updated through **2026-11-18** · ordered by date (newest first). Full metadata in the [annotated catalogue](docs/catalogue.md) and [master list](docs/paper-master-list.md).
+**200 sources** · updated through **2026-11-26** · ordered by date (newest first). Full metadata in the [annotated catalogue](docs/catalogue.md) and [master list](docs/paper-master-list.md).
 
 <a id="papers-worldcoder"></a>
-### 01 · WorldCoder-type · Programmatic Dynamics (48)
+### 01 · WorldCoder-type · Programmatic Dynamics (50)
 
 *State-level executable dynamics: transition mechanisms, world-program induction, planning, and model repair, without generated appearance.*
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
+| `2026` | **CodeWAM: A Code World Action Model for End-to-End Autonomous Driving** | Represents ego-vehicle motion under candidate plans with executable dynamics code paired with a learned visual scene model to evaluate future consequences in end-to-end driving. | [PDF](https://arxiv.org/abs/2611.32483) |
 | `2026` | **Creating Hybrid Interactive Narrative Systems with LLM: From Formal Description to Evaluation** | Encodes narrative events as operations with explicit preconditions and effects. Three experience managers act on the same facts and goals, making their story trajectories comparable as plans. | [PDF](https://arxiv.org/abs/2611.02807) |
 | `2026` | **Algebraic World Model: From Exploration to Proofs** | Explores unknown games with executable Python hypotheses, typed rules, and Lean formalization for reachability and impossibility proofs. | [PDF](https://arxiv.org/abs/2610.40503) |
 | `2026` | **PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds** | Has a shared VLM propose executable physical worlds while a deterministic engine verifies counterfactual branches and produces answer-bound training tasks. | [PDF](https://arxiv.org/abs/2610.34921) |
@@ -80,6 +83,7 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | `2026` | **World-Time Compute with Verified Code World Models** | World-Time Compute uses verified symbolic code worlds to generate exactly labeled trajectories for model training. | [PDF](https://arxiv.org/abs/2609.09163) |
 | `2026` | **OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3** | OPINE-World jointly revises symbolic ontology, transition hypotheses, and goals through error-prioritized exploration. | [PDF](https://arxiv.org/abs/2607.01531) |
 | `2026` | **Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games** | Mind-Studio constructs executable models for partially observable games and evaluates same-state multi-step lookahead fidelity. | [PDF](https://arxiv.org/abs/2606.16070) |
+| `2026` | **PO-PDDL: Learning Symbolic POMDPs from Visual Demonstrations for Robot Planning Under Uncertainty** | Learns symbolic POMDP domains in PO-PDDL from robot demonstration videos by inferring latent state trajectories and stochastic transition and observation rules for belief-space planning. | [PDF](https://arxiv.org/abs/2606.15654) |
 | `2026` | **PatchWorld: Gradient-Free Optimization of Executable World Models for Agent Environments** | PatchWorld optimizes executable belief-state models through counterexample-guided patches and uses them for action lookahead. | [PDF](https://arxiv.org/abs/2605.30880) |
 | `2026` | **Distilling Game Code World Model Generation into Lightweight Large Language Models (GameCWM distillation)** | Distills the generation of game code world models (rules, legal actions, transitions, observations, rewards) from frontier LLMs into smaller models through post-training. | [PDF](https://arxiv.org/abs/2605.24375) |
 | `2026` | **Baba in Wonderland: Online Self-Supervised Dynamics Discovery for Executable World Models (Alice / Baba in Wonderland)** | Alice learns executable dynamics under misaligned lexical priors, using preservation conflicts to revise hypotheses and guide exploration. | [PDF](https://arxiv.org/abs/2605.16725) |
@@ -107,14 +111,17 @@ As part of our ongoing research effort, we plan to release a series of open reso
 [↑ Back to overview](#contents)
 
 <a id="papers-code_as_world"></a>
-### 02 · Code-as-World-type · Whitebox Worlds + Generative Rendering (25)
+### 02 · Code-as-World-type · Whitebox Worlds + Generative Rendering (30)
 
 *Code keeps persistent state and rules over a whitebox/proxy world; a generative renderer supplies appearance.*
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
-| `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | The upstream engine fixes camera and entity motion in a structural proxy. Invoker-Render combines the proxy with an appearance reference and text to stream the rendered scene. | [Project](https://github.com/inclusionAI/CodeWorldModel) |
+| `2026` | **ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds** | Autoregressive video diffusion renderer with dynamic-context learning, recurrent history compression and cross-representation flow alignment for sustained rendering from game-engine proxies. | [PDF](https://arxiv.org/abs/2611.25838) |
+| `2026` | **WorldRuler: Interactive World Modeling under Configurable Rules** | Organizes user-defined rules, dependencies and object states in an executable 3D rule graph coupled in a closed loop with video generation and perceptual feedback across save-and-load. | [PDF](https://arxiv.org/abs/2611.24869) |
+| `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | Pairs bidirectional creation and four-step causal streaming via ProForcing over multi-granularity structural proxies, an appearance reference and language, while the upstream engine supplies state and motion. | [PDF](https://arxiv.org/abs/2611.22925) |
 | `2026` | **GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models** | A game engine computes event timing, outcomes and camera state. A video model renders the interaction, allowing the same mechanic to take different visual forms. | [PDF](https://arxiv.org/abs/2611.19247) |
+| `2026` | **Streaming Code World Model (Streaming CWM)** | Implements causal four-step chunked streaming video generation over depth and semantic proxies exported from Code World Model and CARLA driving state. | [Project](https://github.com/TingtingLiao/streaming-code-world-model) |
 | `2026` | **CoCode-World: Shared 3D Proxy Representation for Multi-Player World Models** | Renders two players’ views jointly from a shared programmable 3D proxy and RGB references. Synchronized GTA V observations test whether characters retain their appearance across viewpoints. | [PDF](https://arxiv.org/abs/2611.15602) |
 | `2026` | **Fight World Model: Customizable Combat through Visual Interaction Proxies** | Separates executable combat state and rule resolution from video rendering with identity- and timing-aligned interaction proxies; tests rule changes and customization. | [PDF](https://arxiv.org/abs/2610.40607) |
 | `2026` | **Wizard: Manipulate Any World in Real Time via Agentic Control** | Combines structured skeleton/geometry proxies with an agentic framework that maintains game state for real-time, generalizable video-world control. | [PDF](https://arxiv.org/abs/2610.40339) |
@@ -132,17 +139,19 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | `2026` | **StreamRender-H3: Interactive Coding Worlds with Real-time Streaming Diffusion Render** | A three.js game engine maintains maps, rules and state, advancing on player inputs. Semantic frames connect it to a streaming MiniMax-H3 renderer. The demonstrated system separates executable simulation from generated appearance. | [Project](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/) |
 | `2026` | **AgentGarten: Code Worlds for Evolving Agents** | AgentGarten connects program-defined simulation backends to a shared real-time renderer and reusable agent playbooks. | [PDF](https://arxiv.org/abs/2610.12374) |
 | `2026` | **Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models** | A coding agent and lightweight engine maintain an extensible world-state table, compile coarse visual conditions, and incorporate newly observed objects for persistent interaction. | [PDF](https://arxiv.org/abs/2610.01614) |
+| `2026` | **WorldWeave: Growing Persistent Geometric Worlds for Video Generation** | Decouples expandable world-state maintenance from video synthesis via agent-guided scene organization, deterministic geometry compilation and read-only depth queries across revisits. | [PDF](https://arxiv.org/abs/2609.34221) |
 | `2026` | **Code Plans, Diffusion Renders: Open-Ended Generative World Modeling (CoDeR)** | CoDeR coordinates executable whitebox world construction with a generative Artist for open-ended visual worlds. | [PDF](https://arxiv.org/abs/2609.26458) |
 | `2026` | **GameDirector: Decoupling Gameplay Logic from Rendering for Player-Configurable Game World Models** | GameDirector uses visual situation estimates and explicit gameplay rules to control game-video generation. | [PDF](https://arxiv.org/abs/2609.25652) |
 | `2026` | **Programmable World Model** | Programmable World Model compiles persistent engine state, including nonvisual facts, into controls for video generation. | [PDF](https://arxiv.org/abs/2609.10540) |
 | `2026` | **Magpie: Real-Time World Renderer for Interactive Games** | Magpie combines persistent game-engine state and rules with a whitebox-conditioned interactive neural renderer. | [PDF](https://arxiv.org/abs/2608.27168) |
 | `2026` | **Code World Model: Coding Agent as World Brain** | Code World Model separates a coding world brain from a visual world engine through executable proxy representations. | [PDF](https://arxiv.org/abs/2608.25927) |
+| `2026` | **Generative World Renderer at the Speed of Play (AlayaRenderer-Flash)** | Distills a G-buffer and prompt-conditioned generative world renderer into a few-step autoregressive streaming model running at over 30 FPS when paired with a physics engine. | [PDF](https://arxiv.org/abs/2607.18703) |
 | `2025` | **Web World Models** | Web World Models uses typed web state and code-defined rules as the substrate for persistent, generative worlds. | [PDF](https://arxiv.org/abs/2512.23676) |
 
 [↑ Back to overview](#contents)
 
 <a id="papers-vibeworlding"></a>
-### 03 · VibeWorlding-type · Agentic 3D World Construction (42)
+### 03 · VibeWorlding-type · Agentic 3D World Construction (45)
 
 *Code specifies the full 3D world (geometry, materials, layout, and optionally physics) for conventional rendering or simulation; static scenes included.*
 
@@ -150,6 +159,7 @@ As part of our ongoing research effort, we plan to release a series of open reso
 |---|---|---|:-:|
 | `2026` | **TelePhysica: Agentic Reconstruction of Physically Interactive Scenes** | Reconstructs visual meshes and executable physical models from a photograph, checks equilibrium, then simulates interventions such as reversing an applied force. Simulated trajectories can also guide video synthesis. | [PDF](https://arxiv.org/abs/2611.18078) |
 | `2026` | **SceneAgent: A Multi-Agent Framework for Portable Game Scene Generation (SceneAgent (portable game scenes))** | Stores the evolving game scene in a persistent SceneContext. Builder agents reuse layout skills across engines while adapters translate coordinates, bind assets and export scenes. | [PDF](https://arxiv.org/abs/2611.17821) |
+| `2026` | **BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs** | Trains open-weight MLLM agents to edit explicit 3D scenes via Blender Python code inside an isolated deterministic sandbox with structured state export and multi-turn RL rewards. | [PDF](https://arxiv.org/abs/2611.10768) |
 | `2026` | **Gym-Anything for Robotics: Scaling physical simulations with digital agents** | Treats simulation creation as a coding-agent task and releases RoboWorld environments plus an adversarial creation-audit loop for physical simulation construction. | [PDF](https://arxiv.org/abs/2610.40565) |
 | `2026` | **Cinematize from Unreal: Agentic Choreography for Controllable World Simulation (CineU)** | Uses an Unreal project as a persistent inspectable world; agent-generated code performs geometry- and capability-constrained operations with verification and localized repair. | [PDF](https://arxiv.org/abs/2610.38468) |
 | `2026` | **Learning to Code the World: Harness Evolution for Compositional 3D Reconstruction (SceneEvolve)** | Represents compositional 3D scenes as executable code and evolves the reconstruction harness while fixing model parameters, action semantics, and execution backend. | [PDF](https://arxiv.org/abs/2610.37046) |
@@ -170,10 +180,12 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | `2026` | **LEGO-Anything: Coding Agents for 3D Scene Reconstruction** | LEGO-Anything reconstructs 3D scenes as executable programs and separates artifact, geometry, and appearance evaluation. | [PDF](https://arxiv.org/abs/2609.36380) |
 | `2026` | **Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs** | Recursive Code World Models reconstruct complex scenes using recursive programs, global-local refinement, and shared reference views. | [PDF](https://arxiv.org/abs/2609.11499) |
 | `2026` | **FuncRoom-Agent: Sequential Feed-Forward 3D Functional Indoor Scene Generation** | FuncRoom-Agent generates functional indoor scenes with a recursive DSL, sequential expert, and execution-grounded process reward. | [PDF](https://arxiv.org/abs/2608.29519) |
+| `2026` | **aDSL: Agentic 3D Creation via Joint Agent-Program Design** | Co-designs a relational 3D domain-specific language with a Plan-Execute-Critic multi-agent loop that repairs geometry and constraint violations from execution feedback. | [PDF](https://arxiv.org/abs/2608.17975) |
 | `2026` | **VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?** | VibeWorlding studies an end-to-end multimodal coding agent that constructs and edits open 3D worlds in a Blender sandbox through asset retrieval, procedural editing, rendered-view feedback, and physical-feasibility checks. | [PDF](https://arxiv.org/abs/2608.15265) |
 | `2026` | **WorldClaw: Agentic 3D Open-World Generation at Scale** | WorldClaw builds large editable 3D scenes through region planning, terrain generation, and render-guided refinement. | [PDF](https://arxiv.org/abs/2608.05248) |
 | `2026` | **SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation** | A planner-coder-reviewer multi-agent system writes Blender programs for dynamic 4D scenes with fluids, particles, rigid bodies and articulated mechanisms, and checks motion from rendered video. | [PDF](https://arxiv.org/abs/2607.01766) |
 | `2026` | **SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects** | SceneCode builds editable indoor world programs with articulated objects, simulation exports, and persistent scene organization. | [PDF](https://arxiv.org/abs/2605.19587) |
+| `2026` | **Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis** | Parses top-down room views and synthesizes executable Blender code for 3D indoor geometry, materials and lighting with a structured execution harness and cross-stage memory. | [PDF](https://arxiv.org/abs/2605.18451) |
 | `2026` | **SR-Platform: An Agentic Pipeline for Natural Language-Driven Robot Simulation Environment Synthesis** | Turns natural-language descriptions into executable MuJoCo environments through scene planning, CadQuery asset synthesis, constrained layout and MJCF assembly. | [PDF](https://arxiv.org/abs/2605.14700) |
 | `2026` | **ChronoAgentic: A Code-based Multi-Agent World Simulator for Physically Grounded Simulation Construction** | ChronoAgentic constructs PyChrono simulation programs using planning, coding, visual review, and trajectory checks. | [PDF](https://arxiv.org/abs/2605.14398) |
 | `2026` | **SimWorld Studio: Automatic Environment Generation with Evolving Coding Agent for Embodied Agent Learning** | A self-evolving coding agent writes and runs Unreal Engine code to build physically grounded embodied environments with verifiable tasks from language or image instructions. | [PDF](https://arxiv.org/abs/2605.09423) |
@@ -199,18 +211,21 @@ As part of our ongoing research effort, we plan to release a series of open reso
 *Records outside the three primary families: GUI world models and benchmarks.*
 
 <a id="papers-other-gui"></a>
-#### GUI World Models (21)
+#### GUI World Models (25)
 
 *GUI, web, and computer-use world models, including renderable-code screen predictors. Kept outside the three families.*
 
 <details>
-<summary>21 records</summary>
+<summary>25 records</summary>
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
+| `2026` | **Interactive Neural Computers** | Trains an end-to-end desktop world model with surprise-gated slot memory and residual latent rendering to predict post-action screens and recall off-screen files. | [PDF](https://arxiv.org/abs/2611.32811) |
+| `2026` | **MKD2World: A Typed Spatial MarkDown World Model For Web Agents** | Serializes desktop web interfaces into Typed Spatial Markdown encoding element types, bounding boxes and control states for action-conditioned next-state prediction in web agents. | [PDF](https://arxiv.org/abs/2611.06544) |
 | `2026` | **WebHarbor: Docking Real Websites for Evolving GUI Agent Environments** | Coding agents extend Dockerized replicas of real websites as new tasks arrive. Human contributors check visual fidelity and workflow behavior across 153 environments. | [PDF](https://arxiv.org/abs/2611.03634) |
 | `2026` | **Agent World Model in the Wild: Computer-Use Agent Environment Synthesis (WildAWM)** | Synthesizes executable computer-use worlds spanning GUI, MCP and CLI interfaces, with replayable state-building programs and execution-based task/verifier quality gates for agent training. | [PDF](https://arxiv.org/abs/2610.26828) |
 | `2026` | **Beyond Next-Screen Prediction: The Decision Value of GUI World Models** | Controls prediction presentation and supervision when comparing GUI lookahead with a directly learned action ranker, testing the incremental decision value of predicted screens. | [PDF](https://arxiv.org/abs/2610.24372) |
+| `2026` | **Latent World Action Model for GUI Agents** | Replaces full-screen pixel reconstruction with action-aware contrastive latent transition prediction and joint action selection for GUI agents. | [PDF](https://arxiv.org/abs/2610.14228) |
 | `2026` | **Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents** | Studies GUI world models as transition verifiers and separates screen similarity from transition correctness. | [PDF](https://arxiv.org/abs/2610.11942) |
 | `2026` | **AutoGUIWorld: Image Generators as Visual World Models for GUI Agent** | AutoGUIWorld synthesizes GUI trajectories by planning visual consequences and iteratively editing screenshots. | [PDF](https://arxiv.org/abs/2610.01215) |
 | `2026` | **The GUI Is Not the State: Diagnosing State Aliasing in GUI World Models (StateAliasBench)** | StateAliasBench pairs identical visible GUI conditions with different futures to diagnose hidden transition state. | [PDF](https://arxiv.org/abs/2609.32679) |
@@ -221,6 +236,7 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | `2026` | **OpenComputer: Verifiable Software Worlds for Computer-Use Agents** | OpenComputer provides real software environments with structured state verification and auditable task rewards. | [PDF](https://arxiv.org/abs/2605.19769) |
 | `2026` | **How Mobile World Model Guides GUI Agents?** | Compares text, image, and renderable-code mobile predictions across reconstruction, online use, and agent-consumption strategies. | [PDF](https://arxiv.org/abs/2605.10347) |
 | `2026` | **Computer-Using World Model** | Computer-Using World Model predicts textual changes and then screenshots for desktop software interactions. | [PDF](https://arxiv.org/abs/2602.17365) |
+| `2026` | **World-Model-Augmented Web Agents with Action Correction (WAC)** | Couples a web action model with a transition world model and judge to simulate candidate action outcomes and trigger corrective feedback before risky browser execution. | [PDF](https://arxiv.org/abs/2602.15384) |
 | `2026` | **WebWorld: A Large-Scale World Model for Web Agent Training** | WebWorld learns a large-scale web simulator for agent training. | [PDF](https://arxiv.org/abs/2602.14721) |
 | `2026` | **Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning** | Synthesizes about 1,000 code-driven, database-backed tool environments for agentic reinforcement learning, with more consistent state transitions than LLM-simulated environments. | [PDF](https://arxiv.org/abs/2602.10090) |
 | `2026` | **Code2World: A GUI World Model via Renderable Code Generation** | Code2World learns next-GUI code generation with AndroidCode, visual revision, and render-aware learning. | [PDF](https://arxiv.org/abs/2602.09856) |
@@ -233,12 +249,12 @@ As part of our ongoing research effort, we plan to release a series of open reso
 </details>
 
 <a id="papers-other-benchmark"></a>
-#### Benchmarks (26)
+#### Benchmarks (37)
 
 *Benchmarks and diagnostic studies, grouped by what they evaluate.*
 
 <details>
-<summary>26 records</summary>
+<summary>37 records</summary>
 
 **Evaluating state-level dynamics (WorldCoder-type)**
 
@@ -256,13 +272,18 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
 | `2026` | **WorldDraft: If Code Builds the World, Can Video Models Just Render It?** | Across 432 paired cases from 48 executable 4D world families, varies proxy detail and appearance cues while holding dynamics fixed. Scores motion and camera preservation separately from target appearance. | [PDF](https://arxiv.org/abs/2611.16217) |
+| `2026` | **VibeVideoBench: Evaluating Multimodal Agents on Code-Driven Video Generation** | Evaluates multimodal coding agents on 239 sandbox tasks that synthesize complete videos and audio purely in code, scored via specification checks and ~13k requirement rubrics. | [PDF](https://arxiv.org/abs/2610.35864) |
 | `2026` | **Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V** | Benchmarks executable-program video creation from text, images and videos with objective and model-judged measures of execution, quality and alignment. | [PDF](https://arxiv.org/abs/2610.28416) |
+| `2026` | **RenderBench: Benchmarking Render-to-Real Video Transfer with Reconstructed Digital Twins** | Pairs reconstructed editable 3D digital twins and proxy renders with real target videos across static and dynamic scenes to benchmark render-to-real structural and appearance fidelity. | [PDF](https://arxiv.org/abs/2610.08684) |
 | `2026` | **PROWBench: Do Video Models Render What the Program Specifies?** | PROWBench compares rendered video events with executable program specifications and event logs. | [PDF](https://arxiv.org/abs/2610.02205) |
+| `2026` | **Proxy2World: Learning to Generate Worlds From Lightweight Proxies without Seeing Them** | Learns proxy-conditioned world generation from posed RGBD videos via cross-modal flow matching and introduces ProxyBench to evaluate structural adherence across scenes and motions. | [PDF](https://arxiv.org/abs/2609.35023) |
 
 **Evaluating 3D world construction (VibeWorlding-type)**
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
+| `2026` | **VeriWorld: A Verifiable Visual SWE-Bench for Spatial Reasoning in 3D Environments** | Evaluates spatial reasoning in interactive 3D environments with executable actions and deterministic verification across matched visual, structured and combined input channels. | [PDF](https://arxiv.org/abs/2611.30226) |
+| `2026` | **3D GameDev Arena: Benchmarking Coding Agents That Plan, Build, and Playtest extreme Long-Horizon Browser Games** | Benchmarks coding agents on 108 long-horizon from-scratch 3D browser game tasks across 14 genres using functional code acceptance, agent playtesting and blind human preference. | [PDF](https://arxiv.org/abs/2611.24073) |
 | `2026` | **OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation** | Evaluates generated HTML5 games against 1,800 requirements across 180 tasks. Static source inspection scores specified features and deeper relationships among game systems. | [PDF](https://arxiv.org/abs/2611.17681) |
 | `2026` | **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender** | Tests executable Blender scenes on 242 briefs. Scene Check reruns code against hidden 4D facts, and Screen Check judges whether the verified facts are visible in the rendered preview. | [PDF](https://arxiv.org/abs/2611.15789) |
 | `2026` | **Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds** | Evaluates coding agents on 145 object, scene and interactive-world tasks. Open-world tests distinguish working local mechanisms from activities requiring clearance and persistent state. | [PDF](https://arxiv.org/abs/2611.09017) |
@@ -273,17 +294,23 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | `2026` | **WorldBench: Evaluating LLMs on Three.js Voxel World Generation** | Benchmarks LLM-written Three.js voxel worlds with a judge that both explores the running world and reads the code, counting evidence only when the two agree. | [PDF](https://arxiv.org/abs/2610.10622) |
 | `2026` | **Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos** | Video2World evaluates video-to-interactive-world reconstruction through geometry, dynamics, and function. | [PDF](https://arxiv.org/abs/2610.04432) |
 | `2026` | **Spec2Game: Can LLMs Generate Complete Playable Games from Detailed Specifications?** | Benchmarks generating complete Pygame projects from detailed game specifications with controlled rule variants, separating executability from faithful rule realization. | [PDF](https://arxiv.org/abs/2610.04253) |
+| `2026` | **Code4Scene: Benchmarking Coding Agents for Constructing and Editing 3D Scenes** | Evaluates coding agents on 170 Unreal Engine 3D scene construction and state-preserving editing tasks by inspecting engine-native scene fulfillment, integrity and static physical validity. | [PDF](https://arxiv.org/abs/2609.36777) |
 | `2026` | **WorldCoder-Bench: Benchmarking Physically Grounded 3D World Synthesis** | WorldCoder-Bench tests physically grounded 3D world synthesis using hidden runtime behavior contracts. | [PDF](https://arxiv.org/abs/2606.01869) |
+| `2026` | **VoxelCodeBench: Benchmarking 3D World Modeling Through Code Generation** | Executes generated voxel-manipulation code in Unreal Engine to benchmark symbolic interpretation, geometric construction and multi-object spatial composition beyond syntax validity. | [PDF](https://arxiv.org/abs/2604.02580) |
 
 **Evaluating non-code video and learned world models**
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
+| `2026` | **StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model** | Evaluates interactive video world models against pre-motion ground-truth start geometry and calibrated per-action camera strides, exposing severe scene deformation under free-scale baselines. | [PDF](https://arxiv.org/abs/2611.24408) |
 | `2026` | **The Flip Test: Video World Models Fail to Learn the World State (FlipTest)** | Uses near-identical initial frames, matched controls and dense parameter sweeps to test whether video predictions change at the physical boundary where an outcome flips. | [PDF](https://arxiv.org/abs/2611.19822) |
 | `2026` | **WorldProbe: When Video World Models Fall Apart under Long-Horizon Spatial Exploration** | Uses a goal-conditioned agent to adapt camera actions online and probe long-horizon spatial consistency in video world models. | [PDF](https://arxiv.org/abs/2610.39721) |
 | `2026` | **WMEval: Evaluating Interactive World Models Grounded on Physical Simulations** | Uses Unity physical simulations as ground-truth oracles to compare interactive world-model trajectories at perceptual and state/causal levels. | [PDF](https://arxiv.org/abs/2610.33894) |
 | `2026` | **Events, Not Pixels: Where World Models Get the Return Wrong** | Diagnoses return errors by replacing selected imagined transitions with real ones under matched budgets; reward/terminal events matter more than visually poor frames for the tested models. | [PDF](https://arxiv.org/abs/2610.29435) |
+| `2026` | **Execution Before Memory: Diagnosing Memory Failures in Video World Models** | Introduces MIST to separate whether an instructed hidden change was executed from whether a video world model remembers it later, showing execution failure often masquerades as forgetting. | [PDF](https://arxiv.org/abs/2610.23542) |
 | `2026` | **WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions** | Evaluates action-conditioned robot world-model rollouts against paired physical executions across state correctness, spatial alignment, local interaction fidelity and multiview coherence. | [PDF](https://arxiv.org/abs/2610.18826) |
+| `2026` | **Can Video World Models Track Unobserved World States? (Visual Shell Game)** | Uses an action-conditioned video Shell Game and S_5 swap-tracking analysis to test whether video world models maintain revisable unobserved world states across long swap chains. | [PDF](https://arxiv.org/abs/2608.30692) |
+| `2026` | **Current World Models Lack a Persistent State Core (WRBench)** | Treats camera lookaway as an observability intervention across 9,600 videos from 23 models to test whether unobserved events keep evolving rather than freezing until revisited. | [PDF](https://arxiv.org/abs/2606.20545) |
 | `2025` | **WorldModelBench: Judging Video Generation Models As World Models** | WorldModelBench evaluates video world models using instruction adherence, physical plausibility, and human preferences. | [PDF](https://arxiv.org/abs/2502.20694) |
 
 </details>
@@ -300,16 +327,21 @@ As part of our ongoing research effort, we plan to release a series of open reso
 Related surveys centre on video models or world models in general. This survey takes **executable code as the substrate of the world** as its inclusion criterion and organises the literature by how much of the world code carries (state only / whitebox + generative rendering / full 3D); video models appear only as optional renderers.
 
 <details>
-<summary><strong>Compare with 8 related surveys</strong></summary>
+<summary><strong>Compare with 13 related surveys</strong></summary>
 
 | Year | Survey | How We Differ | Link |
 |---|---|---|:-:|
+| `2026` | **Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond** | It centers on the video renderer along a T0–T3b conditioning specification ladder, where code engines are one upstream proxy source among traditional G-buffers and neural states. Our survey centers on executable code as the world substrate—spanning state-only dynamics (01), proxy+renderer worlds (02) and full 3D engine code (03)—and uses L0–L4 to separate upstream state ownership. | [Project](https://genrender-hub.github.io/) |
 | `2026` | **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement** | It surveys agent harnesses built around video generation models, covering video production, interactive world modeling and recursive self-improvement, so the video model is the centre and code is one harness component. Here code is the world substrate: it carries state and rules, a whitebox world, or the full 3D world, and a video model is only one possible renderer. | [PDF](https://arxiv.org/abs/2610.40191) |
+| `2026` | **Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence** | It studies self-evolving physical coding agents that pair Code as Policy with Code as World for robotic execution. Our survey systematically develops Code as World itself across state induction, generative proxy rendering and 3D world construction. | [PDF](https://arxiv.org/abs/2609.35432) |
 | `2026` | **AI for Games in the Foundation Model Era** | It covers games broadly, including learned game-world models and AI-assisted development. Here games are one domain among several, and the focus is on game rules and worlds written as executable code. | [PDF](https://arxiv.org/abs/2609.16679) |
+| `2026` | **Do World Models Make Better Robots? A Survey of Evaluation Benchmarks for Predictive Embodied Intelligence** | It maps evaluation benchmarks for predictive embodied world models versus direct VLA policies. Here robotics is one validation domain, and the focus is on executable world programs, persistent state and counterfactual verifiability. | [PDF](https://arxiv.org/abs/2609.29669) |
 | `2026` | **From Generation to Simulation: How Far Are World Models from Being True Simulators?** | It asks how far latent, video and joint-embedding world models are from simulators. Code world models take the opposite route: they start from an executable simulator-like substrate with explicit state, and this survey studies how that substrate is induced, built and rendered. | [PDF](https://arxiv.org/abs/2608.23070) |
 | `2026` | **From Pixels to States: Rethinking Interactive World Models as Game Engines** | It argues that video world models should recover the explicit state loop of game engines. Code-as-World methods keep that loop in executable code and use video models only to render it; this survey compares how much of the loop code owns. | [PDF](https://arxiv.org/abs/2607.14076) |
 | `2026` | **Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application** | It treats environments as training infrastructure for agents. Here an environment matters only when its code acts as a world model, predicting or simulating how the world evolves; benchmarks and synthetic task environments are secondary. | [PDF](https://arxiv.org/abs/2606.12191) |
 | `2026` | **Bridging the Agent-World Gap: Text World Models for LLM-based Agents** | It covers textual environments and treats code-as-world-model as one construction paradigm. Here code-as-world is the subject itself, extended from text and symbolic states to whitebox worlds with generative rendering and full 3D worlds. | [PDF](https://arxiv.org/abs/2606.09032) |
+| `2026` | **Towards Interactive Video World Modeling: Frontiers, Challenges, Benchmarks, and Future Trends** | It centers on action-conditioned video and 3D generative world models. Here executable code is the world substrate, and video generators appear as optional state-conditioned renderers. | [PDF](https://arxiv.org/abs/2606.01164) |
+| `2026` | **World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications** | It surveys broad learned world models along architecture, method family, reasoning strategy and domain. Our survey focuses specifically on world models where executable code carries world state, rules or 3D structure. | [PDF](https://arxiv.org/abs/2606.00133) |
 | `2026` | **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** | It organizes world models by capability level and law regime across 400+ works, with code-based models as one implementation among many. Here the organizing question is what executable code carries in the world, and only methods where code is the world substrate are included. | [PDF](https://arxiv.org/abs/2604.22748) |
 | `2025` | **LLMs as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models** | It covers one corner of the WorldCoder-type line: symbolic planning models written from language. Here such models sit alongside Python transition programs, physical residuals, generatively rendered code worlds and 3D world programs. | [PDF](https://arxiv.org/abs/2503.18971) |
 
