@@ -2562,6 +2562,18 @@
       ],
       "evidence_depth": "targeted_fulltext",
       "annotated_on": "2026-11-26"
+    },
+    {
+      "id": "2611.27336",
+      "coarse_family": "code_as_world",
+      "coarse_family_label": "Code-as-World-type · Whitebox Worlds + Generative Rendering",
+      "source_provenance": "arxiv_search_2026-11-26",
+      "assignment_status": "provisional",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.27336"
+      ],
+      "evidence_depth": "abstract",
+      "annotated_on": "2026-11-26"
     }
   ]
 }

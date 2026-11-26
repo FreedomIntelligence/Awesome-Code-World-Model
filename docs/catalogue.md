@@ -4,7 +4,7 @@
 
 [← Browse the paper collection](../README.md#paper-collection) · [Structured data](../data/papers.json) · [BibTeX](../papers.bib)
 
-**200 source records** · literature cutoff **2026-11-26** · metadata snapshot **2026-11-26**.
+**201 source records** · literature cutoff **2026-11-26** · metadata snapshot **2026-11-26**.
 
 Review: **FT** = targeted full-text sections · **A** = metadata and abstract · **M** = bibliographic metadata.
 
@@ -104,10 +104,11 @@ Review depth describes citation and mechanism checking. Dates prefixed **by** ar
 
 </details>
 
-## Code-as-World-type · Whitebox Worlds + Generative Rendering (30)
+## Code-as-World-type · Whitebox Worlds + Generative Rendering (31)
 
 | Date | Paper | Mechanism / relevance | Scope | Review |
 |---|---|---|---|---|
+| 2026-11-20 | [Zing-1.0: A Playable World System Built on Controllable Rendering](https://arxiv.org/abs/2611.27336) | An executable engine resolves player actions under world rules and emits proxy video to a block-causal streaming renderer synchronized with simulation updates. | core | A |
 | 2026-11-19 | [ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds](https://arxiv.org/abs/2611.25838) | Autoregressive video diffusion renderer with dynamic-context learning, recurrent history compression and cross-representation flow alignment for sustained rendering from game-engine proxies. | enabling | A |
 | 2026-11-18 | [WorldRuler: Interactive World Modeling under Configurable Rules](https://arxiv.org/abs/2611.24869) | Organizes user-defined rules, dependencies and object states in an executable 3D rule graph coupled in a closed loop with video generation and perceptual feedback across save-and-load. | core | A |
 | 2026-11-17 | [Code World Model 2.0: Towards Infinite Controllable Video Generation **(Invoker-Render)**](https://arxiv.org/abs/2611.22925) | Pairs bidirectional creation and four-step causal streaming via ProForcing over multi-granularity structural proxies, an appearance reference and language, while the upstream engine supplies state and motion. | enabling | FT |
@@ -140,8 +141,9 @@ Review depth describes citation and mechanism checking. Dates prefixed **by** ar
 | 2025-12-29 | [Web World Models](https://arxiv.org/abs/2512.23676) | Web World Models uses typed web state and code-defined rules as the substrate for persistent, generative worlds. | core | FT |
 
 <details>
-<summary>Evidence notes (27)</summary>
+<summary>Evidence notes (28)</summary>
 
+- **Zing-1.0:** Cited in Survey §5 for block-causal rendering synchronized to simulation updates and action-mediated feedback.
 - **ContextRenderer:** Renderer-side counterpart for engine-provided proxies; introduces the WorldPrism multi-proxy gameplay dataset.
 - **WorldRuler:** Connects rule execution, video generation and perceptual feedback with dynamic object binding and RuleVerse annotations.
 - **Invoker-Render:** Upgraded from project record invoker-render to arXiv:2611.22925; official repository at https://github.com/inclusionAI/CodeWorldModel.

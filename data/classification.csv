@@ -199,3 +199,4 @@ streamrender_h3,StreamRender-H3: Interactive Coding Worlds with Real-time Stream
 2606.20545,Current World Models Lack a Persistent State Core,WRBench,https://arxiv.org/abs/2606.20545,2026,,Unassigned / 未归类,benchmark,video_wm,arxiv_search_2026-11-26,benchmark,abstract
 genrender,"Video Models as Generative Renderers: Foundations, Interfaces, Systems, and Beyond",GenRender,https://genrender-hub.github.io/,2026,,Unassigned / 未归类,survey,,official_project,survey,targeted_fulltext
 streaming-cwm,Streaming Code World Model,Streaming CWM,https://github.com/TingtingLiao/streaming-code-world-model,2026,code_as_world,Code-as-World-type · Whitebox Worlds + Generative Rendering,,,official_project,enabling,targeted_fulltext
+2611.27336,Zing-1.0: A Playable World System Built on Controllable Rendering,Zing-1.0,https://arxiv.org/abs/2611.27336,2026,code_as_world,Code-as-World-type · Whitebox Worlds + Generative Rendering,,,arxiv_search_2026-11-26,core,abstract

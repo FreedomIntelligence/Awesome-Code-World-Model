@@ -10,7 +10,7 @@
 
 <!-- BADGES:BEGIN -->
 
-[![Papers](https://img.shields.io/badge/Papers-200-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
+[![Papers](https://img.shields.io/badge/Papers-201-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
 
 <!-- BADGES:END -->
 
@@ -37,7 +37,7 @@
 | 分类主线 | 代码承担内容 | 核心问题 | 文献数 |
 |---|---|---|---:|
 | **[01 · WorldCoder-type](#papers-worldcoder)** | 纯状态与动力学 | 代码能否预测动作后果并支持规划？ | **50** |
-| **[02 · Code-as-World-type](#papers-code_as_world)** | 白模世界 + 生成式渲染 | 代码维护的白模状态与规则能否驱动生成式渲染？ | **30** |
+| **[02 · Code-as-World-type](#papers-code_as_world)** | 白模世界 + 生成式渲染 | 代码维护的白模状态与规则能否驱动生成式渲染？ | **31** |
 | **[03 · VibeWorlding-type](#papers-vibeworlding)** | 完整 3D 世界 | agent 能否用代码构建并编辑完整 3D 世界？ | **45** |
 | **[其他](#papers-other)** | GUI 世界、评测与综述 | [GUI 世界模型](#papers-other-gui) (25) · [评测基准](#papers-other-benchmark) (37) · [相关综述](#related-surveys) (13) | **75** |
 
@@ -48,7 +48,7 @@
 
 <!-- CATALOG:BEGIN -->
 
-**200 条文献来源** · 截止 **2026-11-26** · 按发布日期倒序排列。完整信息见[详细核查表](docs/catalogue.md)与[全量论文总表](docs/paper-master-list.md)。
+**201 条文献来源** · 截止 **2026-11-26** · 按发布日期倒序排列。完整信息见[详细核查表](docs/catalogue.md)与[全量论文总表](docs/paper-master-list.md)。
 
 <a id="papers-worldcoder"></a>
 ### 01 · WorldCoder-type · 程序化动力学 (50)
@@ -111,12 +111,13 @@
 [↑ 返回总览](#contents)
 
 <a id="papers-code_as_world"></a>
-### 02 · Code-as-World-type · 白模世界 + 生成式渲染 (30)
+### 02 · Code-as-World-type · 白模世界 + 生成式渲染 (31)
 
 *代码维护白模/proxy 世界的持久状态与规则，由生成式渲染器补全外观。*
 
 | 年份 | 论文 | 核心机制与简介 | 链接 |
 |---|---|---|:-:|
+| `2026` | **Zing-1.0: A Playable World System Built on Controllable Rendering** | Zing-1.0 由可执行引擎按世界规则解析玩家动作并生成代理视频，交由与仿真更新同步的分块因果流式渲染器生成可玩画面。 | [PDF](https://arxiv.org/abs/2611.27336) |
 | `2026` | **ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds** | ContextRenderer 面向游戏引擎多样化动态代理提出动态上下文学习与循环历史压缩，在长程交互中保持条件跟随与视觉连续性。 | [PDF](https://arxiv.org/abs/2611.25838) |
 | `2026` | **WorldRuler: Interactive World Modeling under Configurable Rules** | WorldRuler 用可执行三维规则图组织用户自定义规则、依赖与跨存取档物体状态，并与视频生成及感知反馈构成闭环。 | [PDF](https://arxiv.org/abs/2611.24869) |
 | `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | Invoker-Render（Code World Model 2.0）通过 ProForcing 在多粒度结构代理、外观参考与文本条件下统一双向创作与四步因果流式渲染，由上游引擎锁定状态与运动。 | [PDF](https://arxiv.org/abs/2611.22925) |

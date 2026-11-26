@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Code World Models — Interactive Survey &amp; Literature Hub</title>
-  <meta name="description" content="Executable Dynamics, Persistent Worlds, and Renderable Observations: L0–L4 Transition Paradigms, 3 Code-Substrate Families, and 200 Curated Sources.">
+  <meta name="description" content="Executable Dynamics, Persistent Worlds, and Renderable Observations: L0–L4 Transition Paradigms, System Matrix, 3 Code-Substrate Families, and 201 Curated Sources (233 Survey Works).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -38,6 +38,7 @@
           <a class="nav-link" href="#compare" data-i18n="nav_compare">State vs. Pixels</a>
           <a class="nav-link" href="#families" data-i18n="nav_families">3 Families</a>
           <a class="nav-link" href="#contracts" data-i18n="nav_contracts">Observation &amp; Eval</a>
+          <a class="nav-link" href="#matrix" data-i18n="nav_matrix">L0–L4 Matrix</a>
           <a class="nav-link" href="#library" data-i18n="nav_library">Library</a>
         </nav>
       </div>
@@ -65,7 +66,7 @@
 
         <a class="pill-btn tabular nav-gh-btn" href="https://github.com/FreedomIntelligence/Awesome-Code-World-Model" target="_blank" rel="noopener">
           <span class="gh-label">GitHub</span>
-          <span class="badge mono" id="navTotalBadge">200</span>
+          <span class="badge mono" id="navTotalBadge">201</span>
         </a>
       </div>
     </div>
@@ -96,7 +97,7 @@
 
         <h1 class="hero-h1" id="heroTitle">Worlds written as executable code.</h1>
         <p class="hero-sub" id="heroSub">
-          Uniting model-based agents that induce programs for planning with generative visual worlds driven by authoritative code state—organized across a 5-layer transition spectrum and 200 verified sources.
+          Uniting model-based agents that induce programs for planning with generative visual worlds driven by authoritative code state—organized across a 5-layer transition spectrum and 201 verified sources.
         </p>
 
         <div class="cli-box">
@@ -106,14 +107,14 @@
         </div>
 
         <div class="hero-actions">
-          <a href="#library" class="pill-btn primary lg" id="heroPrimaryCta">Browse 200 papers</a>
-          <a href="#paradigms" class="pill-btn lg" id="heroSecondaryCta">Inspect L0–L4 spectrum</a>
+          <a href="#library" class="pill-btn primary lg" id="heroPrimaryCta">Browse 201 papers</a>
+          <a href="#matrix" class="pill-btn lg" id="heroSecondaryCta">L0–L4 System Matrix</a>
           <button type="button" class="pill-btn lg" id="downloadAllBibBtn" data-i18n="download_bib">Download BibTeX</button>
         </div>
 
         <div class="hero-metrics tabular">
           <div class="metric-item">
-            <div class="metric-val" id="statTotal">200</div>
+            <div class="metric-val" id="statTotal">201</div>
             <div class="metric-lbl" data-i18n="stat_sources">Curated sources</div>
           </div>
           <div class="metric-item">
@@ -204,7 +205,7 @@
         <div class="eyebrow" id="fEyebrow">Catalogue Organization · Zooming into L2 &amp; L3</div>
         <h2 class="section-title" id="fTitle">How much of the world code carries</h2>
         <p class="section-desc" id="fDesc">
-          Within code-grounded world models, our 200-paper collection splits into three primary families along a single axis—from pure symbolic/state dynamics to whitebox-conditioned neural rendering to complete 3D worlds in code.
+          Within code-grounded world models, our 201-paper collection splits into three primary families along a single axis—from pure symbolic/state dynamics to whitebox-conditioned neural rendering to complete 3D worlds in code.
         </p>
       </div>
 
@@ -215,7 +216,7 @@
   </section>
 
   <!-- Section 4: Observation Contracts, Evaluation Obligations & Survey Outline -->
-  <section class="section" id="contracts" style="border-bottom:none;">
+  <section class="section" id="contracts">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow pink" id="oEyebrow">Survey Architecture · Sections 5, 7 &amp; Manuscript Map</div>
@@ -230,19 +231,65 @@
     </div>
   </section>
 
-  <!-- Section 5: AffectUI Inset App Shell — 170-Paper Interactive Explorer -->
+  <!-- Section 4.5: GenRender-Style L0–L4 Master System Comparison Matrix -->
+  <section class="section" id="matrix" style="border-bottom:none;">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow pink" id="mEyebrow">Cross-Paradigm Synthesis · L0–L4 Master Matrix</div>
+        <h2 class="section-title" id="mTitle">Compare representative systems across L0–L4</h2>
+        <p class="section-desc" id="mDesc">
+          Filter across hand-written engines (L0), direct LLM predictors (L1), agent-built code world models (L2), shared code+learned dynamics (L3), learned neural world models (L4), and real-time streaming systems. Click any system to inspect its record and BibTeX.
+        </p>
+      </div>
+
+      <div class="matrix-toolbar">
+        <div class="matrix-pills" id="matrixPills" role="group" aria-label="Filter system matrix by paradigm"></div>
+        <div class="matrix-search-wrap">
+          <div class="sidebar-search matrix-search">
+            <span style="color:var(--aui-muted)">⌕</span>
+            <input type="search" id="matrixSearchInput" aria-label="Search system matrix" placeholder="Search system, executor, state, Π(s_t), feedback...">
+          </div>
+          <span class="mono tabular matrix-count" id="matrixCounter">32 / 32</span>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="aui-table matrix-table" id="matrixTable">
+          <thead id="matrixThead"></thead>
+          <tbody id="matrixTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Unified Master Search & Interactive Literature Explorer -->
   <section class="app-shell-section" id="library">
     <div class="container">
-      <div style="margin-bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div style="margin-bottom:16px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
         <div>
-          <div class="eyebrow" id="libEyebrow">Structured Literature Corpus</div>
-          <h2 class="section-title" style="font-size:28px;margin-bottom:4px;" id="libTitle">Explore all 200 verified sources</h2>
-          <p class="section-desc" style="font-size:13.5px;" id="libDesc">Filter by transition paradigm, code-substrate family, benchmark target, code role, and review depth.</p>
+          <div class="eyebrow" id="libEyebrow">Unified Literature Hub · Core Catalogue + L0–L4 References</div>
+          <h2 class="section-title" style="font-size:28px;margin-bottom:4px;" id="libTitle">Explore all 201 verified sources</h2>
+          <p class="section-desc" style="font-size:13.5px;" id="libDesc">Search across all L0–L4 paradigms, 3 code-substrate families, benchmarks, GUI worlds, and full-survey comparators.</p>
         </div>
-        <div style="display:flex;gap:8px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
           <button type="button" class="pill-btn" id="resetFiltersTopBtn" data-i18n="reset_filters">Reset filters</button>
           <button type="button" class="pill-btn primary" id="exportFilteredBibBtn" data-i18n="export_bibtex">Export filtered BibTeX</button>
         </div>
+      </div>
+
+      <div class="master-search-hub">
+        <div class="master-search-top">
+          <div class="master-search-box">
+            <span class="master-search-icon" aria-hidden="true">⌕</span>
+            <input type="search" id="masterSearchInput" aria-label="Master literature search" placeholder="Master search across L0–L4 systems, 201 core papers + 32 survey comparators, authors, arXiv IDs, tags...">
+            <button type="button" class="kbd master-kbd" id="masterCmdTrigger" title="Open Command Palette (⌘K)">⌘K</button>
+          </div>
+          <div class="segmented corpus-scope-seg" id="corpusScopeSeg" role="group" aria-label="Literature scope">
+            <button type="button" id="scopeCoreBtn" class="active" data-scope="core">Core (201)</button>
+            <button type="button" id="scopeAllBtn" data-scope="all">All L0–L4 (233)</button>
+          </div>
+        </div>
+        <div class="quick-par-bar" id="quickParadigmBar" role="group" aria-label="Quick L0 to L4 and category filters"></div>
       </div>
 
       <div class="app-shell">
@@ -261,7 +308,7 @@
 
         <main class="shell-main">
           <div class="library-toolbar">
-            <div style="font-size:12.5px;color:var(--aui-secondary);" class="tabular" id="resultsCounter">Showing 200 of 200 sources</div>
+            <div style="font-size:12.5px;color:var(--aui-secondary);" class="tabular" id="resultsCounter">Showing 201 of 201 sources</div>
             <div class="toolbar-right">
               <select class="aui-select" id="sortSelect" aria-label="Sort order">
                 <option value="newest" data-i18n="sort_newest">Newest first</option>
@@ -300,7 +347,7 @@
             <span class="badge mono">01 · Survey &amp; Atlas</span>
             <span class="badge pink" data-i18n="series_here">Current Site</span>
           </div>
-          <h4 data-i18n="series_w1_t">The Survey &amp; 200-Paper Atlas</h4>
+          <h4 data-i18n="series_w1_t">The Survey &amp; 201-Paper Atlas</h4>
           <p data-i18n="series_w1_d">L0–L4 transition authority framework, observation contracts, evaluation obligations, and living bibliography.</p>
         </div>
 
@@ -368,7 +415,7 @@
   <dialog class="aui-dialog" id="cmdDialog">
     <div class="dialog-head">
       <span style="color:var(--aui-muted)">⌕</span>
-      <input type="text" class="cmd-input" id="cmdInput" placeholder="Jump to L0–L4 paradigm, family, or search 200 papers...">
+      <input type="text" class="cmd-input" id="cmdInput" placeholder="Jump to L0–L4 paradigm, system matrix, or search 233 works...">
       <button class="kbd" id="closeCmdBtn">ESC</button>
     </div>
     <div class="cmd-list" id="cmdResults"></div>
@@ -386,6 +433,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="data.js"></script>
+  <script src="extra_refs.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

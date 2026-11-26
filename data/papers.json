@@ -7016,6 +7016,65 @@
       ],
       "summary": "Implements causal four-step chunked streaming video generation over depth and semantic proxies exported from Code World Model and CARLA driving state.",
       "evidence_notes": "Project repository and Hugging Face checkpoints verified available by 2026-11-12; extends Code World Model proxies to causal chunk streaming."
+    },
+    {
+      "id": "2611.27336",
+      "citation_key": "zhang2026zing",
+      "title": "Zing-1.0: A Playable World System Built on Controllable Rendering",
+      "authors": [
+        "Wenbo Zhang",
+        "Guoli Zhang",
+        "Xuewen Yu",
+        "Xueliang Yang",
+        "Jiangqiao Yan",
+        "Teng Xia",
+        "Xinmiao Wu",
+        "Zeyang Tian",
+        "Haoze Sun",
+        "Jinghui Niu",
+        "Hongli Ning",
+        "Zhiyuan Liu",
+        "Xinna Liu",
+        "Weimin Liu",
+        "Jialin Liu",
+        "Tianpeng Li",
+        "Kejun Li",
+        "Jun Li",
+        "Jiawen Li",
+        "Yirong He",
+        "Haoyuan Guo",
+        "Bosheng Gong",
+        "Junhao Gao",
+        "Xiaoxiao Fu",
+        "Xuezhi Chen",
+        "Shengdong Chen",
+        "Mingyang Chen",
+        "Diying Chen",
+        "Yinglun Chai",
+        "Yiwen Cai"
+      ],
+      "alias": "Zing-1.0",
+      "year": 2026,
+      "first_public_date": "2026-11-20",
+      "source_url": "https://arxiv.org/abs/2611.27336",
+      "arxiv_id": "2611.27336",
+      "review_depth": "abstract",
+      "reviewed_version": "v2",
+      "reviewed_on": "2026-11-26",
+      "metadata_checked_on": "2026-11-26",
+      "section": "code_as_world",
+      "scope": "core",
+      "code_roles": [
+        "transition",
+        "observation"
+      ],
+      "tags": [
+        "proxy-rendering",
+        "streaming-video",
+        "action-mediated"
+      ],
+      "summary": "An executable engine resolves player actions under world rules and emits proxy video to a block-causal streaming renderer synchronized with simulation updates.",
+      "evidence_notes": "Cited in Survey §5 for block-causal rendering synchronized to simulation updates and action-mediated feedback."
     }
   ]
 }

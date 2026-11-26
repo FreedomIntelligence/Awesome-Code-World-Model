@@ -10,7 +10,7 @@
 
 <!-- BADGES:BEGIN -->
 
-[![Papers](https://img.shields.io/badge/Papers-200-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
+[![Papers](https://img.shields.io/badge/Papers-201-6c8ba8?style=flat-square&labelColor=4a5568)](#paper-collection) [![Survey PDF coming soon](https://img.shields.io/badge/Survey%20PDF-coming%20soon-b47b7b?style=flat-square&labelColor=4a5568)](#motivation) [![GitHub stars](https://img.shields.io/github/stars/FreedomIntelligence/Awesome-Code-World-Model?style=flat-square&logo=github&labelColor=4a5568&color=7b9a8d)](https://github.com/FreedomIntelligence/Awesome-Code-World-Model/stargazers) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-8c82a3?style=flat-square&labelColor=4a5568)](CONTRIBUTING.md)
 
 <!-- BADGES:END -->
 
@@ -37,7 +37,7 @@ As part of our ongoing research effort, we plan to release a series of open reso
 | Family | Code Carries | Core Question | Papers |
 |---|---|---|---:|
 | **[01 · WorldCoder-type](#papers-worldcoder)** | State & dynamics only | Does code predict action consequences and support planning? | **50** |
-| **[02 · Code-as-World-type](#papers-code_as_world)** | Whitebox world + generative rendering | Can executable state & rules drive a generatively rendered world? | **30** |
+| **[02 · Code-as-World-type](#papers-code_as_world)** | Whitebox world + generative rendering | Can executable state & rules drive a generatively rendered world? | **31** |
 | **[03 · VibeWorlding-type](#papers-vibeworlding)** | Full 3D world | Can an agent write and edit a full 3D world in code? | **45** |
 | **[Other](#papers-other)** | GUI worlds, benchmarks & surveys | [GUI World Models](#papers-other-gui) (25) · [Benchmarks](#papers-other-benchmark) (37) · [Related Surveys](#related-surveys) (13) | **75** |
 
@@ -48,7 +48,7 @@ As part of our ongoing research effort, we plan to release a series of open reso
 
 <!-- CATALOG:BEGIN -->
 
-**200 sources** · updated through **2026-11-26** · ordered by date (newest first). Full metadata in the [annotated catalogue](docs/catalogue.md) and [master list](docs/paper-master-list.md).
+**201 sources** · updated through **2026-11-26** · ordered by date (newest first). Full metadata in the [annotated catalogue](docs/catalogue.md) and [master list](docs/paper-master-list.md).
 
 <a id="papers-worldcoder"></a>
 ### 01 · WorldCoder-type · Programmatic Dynamics (50)
@@ -111,12 +111,13 @@ As part of our ongoing research effort, we plan to release a series of open reso
 [↑ Back to overview](#contents)
 
 <a id="papers-code_as_world"></a>
-### 02 · Code-as-World-type · Whitebox Worlds + Generative Rendering (30)
+### 02 · Code-as-World-type · Whitebox Worlds + Generative Rendering (31)
 
 *Code keeps persistent state and rules over a whitebox/proxy world; a generative renderer supplies appearance.*
 
 | Year | Paper | Summary | Link |
 |---|---|---|:-:|
+| `2026` | **Zing-1.0: A Playable World System Built on Controllable Rendering** | An executable engine resolves player actions under world rules and emits proxy video to a block-causal streaming renderer synchronized with simulation updates. | [PDF](https://arxiv.org/abs/2611.27336) |
 | `2026` | **ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds** | Autoregressive video diffusion renderer with dynamic-context learning, recurrent history compression and cross-representation flow alignment for sustained rendering from game-engine proxies. | [PDF](https://arxiv.org/abs/2611.25838) |
 | `2026` | **WorldRuler: Interactive World Modeling under Configurable Rules** | Organizes user-defined rules, dependencies and object states in an executable 3D rule graph coupled in a closed loop with video generation and perceptual feedback across save-and-load. | [PDF](https://arxiv.org/abs/2611.24869) |
 | `2026` | **Code World Model 2.0: Towards Infinite Controllable Video Generation (Invoker-Render)** | Pairs bidirectional creation and four-step causal streaming via ProForcing over multi-granularity structural proxies, an appearance reference and language, while the upstream engine supplies state and motion. | [PDF](https://arxiv.org/abs/2611.22925) |
